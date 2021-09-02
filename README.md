@@ -1,6 +1,6 @@
 # Floodplain-Evaluation-Matrix-Tool
 
-# This document was prepared to guide the user in order to:
+ This document was prepared to guide the user in order to:
 
 1) Download (Click "Code -> Download ZIP"), 
 
