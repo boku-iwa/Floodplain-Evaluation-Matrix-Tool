@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="/plugins/test_plugin">
+    <file>eu.png</file>
+    <file>icon.png</file>
+  </qresource>
+  <qresource prefix="eu_flag">
+    <file>eu.png</file>
+  </qresource>
+</RCC>
