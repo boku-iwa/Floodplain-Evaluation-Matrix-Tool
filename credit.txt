@@ -1,9 +1,0 @@
-This Tool was Supported by the European Union's Interreg Danube Transnational Cooperation Programme in the Danube Floodplain Project
-Grant Number: DTP2-003-2.1, 2018
-
-Developers:
-Sencer Yücesan - s.yuecesan@boku.ac.at
-Markus Eder - markus.eder@boku.ac.at
-Sabrina Scheuer - sabrina.scheuer@boku.ac.at
-Project Manager:
-Helmut Habersack - helmut.habersack@boku.ac.at
