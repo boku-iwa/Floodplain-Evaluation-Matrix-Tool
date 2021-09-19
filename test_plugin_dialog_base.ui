@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1143</width>
+    <width>1284</width>
     <height>778</height>
    </rect>
   </property>
@@ -2770,29 +2770,29 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="tab_15">
+        <widget class="QWidget" name="tab_23">
          <attribute name="title">
-          <string>Restoration</string>
+          <string>Stakeholder Analysis</string>
          </attribute>
-         <layout class="QGridLayout" name="gridLayout_24">
-          <item row="1" column="0">
-           <widget class="QTabWidget" name="tabWidget_7">
+         <layout class="QGridLayout" name="gridLayout_40">
+          <item row="0" column="0">
+           <widget class="QTabWidget" name="tabWidget_8">
             <property name="currentIndex">
              <number>0</number>
             </property>
-            <widget class="QWidget" name="tab_22">
+            <widget class="QWidget" name="tab_26">
              <attribute name="title">
               <string>Stakeholder</string>
              </attribute>
-             <layout class="QGridLayout" name="gridLayout_35">
+             <layout class="QGridLayout" name="gridLayout_37">
               <item row="0" column="0">
-               <widget class="QGroupBox" name="groupBox_9">
+               <widget class="QGroupBox" name="groupBox_11">
                 <property name="title">
                  <string>Stakeholder Analysis</string>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_34">
+                <layout class="QGridLayout" name="gridLayout_38">
                  <item row="5" column="6">
-                  <widget class="QComboBox" name="comboBox_42">
+                  <widget class="QComboBox" name="comboBox_47">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -2811,7 +2811,7 @@
                   </widget>
                  </item>
                  <item row="6" column="2">
-                  <widget class="QComboBox" name="comboBox_41">
+                  <widget class="QComboBox" name="comboBox_48">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -2855,21 +2855,21 @@
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="Line" name="line_55">
+                  <widget class="Line" name="line_61">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="4">
-                  <widget class="QLabel" name="label_180">
+                  <widget class="QLabel" name="label_186">
                    <property name="text">
                     <string>Interest</string>
                    </property>
                   </widget>
                  </item>
                  <item row="7" column="2">
-                  <widget class="QComboBox" name="comboBox_43">
+                  <widget class="QComboBox" name="comboBox_55">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -2913,7 +2913,7 @@
                   </widget>
                  </item>
                  <item row="7" column="4">
-                  <widget class="QComboBox" name="comboBox_53">
+                  <widget class="QComboBox" name="comboBox_56">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -2932,10 +2932,10 @@
                   </widget>
                  </item>
                  <item row="7" column="0">
-                  <widget class="QLineEdit" name="lineEdit_217"/>
+                  <widget class="QLineEdit" name="lineEdit_228"/>
                  </item>
                  <item row="6" column="6">
-                  <widget class="QComboBox" name="comboBox_40">
+                  <widget class="QComboBox" name="comboBox_57">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -2954,7 +2954,7 @@
                   </widget>
                  </item>
                  <item row="3" column="4">
-                  <widget class="QComboBox" name="comboBox_54">
+                  <widget class="QComboBox" name="comboBox_58">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -2973,17 +2973,17 @@
                   </widget>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLineEdit" name="lineEdit_213"/>
+                  <widget class="QLineEdit" name="lineEdit_229"/>
                  </item>
                  <item row="0" column="1">
-                  <widget class="Line" name="line_51">
+                  <widget class="Line" name="line_62">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="8" column="4">
-                  <spacer name="verticalSpacer_16">
+                  <spacer name="verticalSpacer_19">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
@@ -2996,7 +2996,7 @@
                   </spacer>
                  </item>
                  <item row="6" column="4">
-                  <widget class="QComboBox" name="comboBox_52">
+                  <widget class="QComboBox" name="comboBox_59">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3015,17 +3015,17 @@
                   </widget>
                  </item>
                  <item row="5" column="0">
-                  <widget class="QLineEdit" name="lineEdit_215"/>
+                  <widget class="QLineEdit" name="lineEdit_230"/>
                  </item>
                  <item row="0" column="3">
-                  <widget class="Line" name="line_52">
+                  <widget class="Line" name="line_63">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="4" column="4">
-                  <widget class="QComboBox" name="comboBox_50">
+                  <widget class="QComboBox" name="comboBox_60">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3044,17 +3044,17 @@
                   </widget>
                  </item>
                  <item row="1" column="4">
-                  <widget class="Line" name="line_59">
+                  <widget class="Line" name="line_64">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLineEdit" name="lineEdit_214"/>
+                  <widget class="QLineEdit" name="lineEdit_231"/>
                  </item>
                  <item row="5" column="2">
-                  <widget class="QComboBox" name="comboBox_39">
+                  <widget class="QComboBox" name="comboBox_61">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -3098,7 +3098,7 @@
                   </widget>
                  </item>
                  <item row="4" column="6">
-                  <widget class="QComboBox" name="comboBox_44">
+                  <widget class="QComboBox" name="comboBox_62">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3117,7 +3117,7 @@
                   </widget>
                  </item>
                  <item row="4" column="2">
-                  <widget class="QComboBox" name="comboBox_37">
+                  <widget class="QComboBox" name="comboBox_63">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -3161,7 +3161,7 @@
                   </widget>
                  </item>
                  <item row="2" column="2">
-                  <widget class="QComboBox" name="comboBox_36">
+                  <widget class="QComboBox" name="comboBox_64">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -3205,7 +3205,7 @@
                   </widget>
                  </item>
                  <item row="3" column="2">
-                  <widget class="QComboBox" name="comboBox_45">
+                  <widget class="QComboBox" name="comboBox_65">
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -3249,35 +3249,35 @@
                   </widget>
                  </item>
                  <item row="1" column="6">
-                  <widget class="Line" name="line_57">
+                  <widget class="Line" name="line_65">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_181">
+                  <widget class="QLabel" name="label_187">
                    <property name="text">
                     <string>Name</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="6">
-                  <widget class="QLabel" name="label_189">
+                  <widget class="QLabel" name="label_191">
                    <property name="text">
                     <string>Power</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="Line" name="line_53">
+                  <widget class="Line" name="line_66">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="3" column="6">
-                  <widget class="QComboBox" name="comboBox_46">
+                  <widget class="QComboBox" name="comboBox_66">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3296,10 +3296,10 @@
                   </widget>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLineEdit" name="lineEdit_212"/>
+                  <widget class="QLineEdit" name="lineEdit_232"/>
                  </item>
                  <item row="7" column="6">
-                  <widget class="QComboBox" name="comboBox_38">
+                  <widget class="QComboBox" name="comboBox_67">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3318,14 +3318,14 @@
                   </widget>
                  </item>
                  <item row="0" column="5">
-                  <widget class="Line" name="line_56">
+                  <widget class="Line" name="line_67">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="6">
-                  <widget class="QComboBox" name="comboBox_35">
+                  <widget class="QComboBox" name="comboBox_68">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3344,17 +3344,17 @@
                   </widget>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QLabel" name="label_190">
+                  <widget class="QLabel" name="label_192">
                    <property name="text">
                     <string>Type of the stakeholder</string>
                    </property>
                   </widget>
                  </item>
                  <item row="6" column="0">
-                  <widget class="QLineEdit" name="lineEdit_216"/>
+                  <widget class="QLineEdit" name="lineEdit_233"/>
                  </item>
                  <item row="2" column="4">
-                  <widget class="QComboBox" name="comboBox_49">
+                  <widget class="QComboBox" name="comboBox_69">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3373,7 +3373,7 @@
                   </widget>
                  </item>
                  <item row="5" column="4">
-                  <widget class="QComboBox" name="comboBox_51">
+                  <widget class="QComboBox" name="comboBox_70">
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -3392,7 +3392,7 @@
                   </widget>
                  </item>
                  <item row="4" column="7">
-                  <spacer name="horizontalSpacer_9">
+                  <spacer name="horizontalSpacer_10">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -3408,78 +3408,78 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QGroupBox" name="groupBox_10">
+               <widget class="QGroupBox" name="groupBox_14">
                 <property name="title">
                  <string>Measures Planned for the Stakeholders</string>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_36">
+                <layout class="QGridLayout" name="gridLayout_39">
                  <item row="6" column="2">
-                  <widget class="QLineEdit" name="lineEdit_227"/>
+                  <widget class="QLineEdit" name="lineEdit_234"/>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QLabel" name="label_183">
+                  <widget class="QLabel" name="label_188">
                    <property name="text">
                     <string>Measure Description</string>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="2">
-                  <widget class="QLineEdit" name="lineEdit_219"/>
+                  <widget class="QLineEdit" name="lineEdit_235"/>
                  </item>
                  <item row="1" column="2">
-                  <widget class="Line" name="line_60">
+                  <widget class="Line" name="line_68">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="Line" name="line_54">
+                  <widget class="Line" name="line_69">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="5" column="0">
-                  <widget class="QLineEdit" name="lineEdit_224"/>
+                  <widget class="QLineEdit" name="lineEdit_236"/>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_182">
+                  <widget class="QLabel" name="label_193">
                    <property name="text">
                     <string>Name</string>
                    </property>
                   </widget>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLineEdit" name="lineEdit_220"/>
+                  <widget class="QLineEdit" name="lineEdit_237"/>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLineEdit" name="lineEdit_218"/>
+                  <widget class="QLineEdit" name="lineEdit_238"/>
                  </item>
                  <item row="5" column="2">
-                  <widget class="QLineEdit" name="lineEdit_225"/>
+                  <widget class="QLineEdit" name="lineEdit_239"/>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLineEdit" name="lineEdit_222"/>
+                  <widget class="QLineEdit" name="lineEdit_240"/>
                  </item>
                  <item row="3" column="2">
-                  <widget class="QLineEdit" name="lineEdit_221"/>
+                  <widget class="QLineEdit" name="lineEdit_241"/>
                  </item>
                  <item row="1" column="0">
-                  <widget class="Line" name="line_58">
+                  <widget class="Line" name="line_70">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="6" column="0">
-                  <widget class="QLineEdit" name="lineEdit_226"/>
+                  <widget class="QLineEdit" name="lineEdit_242"/>
                  </item>
                  <item row="4" column="2">
-                  <widget class="QLineEdit" name="lineEdit_223"/>
+                  <widget class="QLineEdit" name="lineEdit_243"/>
                  </item>
                  <item row="7" column="0">
-                  <spacer name="verticalSpacer_18">
+                  <spacer name="verticalSpacer_20">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
@@ -3495,7 +3495,7 @@
                </widget>
               </item>
               <item row="2" column="0">
-               <spacer name="verticalSpacer_17">
+               <spacer name="verticalSpacer_21">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -3509,13 +3509,27 @@
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="tab_20">
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_24">
+         <attribute name="title">
+          <string>Ecosystem Services</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_41">
+          <item row="0" column="0">
+           <widget class="QTabWidget" name="tabWidget_9">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_28">
              <attribute name="title">
               <string>Ecosystem Services</string>
              </attribute>
-             <layout class="QGridLayout" name="gridLayout_28">
+             <layout class="QGridLayout" name="gridLayout_44">
               <item row="7" column="2">
-               <widget class="QComboBox" name="comboBox_4">
+               <widget class="QComboBox" name="comboBox_89">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3549,7 +3563,7 @@
                </widget>
               </item>
               <item row="6" column="7">
-               <widget class="QComboBox" name="comboBox_20">
+               <widget class="QComboBox" name="comboBox_90">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3583,23 +3597,23 @@
                </widget>
               </item>
               <item row="9" column="9">
-               <widget class="QLineEdit" name="lineEdit_185"/>
+               <widget class="QLineEdit" name="lineEdit_260"/>
               </item>
               <item row="4" column="0">
-               <widget class="QLabel" name="label_155">
+               <widget class="QLabel" name="label_200">
                 <property name="text">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Agricultural Product&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="21" column="9">
-               <widget class="QLineEdit" name="lineEdit_196"/>
+               <widget class="QLineEdit" name="lineEdit_261"/>
               </item>
               <item row="14" column="9">
-               <widget class="QLineEdit" name="lineEdit_190"/>
+               <widget class="QLineEdit" name="lineEdit_262"/>
               </item>
               <item row="14" column="2">
-               <widget class="QComboBox" name="comboBox_10">
+               <widget class="QComboBox" name="comboBox_91">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3633,14 +3647,14 @@
                </widget>
               </item>
               <item row="8" column="0">
-               <widget class="QLabel" name="label_153">
+               <widget class="QLabel" name="label_201">
                 <property name="text">
                  <string>Honey - Beehive Products</string>
                 </property>
                </widget>
               </item>
               <item row="15" column="7">
-               <widget class="QComboBox" name="comboBox_28">
+               <widget class="QComboBox" name="comboBox_92">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3674,20 +3688,20 @@
                </widget>
               </item>
               <item row="21" column="0">
-               <widget class="QLabel" name="label_166">
+               <widget class="QLabel" name="label_202">
                 <property name="text">
                  <string>Tourism </string>
                 </property>
                </widget>
               </item>
               <item row="5" column="9">
-               <widget class="QLineEdit" name="lineEdit_179"/>
+               <widget class="QLineEdit" name="lineEdit_263"/>
               </item>
               <item row="21" column="4">
-               <widget class="QLineEdit" name="lineEdit_172"/>
+               <widget class="QLineEdit" name="lineEdit_264"/>
               </item>
               <item row="12" column="7">
-               <widget class="QComboBox" name="comboBox_25">
+               <widget class="QComboBox" name="comboBox_93">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3721,7 +3735,7 @@
                </widget>
               </item>
               <item row="8" column="7">
-               <widget class="QComboBox" name="comboBox_22">
+               <widget class="QComboBox" name="comboBox_94">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3755,34 +3769,34 @@
                </widget>
               </item>
               <item row="16" column="9">
-               <widget class="QLineEdit" name="lineEdit_192"/>
+               <widget class="QLineEdit" name="lineEdit_265"/>
               </item>
               <item row="12" column="9">
-               <widget class="QLineEdit" name="lineEdit_188"/>
+               <widget class="QLineEdit" name="lineEdit_266"/>
               </item>
               <item row="0" column="8">
-               <widget class="Line" name="line_8">
+               <widget class="Line" name="line_81">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
                </widget>
               </item>
               <item row="0" column="1">
-               <widget class="Line" name="line_39">
+               <widget class="Line" name="line_82">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
                </widget>
               </item>
               <item row="6" column="0">
-               <widget class="QLabel" name="label_157">
+               <widget class="QLabel" name="label_203">
                 <property name="text">
                  <string>Animal Product</string>
                 </property>
                </widget>
               </item>
               <item row="8" column="2">
-               <widget class="QComboBox" name="comboBox_5">
+               <widget class="QComboBox" name="comboBox_95">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3816,7 +3830,7 @@
                </widget>
               </item>
               <item row="6" column="2">
-               <widget class="QComboBox" name="comboBox_3">
+               <widget class="QComboBox" name="comboBox_96">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3850,7 +3864,7 @@
                </widget>
               </item>
               <item row="21" column="7">
-               <widget class="QComboBox" name="comboBox_33">
+               <widget class="QComboBox" name="comboBox_97">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3884,21 +3898,21 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="Line" name="line_42">
+               <widget class="Line" name="line_83">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="10" column="0">
-               <widget class="QLabel" name="label_151">
+               <widget class="QLabel" name="label_204">
                 <property name="text">
                  <string>Water - Drinking, Irrigation</string>
                 </property>
                </widget>
               </item>
               <item row="16" column="7">
-               <widget class="QComboBox" name="comboBox_29">
+               <widget class="QComboBox" name="comboBox_98">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3932,7 +3946,7 @@
                </widget>
               </item>
               <item row="9" column="7">
-               <widget class="QComboBox" name="comboBox_23">
+               <widget class="QComboBox" name="comboBox_99">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -3966,70 +3980,70 @@
                </widget>
               </item>
               <item row="4" column="9">
-               <widget class="QLineEdit" name="lineEdit_178"/>
+               <widget class="QLineEdit" name="lineEdit_267"/>
               </item>
               <item row="7" column="4">
-               <widget class="QLineEdit" name="lineEdit_184"/>
+               <widget class="QLineEdit" name="lineEdit_268"/>
               </item>
               <item row="0" column="9">
-               <widget class="QLabel" name="label_160">
+               <widget class="QLabel" name="label_205">
                 <property name="text">
                  <string>% of Area (R)</string>
                 </property>
                </widget>
               </item>
               <item row="19" column="9">
-               <widget class="QLineEdit" name="lineEdit_194"/>
+               <widget class="QLineEdit" name="lineEdit_269"/>
               </item>
               <item row="5" column="4">
-               <widget class="QLineEdit" name="lineEdit_183"/>
+               <widget class="QLineEdit" name="lineEdit_270"/>
               </item>
               <item row="10" column="9">
-               <widget class="QLineEdit" name="lineEdit_187"/>
+               <widget class="QLineEdit" name="lineEdit_271"/>
               </item>
               <item row="9" column="0">
-               <widget class="QLabel" name="label_159">
+               <widget class="QLabel" name="label_206">
                 <property name="text">
                  <string>Fish - Fish Products</string>
                 </property>
                </widget>
               </item>
               <item row="7" column="9">
-               <widget class="QLineEdit" name="lineEdit_181"/>
+               <widget class="QLineEdit" name="lineEdit_272"/>
               </item>
               <item row="5" column="0">
-               <widget class="QLabel" name="label_147">
+               <widget class="QLabel" name="label_207">
                 <property name="text">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Wood&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="17" column="0">
-               <widget class="QLabel" name="label_163">
+               <widget class="QLabel" name="label_208">
                 <property name="text">
                  <string>Provision of Habitats</string>
                 </property>
                </widget>
               </item>
               <item row="15" column="9">
-               <widget class="QLineEdit" name="lineEdit_191"/>
+               <widget class="QLineEdit" name="lineEdit_273"/>
               </item>
               <item row="13" column="0">
-               <widget class="QLabel" name="label_152">
+               <widget class="QLabel" name="label_209">
                 <property name="text">
                  <string>Air Purification</string>
                 </property>
                </widget>
               </item>
               <item row="22" column="0">
-               <widget class="QLabel" name="label_167">
+               <widget class="QLabel" name="label_210">
                 <property name="text">
                  <string>Education</string>
                 </property>
                </widget>
               </item>
               <item row="22" column="7">
-               <widget class="QComboBox" name="comboBox_34">
+               <widget class="QComboBox" name="comboBox_100">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4063,7 +4077,7 @@
                </widget>
               </item>
               <item row="12" column="2">
-               <widget class="QComboBox" name="comboBox_8">
+               <widget class="QComboBox" name="comboBox_101">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4097,10 +4111,10 @@
                </widget>
               </item>
               <item row="16" column="4">
-               <widget class="QLineEdit" name="lineEdit_165"/>
+               <widget class="QLineEdit" name="lineEdit_274"/>
               </item>
               <item row="7" column="7">
-               <widget class="QComboBox" name="comboBox_21">
+               <widget class="QComboBox" name="comboBox_102">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4134,14 +4148,14 @@
                </widget>
               </item>
               <item row="19" column="0">
-               <widget class="QLabel" name="label_164">
+               <widget class="QLabel" name="label_211">
                 <property name="text">
                  <string>Recreational Activity</string>
                 </property>
                </widget>
               </item>
               <item row="5" column="2">
-               <widget class="QComboBox" name="comboBox_2">
+               <widget class="QComboBox" name="comboBox_103">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4175,25 +4189,25 @@
                </widget>
               </item>
               <item row="8" column="4">
-               <widget class="QLineEdit" name="lineEdit_176"/>
+               <widget class="QLineEdit" name="lineEdit_275"/>
               </item>
               <item row="19" column="4">
-               <widget class="QLineEdit" name="lineEdit_169"/>
+               <widget class="QLineEdit" name="lineEdit_276"/>
               </item>
               <item row="17" column="9">
-               <widget class="QLineEdit" name="lineEdit_193"/>
+               <widget class="QLineEdit" name="lineEdit_277"/>
               </item>
               <item row="17" column="4">
-               <widget class="QLineEdit" name="lineEdit_167"/>
+               <widget class="QLineEdit" name="lineEdit_278"/>
               </item>
               <item row="9" column="4">
-               <widget class="QLineEdit" name="lineEdit_168"/>
+               <widget class="QLineEdit" name="lineEdit_279"/>
               </item>
               <item row="4" column="4">
-               <widget class="QLineEdit" name="lineEdit_166"/>
+               <widget class="QLineEdit" name="lineEdit_280"/>
               </item>
               <item row="10" column="7">
-               <widget class="QComboBox" name="comboBox_24">
+               <widget class="QComboBox" name="comboBox_104">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4227,21 +4241,21 @@
                </widget>
               </item>
               <item row="1" column="4">
-               <widget class="Line" name="line_38">
+               <widget class="Line" name="line_84">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="7" column="0">
-               <widget class="QLabel" name="label_149">
+               <widget class="QLabel" name="label_212">
                 <property name="text">
                  <string>Game Meat</string>
                 </property>
                </widget>
               </item>
               <item row="14" column="7">
-               <widget class="QComboBox" name="comboBox_27">
+               <widget class="QComboBox" name="comboBox_105">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4275,7 +4289,7 @@
                </widget>
               </item>
               <item row="22" column="2">
-               <widget class="QComboBox" name="comboBox_17">
+               <widget class="QComboBox" name="comboBox_106">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4309,17 +4323,17 @@
                </widget>
               </item>
               <item row="6" column="4">
-               <widget class="QLineEdit" name="lineEdit_175"/>
+               <widget class="QLineEdit" name="lineEdit_281"/>
               </item>
               <item row="15" column="0">
-               <widget class="QLabel" name="label_161">
+               <widget class="QLabel" name="label_213">
                 <property name="text">
                  <string>Flood Retention</string>
                 </property>
                </widget>
               </item>
               <item row="16" column="2">
-               <widget class="QComboBox" name="comboBox_11">
+               <widget class="QComboBox" name="comboBox_107">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4353,7 +4367,7 @@
                </widget>
               </item>
               <item row="5" column="7">
-               <widget class="QComboBox" name="comboBox_19">
+               <widget class="QComboBox" name="comboBox_108">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4387,7 +4401,7 @@
                </widget>
               </item>
               <item row="20" column="7">
-               <widget class="QComboBox" name="comboBox_32">
+               <widget class="QComboBox" name="comboBox_109">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4421,13 +4435,13 @@
                </widget>
               </item>
               <item row="20" column="9">
-               <widget class="QLineEdit" name="lineEdit_195"/>
+               <widget class="QLineEdit" name="lineEdit_282"/>
               </item>
               <item row="13" column="9">
-               <widget class="QLineEdit" name="lineEdit_189"/>
+               <widget class="QLineEdit" name="lineEdit_283"/>
               </item>
               <item row="17" column="2">
-               <widget class="QComboBox" name="comboBox_13">
+               <widget class="QComboBox" name="comboBox_110">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4461,7 +4475,7 @@
                </widget>
               </item>
               <item row="15" column="2">
-               <widget class="QComboBox" name="comboBox_12">
+               <widget class="QComboBox" name="comboBox_111">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4495,14 +4509,14 @@
                </widget>
               </item>
               <item row="0" column="4">
-               <widget class="QLabel" name="label_154">
+               <widget class="QLabel" name="label_214">
                 <property name="text">
                  <string>% of Total Area</string>
                 </property>
                </widget>
               </item>
               <item row="17" column="7">
-               <widget class="QComboBox" name="comboBox_30">
+               <widget class="QComboBox" name="comboBox_112">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4536,24 +4550,24 @@
                </widget>
               </item>
               <item row="14" column="4">
-               <widget class="QLineEdit" name="lineEdit_171"/>
+               <widget class="QLineEdit" name="lineEdit_284"/>
               </item>
               <item row="0" column="3">
-               <widget class="Line" name="line_11">
+               <widget class="Line" name="line_85">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
                </widget>
               </item>
               <item row="0" column="2">
-               <widget class="QLabel" name="label_150">
+               <widget class="QLabel" name="label_215">
                 <property name="text">
                  <string>Intensity</string>
                 </property>
                </widget>
               </item>
               <item row="10" column="2">
-               <widget class="QComboBox" name="comboBox_7">
+               <widget class="QComboBox" name="comboBox_113">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4587,7 +4601,7 @@
                </widget>
               </item>
               <item row="4" column="7">
-               <widget class="QComboBox" name="comboBox_18">
+               <widget class="QComboBox" name="comboBox_114">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4621,7 +4635,7 @@
                </widget>
               </item>
               <item row="21" column="2">
-               <widget class="QComboBox" name="comboBox_16">
+               <widget class="QComboBox" name="comboBox_115">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4655,17 +4669,17 @@
                </widget>
               </item>
               <item row="12" column="0">
-               <widget class="QLabel" name="label_146">
+               <widget class="QLabel" name="label_216">
                 <property name="text">
                  <string>Local Climate Regulation</string>
                 </property>
                </widget>
               </item>
               <item row="12" column="4">
-               <widget class="QLineEdit" name="lineEdit_177"/>
+               <widget class="QLineEdit" name="lineEdit_285"/>
               </item>
               <item row="9" column="2">
-               <widget class="QComboBox" name="comboBox_6">
+               <widget class="QComboBox" name="comboBox_116">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4699,33 +4713,33 @@
                </widget>
               </item>
               <item row="11" column="0">
-               <widget class="Line" name="line_10">
+               <widget class="Line" name="line_86">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="22" column="9">
-               <widget class="QLineEdit" name="lineEdit_197"/>
+               <widget class="QLineEdit" name="lineEdit_286"/>
               </item>
               <item row="6" column="9">
-               <widget class="QLineEdit" name="lineEdit_180"/>
+               <widget class="QLineEdit" name="lineEdit_287"/>
               </item>
               <item row="15" column="4">
-               <widget class="QLineEdit" name="lineEdit_164"/>
+               <widget class="QLineEdit" name="lineEdit_288"/>
               </item>
               <item row="14" column="0">
-               <widget class="QLabel" name="label_158">
+               <widget class="QLabel" name="label_217">
                 <property name="text">
                  <string>Low Water Regulation </string>
                 </property>
                </widget>
               </item>
               <item row="13" column="4">
-               <widget class="QLineEdit" name="lineEdit_186"/>
+               <widget class="QLineEdit" name="lineEdit_289"/>
               </item>
               <item row="4" column="2">
-               <widget class="QComboBox" name="comboBox">
+               <widget class="QComboBox" name="comboBox_117">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4759,51 +4773,51 @@
                </widget>
               </item>
               <item row="20" column="4">
-               <widget class="QLineEdit" name="lineEdit_170"/>
+               <widget class="QLineEdit" name="lineEdit_290"/>
               </item>
               <item row="16" column="0">
-               <widget class="QLabel" name="label_162">
+               <widget class="QLabel" name="label_218">
                 <property name="text">
                  <string>Noise Regulation</string>
                 </property>
                </widget>
               </item>
               <item row="22" column="4">
-               <widget class="QLineEdit" name="lineEdit_174"/>
+               <widget class="QLineEdit" name="lineEdit_291"/>
               </item>
               <item row="18" column="0">
-               <widget class="Line" name="line_45">
+               <widget class="Line" name="line_87">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="20" column="0">
-               <widget class="QLabel" name="label_165">
+               <widget class="QLabel" name="label_219">
                 <property name="text">
                  <string>Water Related Activity</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="5">
-               <widget class="Line" name="line_37">
+               <widget class="Line" name="line_88">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
                </widget>
               </item>
               <item row="8" column="9">
-               <widget class="QLineEdit" name="lineEdit_182"/>
+               <widget class="QLineEdit" name="lineEdit_292"/>
               </item>
               <item row="1" column="7">
-               <widget class="Line" name="line_12">
+               <widget class="Line" name="line_89">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="13" column="2">
-               <widget class="QComboBox" name="comboBox_9">
+               <widget class="QComboBox" name="comboBox_118">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4837,14 +4851,14 @@
                </widget>
               </item>
               <item row="0" column="6" colspan="2">
-               <widget class="QLabel" name="label_148">
+               <widget class="QLabel" name="label_220">
                 <property name="text">
                  <string>Intensity (R)</string>
                 </property>
                </widget>
               </item>
               <item row="19" column="2">
-               <widget class="QComboBox" name="comboBox_14">
+               <widget class="QComboBox" name="comboBox_119">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4878,7 +4892,7 @@
                </widget>
               </item>
               <item row="13" column="7">
-               <widget class="QComboBox" name="comboBox_26">
+               <widget class="QComboBox" name="comboBox_120">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4912,24 +4926,24 @@
                </widget>
               </item>
               <item row="10" column="4">
-               <widget class="QLineEdit" name="lineEdit_173"/>
+               <widget class="QLineEdit" name="lineEdit_293"/>
               </item>
               <item row="1" column="2">
-               <widget class="Line" name="line_36">
+               <widget class="Line" name="line_90">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
-               <widget class="QLabel" name="label_156">
+               <widget class="QLabel" name="label_221">
                 <property name="text">
                  <string>ESS</string>
                 </property>
                </widget>
               </item>
               <item row="19" column="7">
-               <widget class="QComboBox" name="comboBox_31">
+               <widget class="QComboBox" name="comboBox_121">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -4963,14 +4977,14 @@
                </widget>
               </item>
               <item row="1" column="9">
-               <widget class="Line" name="line_9">
+               <widget class="Line" name="line_91">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
               <item row="20" column="2">
-               <widget class="QComboBox" name="comboBox_15">
+               <widget class="QComboBox" name="comboBox_122">
                 <item>
                  <property name="text">
                   <string>Missing</string>
@@ -5004,7 +5018,7 @@
                </widget>
               </item>
               <item row="23" column="4">
-               <spacer name="verticalSpacer_15">
+               <spacer name="verticalSpacer_25">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -5018,39 +5032,53 @@
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="tab_21">
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_25">
+         <attribute name="title">
+          <string>Habitat Modelling</string>
+         </attribute>
+         <layout class="QGridLayout" name="gridLayout_42">
+          <item row="0" column="0">
+           <widget class="QTabWidget" name="tabWidget_10">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_30">
              <attribute name="title">
               <string>Habitat Modelling</string>
              </attribute>
-             <layout class="QGridLayout" name="gridLayout_29">
+             <layout class="QGridLayout" name="gridLayout_47">
               <item row="0" column="0">
-               <widget class="QGroupBox" name="groupBox_7">
+               <widget class="QGroupBox" name="groupBox_17">
                 <property name="title">
                  <string/>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_32">
+                <layout class="QGridLayout" name="gridLayout_48">
                  <item row="0" column="3">
-                  <widget class="QLabel" name="label_175">
+                  <widget class="QLabel" name="label_244">
                    <property name="text">
                     <string>Restoration</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_173">
+                  <widget class="QLabel" name="label_245">
                    <property name="text">
                     <string>Percentage of Lateral Connection During an HQ:</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="QLineEdit" name="lineEdit_198"/>
+                  <widget class="QLineEdit" name="lineEdit_328"/>
                  </item>
                  <item row="1" column="3">
-                  <widget class="QLineEdit" name="lineEdit_199"/>
+                  <widget class="QLineEdit" name="lineEdit_329"/>
                  </item>
                  <item row="0" column="1">
-                  <spacer name="horizontalSpacer_8">
+                  <spacer name="horizontalSpacer_12">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -5063,14 +5091,14 @@
                   </spacer>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QLabel" name="label_174">
+                  <widget class="QLabel" name="label_246">
                    <property name="text">
                     <string>Current State</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="4">
-                  <widget class="QLabel" name="label_176">
+                  <widget class="QLabel" name="label_247">
                    <property name="text">
                     <string>%</string>
                    </property>
@@ -5080,34 +5108,34 @@
                </widget>
               </item>
               <item row="1" column="0">
-               <widget class="QGroupBox" name="groupBox_8">
+               <widget class="QGroupBox" name="groupBox_18">
                 <property name="title">
                  <string/>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_30">
+                <layout class="QGridLayout" name="gridLayout_49">
                  <item row="0" column="3">
-                  <widget class="Line" name="line_43">
+                  <widget class="Line" name="line_103">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="6">
-                  <widget class="Line" name="line_47">
+                  <widget class="Line" name="line_104">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="0">
-                  <widget class="QLabel" name="label_170">
+                  <widget class="QLabel" name="label_248">
                    <property name="text">
                     <string>Habitat Type</string>
                    </property>
                   </widget>
                  </item>
                  <item row="5" column="4">
-                  <spacer name="verticalSpacer_5">
+                  <spacer name="verticalSpacer_27">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
@@ -5120,138 +5148,138 @@
                   </spacer>
                  </item>
                  <item row="2" column="0">
-                  <widget class="QLabel" name="label_177">
+                  <widget class="QLabel" name="label_249">
                    <property name="text">
                     <string>Floodplain</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="4">
-                  <widget class="QLabel" name="label_172">
+                  <widget class="QLabel" name="label_250">
                    <property name="text">
                     <string>Flow Velocities</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="7">
-                  <widget class="Line" name="line_48">
+                  <widget class="Line" name="line_105">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="8">
-                  <widget class="Line" name="line_50">
+                  <widget class="Line" name="line_106">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="1">
-                  <widget class="Line" name="line_44">
+                  <widget class="Line" name="line_107">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="0">
-                  <widget class="Line" name="line_49">
+                  <widget class="Line" name="line_108">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="6">
-                  <widget class="QLabel" name="label_171">
+                  <widget class="QLabel" name="label_251">
                    <property name="text">
                     <string>Area (R)</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="2">
-                  <widget class="Line" name="line_40">
+                  <widget class="Line" name="line_109">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="5">
-                  <widget class="Line" name="line_41">
+                  <widget class="Line" name="line_110">
                    <property name="orientation">
                     <enum>Qt::Vertical</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="3" column="0">
-                  <widget class="QLabel" name="label_178">
+                  <widget class="QLabel" name="label_252">
                    <property name="text">
                     <string>Backwater</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="8">
-                  <widget class="QLabel" name="label_168">
+                  <widget class="QLabel" name="label_253">
                    <property name="text">
                     <string>Flow Velocities (R)</string>
                    </property>
                   </widget>
                  </item>
                  <item row="0" column="2">
-                  <widget class="QLabel" name="label_169">
+                  <widget class="QLabel" name="label_254">
                    <property name="text">
                     <string>Area</string>
                    </property>
                   </widget>
                  </item>
                  <item row="1" column="4">
-                  <widget class="Line" name="line_46">
+                  <widget class="Line" name="line_111">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
                   </widget>
                  </item>
                  <item row="4" column="0">
-                  <widget class="QLabel" name="label_179">
+                  <widget class="QLabel" name="label_255">
                    <property name="text">
                     <string>Channel</string>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="2">
-                  <widget class="QLineEdit" name="lineEdit_200"/>
+                  <widget class="QLineEdit" name="lineEdit_330"/>
                  </item>
                  <item row="3" column="2">
-                  <widget class="QLineEdit" name="lineEdit_201"/>
+                  <widget class="QLineEdit" name="lineEdit_331"/>
                  </item>
                  <item row="2" column="4">
-                  <widget class="QLineEdit" name="lineEdit_202"/>
+                  <widget class="QLineEdit" name="lineEdit_332"/>
                  </item>
                  <item row="3" column="4">
-                  <widget class="QLineEdit" name="lineEdit_203"/>
+                  <widget class="QLineEdit" name="lineEdit_333"/>
                  </item>
                  <item row="4" column="4">
-                  <widget class="QLineEdit" name="lineEdit_204"/>
+                  <widget class="QLineEdit" name="lineEdit_334"/>
                  </item>
                  <item row="4" column="2">
-                  <widget class="QLineEdit" name="lineEdit_205"/>
+                  <widget class="QLineEdit" name="lineEdit_335"/>
                  </item>
                  <item row="2" column="6">
-                  <widget class="QLineEdit" name="lineEdit_206"/>
+                  <widget class="QLineEdit" name="lineEdit_336"/>
                  </item>
                  <item row="3" column="6">
-                  <widget class="QLineEdit" name="lineEdit_207"/>
+                  <widget class="QLineEdit" name="lineEdit_337"/>
                  </item>
                  <item row="4" column="6">
-                  <widget class="QLineEdit" name="lineEdit_208"/>
+                  <widget class="QLineEdit" name="lineEdit_338"/>
                  </item>
                  <item row="2" column="8">
-                  <widget class="QLineEdit" name="lineEdit_209"/>
+                  <widget class="QLineEdit" name="lineEdit_339"/>
                  </item>
                  <item row="3" column="8">
-                  <widget class="QLineEdit" name="lineEdit_210"/>
+                  <widget class="QLineEdit" name="lineEdit_340"/>
                  </item>
                  <item row="4" column="8">
-                  <widget class="QLineEdit" name="lineEdit_211"/>
+                  <widget class="QLineEdit" name="lineEdit_341"/>
                  </item>
                 </layout>
                </widget>
@@ -5273,7 +5301,10 @@
              <string/>
             </property>
             <property name="pixmap">
-             <pixmap resource="resources.qrc">:/eu_flag/eu.png</pixmap>
+             <pixmap resource="resources.qrc">:/eu_flag2/eu2.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>false</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -5316,6 +5347,9 @@
    <header>qgsmaplayercombobox.h</header>
   </customwidget>
  </customwidgets>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>button_box</sender>
