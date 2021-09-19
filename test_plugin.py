@@ -1,22 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-/***************************************************************************
- FEM Tool
-                              -------------------
-        begin                : 2021-03-11
-        copyright            : (C) 2021 by Sencer Yucesan - BOKU
-        email                : s.yuecesan@boku.ac.at
- ***************************************************************************/
 
-/***************************************************************************
- *                                                                         *
- *   This program is free software; you can redistribute it and/or modify  *
- *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- ***************************************************************************/
-"""
 import sys, csv, struct
 import os 
 import numpy as np

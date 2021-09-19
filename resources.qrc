@@ -6,4 +6,7 @@
   <qresource prefix="eu_flag">
     <file>eu.png</file>
   </qresource>
+  <qresource prefix="eu_flag2">
+    <file>eu2.png</file>
+  </qresource>
 </RCC>
