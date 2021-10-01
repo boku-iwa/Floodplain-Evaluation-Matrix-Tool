@@ -181,7 +181,19 @@ class test_plugin:
 
     def select_input_file3(self):
         filename3, _filter = QFileDialog.getOpenFileName(self.dlg, "Select an input file ","", '*.txt')
-        self.dlg.lineEdit_9.setText(filename3)   
+        self.dlg.lineEdit_9.setText(filename3)
+        
+    def select_input_file1_restoration(self):
+        filename1, _filter = QFileDialog.getOpenFileName(self.dlg, "Select an input file ","", '*.txt')
+        self.dlg.lineEdit_164.setText(filename1)    
+
+    def select_input_file2_restoration(self):
+        filename2, _filter = QFileDialog.getOpenFileName(self.dlg, "Select an input file ","", '*.txt')
+        self.dlg.lineEdit_174.setText(filename2)   
+
+    def select_input_file3_restoration(self):
+        filename3, _filter = QFileDialog.getOpenFileName(self.dlg, "Select an input file ","", '*.txt')
+        self.dlg.lineEdit_171.setText(filename3)
         
         Qmax_input = 0;
     def import1(self):
@@ -190,7 +202,14 @@ class test_plugin:
         print("Qmax Input imported from: ", path)
         self.dlg.lineEdit_7.setText("Imported")
         Qmax_input = np.loadtxt(path, delimiter = " ")
-        #print(Qmax_input)
+        
+        Qmax_input_restoration = 0;
+    def import1_restoration(self):
+        global Qmax_input_restoration
+        path = self.dlg.lineEdit_164.text()
+        print("Qmax Input imported from: ", path)
+        self.dlg.lineEdit_164.setText("Imported")
+        Qmax_input_restoration = np.loadtxt(path, delimiter = " ")
         
         Qmax_outputFP = 0;
     def import2(self):
@@ -199,7 +218,14 @@ class test_plugin:
         print("Qmax OutputFP imported from: ", path)
         self.dlg.lineEdit_8.setText("Imported")
         Qmax_outputFP = np.loadtxt(path, delimiter = " ")
-        #print(Qmax_output)
+        
+        Qmax_outputFP_restoration = 0;
+    def import2_restoration(self):
+        global Qmax_outputFP_restoration
+        path = self.dlg.lineEdit_174.text()
+        print("Qmax OutputFP imported from: ", path)
+        self.dlg.lineEdit_174.setText("Imported")
+        Qmax_outputFP_restoration = np.loadtxt(path, delimiter = " ")
 
         Qmax_outputNoFP = 0;
     def import3(self):
@@ -208,6 +234,14 @@ class test_plugin:
         print("Qmax OutputNoFP imported from: ", path)
         Qmax_outputNoFP = np.loadtxt(path, delimiter = " ")
         self.dlg.lineEdit_9.setText("Imported")
+        
+        Qmax_outputNoFP_restoration = 0;
+    def import3_restoration(self):
+        global Qmax_outputNoFP_restoration
+        path = self.dlg.lineEdit_171.text()
+        print("Qmax OutputNoFP imported from: ", path)
+        Qmax_outputNoFP_restoration = np.loadtxt(path, delimiter = " ")
+        self.dlg.lineEdit_171.setText("Imported")
 
         Qbankfull = 0;
     def import4(self):
@@ -216,24 +250,50 @@ class test_plugin:
         Qbankfull = np.asarray(path, dtype='float64')#float(input(path))
         self.dlg.lineEdit_2.setText("Imported")
         print("Qbankfull imported: ", Qbankfull)
+        
+        Qbankfull_restoration = 0;
+    def import4_restoration(self):
+        global Qbankfull_restoration
+        path = self.dlg.lineEdit_173.text()
+        Qbankfull_restoration = np.asarray(path, dtype='float64')#float(input(path))
+        self.dlg.lineEdit_173.setText("Imported")
+        print("Qbankfull imported: ", Qbankfull_restoration)
 
         Delta_Qtot = 0;
     def substract1(self):
         global Delta_Qtot
         Delta_Qtot = abs(max(Qmax_input[:,1])-max(Qmax_outputFP[:,1]))
         self.dlg.lineEdit_10.setText(str("{:.4f}".format(Delta_Qtot)))
+        
+        Delta_Qtot_restoration = 0;
+    def substract1_restoration(self):
+        global Delta_Qtot_restoration
+        Delta_Qtot_restoration = abs(max(Qmax_input_restoration[:,1])-max(Qmax_outputFP_restoration[:,1]))
+        self.dlg.lineEdit_166.setText(str("{:.4f}".format(Delta_Qtot_restoration)))
 
         Delta_Qrc = 0;
     def substract2(self):
         global Delta_Qrc
         Delta_Qrc = abs(max(Qmax_input[:,1])-max(Qmax_outputNoFP[:,1]))
         self.dlg.lineEdit_11.setText(str("{:.4f}".format(Delta_Qrc)))
+        
+        Delta_Qrc_restoration = 0;
+    def substract2_restoration(self):
+        global Delta_Qrc_restoration
+        Delta_Qrc_restoration = abs(max(Qmax_input_restoration[:,1])-max(Qmax_outputNoFP_restoration[:,1]))
+        self.dlg.lineEdit_172.setText(str("{:.4f}".format(Delta_Qrc_restoration)))
 
         Delta_Q = 0;
     def substract3(self):
         global Delta_Q
         Delta_Q = abs(Delta_Qtot - Delta_Qrc)
         self.dlg.lineEdit_12.setText(str("{:.4f}".format(Delta_Q)))
+        
+        Delta_Q_restoration = 0;
+    def substract3_restoration(self):
+        global Delta_Q_restoration
+        Delta_Q_restoration = abs(Delta_Qtot_restoration - Delta_Qrc_restoration)
+        self.dlg.lineEdit_165.setText(str("{:.4f}".format(Delta_Q_restoration)))
 
         Delta_Qrelative = 0;
     def substract4(self):
@@ -243,10 +303,13 @@ class test_plugin:
         self.dlg.lineEdit_13.setText(str(Delta_Qrelative))
         Delta_Qrelative = np.asarray(Delta_Qrelative, dtype='float64')
         
-    #def find_maximum(test):
-    #    test1 = max(test[:,1])
-    #    test2 = np.where(test == test1)
-    #    return test[test2[0],0]
+        Delta_Qrelative_restoration = 0;
+    def substract4_restoration(self):
+        global Delta_Qrelative_restoration
+        Delta_Qrelative_restoration = (Delta_Q_restoration / (max(Qmax_input_restoration[:,1]) - Qbankfull_restoration))*100
+        Delta_Qrelative_restoration = "{:.2f}".format(Delta_Qrelative_restoration)
+        self.dlg.lineEdit_167.setText(str(Delta_Qrelative_restoration))
+        Delta_Qrelative_restoration = np.asarray(Delta_Qrelative_restoration, dtype='float64')
         
         Delta_Ttot = 0;
     def substract5(self):
@@ -260,6 +323,18 @@ class test_plugin:
         Delta_Ttot = abs(float(Delta_Tqmax - Delta_Tqmax_FP))
         self.dlg.lineEdit_14.setText(str(Delta_Ttot))
         
+        Delta_Ttot_restoration = 0;
+    def substract5_restoration(self):
+        global Delta_Ttot_restoration
+        Qmaximum_restoration = max(Qmax_input_restoration[:,1])
+        Qmaximum_position_restoration = np.where(Qmax_input_restoration == Qmaximum_restoration)
+        Delta_Tqmax_restoration = Qmax_input_restoration[Qmaximum_position_restoration[0],0]
+        Qmaximum_FP_restoration = max(Qmax_outputFP_restoration[:,1])
+        Qmaximum_position_FP_restoration = np.where(Qmax_outputFP_restoration == Qmaximum_FP_restoration)
+        Delta_Tqmax_FP_restoration = Qmax_outputFP_restoration[Qmaximum_position_FP_restoration[0],0]
+        Delta_Ttot_restoration = abs(float(Delta_Tqmax_restoration - Delta_Tqmax_FP_restoration))
+        self.dlg.lineEdit_168.setText(str(Delta_Ttot_restoration))
+        
         Delta_Trc = 0;
     def substract6(self):
         global Delta_Trc
@@ -272,6 +347,18 @@ class test_plugin:
         Delta_Trc = abs(float(Delta_Tqmax - Delta_Tqmax_noFP))
         self.dlg.lineEdit_15.setText(str(Delta_Trc))
         
+        Delta_Trc_restoration = 0;
+    def substract6_restoration(self):
+        global Delta_Trc_restoration
+        Qmaximum_restoration = max(Qmax_input_restoration[:,1])
+        Qmaximum_position_restoration = np.where(Qmax_input_restoration == Qmaximum_restoration)
+        Delta_Tqmax_restoration = Qmax_input_restoration[Qmaximum_position_restoration[0],0]
+        Qmaximum_noFP_restoration = max(Qmax_outputNoFP_restoration[:,1])
+        Qmaximum_position_noFP_restoration = np.where(Qmax_outputNoFP_restoration == Qmaximum_noFP_restoration)
+        Delta_Tqmax_noFP_restoration = Qmax_outputNoFP_restoration[Qmaximum_position_noFP_restoration[0],0]
+        Delta_Trc_restoration = abs(float(Delta_Tqmax_restoration - Delta_Tqmax_noFP_restoration))
+        self.dlg.lineEdit_169.setText(str(Delta_Trc_restoration))
+        
         Delta_T = 0;
     def substract7(self):
         global Delta_T
@@ -279,6 +366,14 @@ class test_plugin:
         Delta_T = "{:.2f}".format(Delta_T)
         self.dlg.lineEdit_16.setText(str(Delta_T))
         Delta_T = np.asarray(Delta_T, dtype='float64')
+        
+        Delta_T_restoration = 0;
+    def substract7_restoration(self):
+        global Delta_T_restoration
+        Delta_T_restoration = abs(float(Delta_Ttot_restoration - Delta_Trc_restoration))
+        Delta_T_restoration = "{:.2f}".format(Delta_T_restoration)
+        self.dlg.lineEdit_170.setText(str(Delta_T_restoration))
+        Delta_T_restoration = np.asarray(Delta_T_restoration, dtype='float64')
         
         Delta_h = 0;
     def substract8(self):
@@ -288,13 +383,29 @@ class test_plugin:
         self.dlg.lineEdit_19.setText(str(Delta_h))
         Delta_h = np.asarray(Delta_h, dtype='float64')
         
+        Delta_h_restoration = 0;
+    def substract8_restoration(self):
+        global Delta_h_restoration
+        Delta_h_restoration = abs(float(h_tot_restoration - h_RC_restoration))
+        Delta_h_restoration = "{:.2f}".format(Delta_h_restoration)
+        self.dlg.lineEdit_187.setText(str(Delta_h_restoration))
+        Delta_h_restoration = np.asarray(Delta_h_restoration, dtype='float64')
+        
         Delta_v = 0;
     def substract9(self):
         global Delta_v
         Delta_v = abs(float(v_tot - v_RC))
         Delta_v = "{:.2f}".format(Delta_v)
         self.dlg.lineEdit_45.setText(str(Delta_v))
-        Delta_v = np.asarray(Delta_v, dtype='float64')   
+        Delta_v = np.asarray(Delta_v, dtype='float64')
+        
+        Delta_v_restoration = 0;
+    def substract9_restoration(self):
+        global Delta_v_restoration
+        Delta_v_restoration = abs(float(v_tot_restoration - v_RC_restoration))
+        Delta_v_restoration = "{:.2f}".format(Delta_v_restoration)
+        self.dlg.lineEdit_192.setText(str(Delta_v_restoration))
+        Delta_v_restoration = np.asarray(Delta_v_restoration, dtype='float64')
         
         Delta_tau = 0;
     def substract10(self):
@@ -302,7 +413,15 @@ class test_plugin:
         Delta_tau = abs(float(tau_tot - tau_RC))
         Delta_tau = "{:.2f}".format(Delta_tau)
         self.dlg.lineEdit_47.setText(str(Delta_tau))
-        Delta_tau = np.asarray(Delta_tau, dtype='float64')   
+        Delta_tau = np.asarray(Delta_tau, dtype='float64')
+        
+        Delta_tau_restoration = 0;
+    def substract10_restoration(self):
+        global Delta_tau_restoration
+        Delta_tau_restoration = abs(float(tau_tot_restoration - tau_RC_restoration))
+        Delta_tau_restoration = "{:.2f}".format(Delta_tau_restoration)
+        self.dlg.lineEdit_195.setText(str(Delta_tau_restoration))
+        Delta_tau_restoration = np.asarray(Delta_tau_restoration, dtype='float64')
         
         protected_habitat = 0;
     def substract11(self):
@@ -310,7 +429,15 @@ class test_plugin:
         protected_habitat = abs(float(area_protected/area_floodplain))*100
         protected_habitat = "{:.2f}".format(protected_habitat)
         self.dlg.lineEdit_52.setText(str(protected_habitat))     
-        protected_habitat = np.asarray(protected_habitat, dtype='float64')   
+        protected_habitat = np.asarray(protected_habitat, dtype='float64')
+        
+        protected_habitat_restoration = 0;
+    def substract11_restoration(self):
+        global protected_habitat_restoration
+        protected_habitat_restoration = abs(float(area_protected_restoration/area_floodplain))*100
+        protected_habitat_restoration = "{:.2f}".format(protected_habitat_restoration)
+        self.dlg.lineEdit_206.setText(str(protected_habitat_restoration))     
+        protected_habitat_restoration = np.asarray(protected_habitat_restoration, dtype='float64')   
         
     def import_flood(self):
         layer = self.dlg.mMapLayerComboBox.currentLayer()
@@ -384,7 +511,7 @@ class test_plugin:
     def import7(self):
         global distance_flood
         path = self.dlg.lineEdit_30.text()
-        distance_flood = np.asarray(path, dtype='i')#float(input(path))
+        distance_flood = np.asarray(path, dtype='i')
         self.dlg.lineEdit_30.setText("Imported: " + str(distance_flood))
         print("distance_flood imported: ", distance_flood)
         
@@ -392,7 +519,7 @@ class test_plugin:
     def import8(self):
         global ratio_factor
         path = self.dlg.lineEdit_33.text()
-        ratio_factor = np.asarray(path, dtype='float64')#float(input(path))
+        ratio_factor = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_33.setText("Imported: " + str(ratio_factor))
         print("ratio_factor imported: ", ratio_factor)
         
@@ -400,26 +527,51 @@ class test_plugin:
     def import9(self):
         global h_tot
         path = self.dlg.lineEdit_17.text()
-        h_tot = np.asarray(path, dtype='float64')#float(input(path))
+        h_tot = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_17.setText("Imported: " + str(h_tot))
         print("h_tot imported: ", h_tot)
+        
+        h_tot_restoration = 0;
+    def import9_restoration(self):
+        global h_tot_restoration
+        path = self.dlg.lineEdit_188.text()
+        h_tot_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_188.setText("Imported: " + str(h_tot_restoration))
+        print("h_tot imported: ", h_tot_restoration)
         
         h_RC = 0;
     def import10(self):
         global h_RC
         path = self.dlg.lineEdit_18.text()
-        h_RC = np.asarray(path, dtype='float64')#float(input(path))
+        h_RC = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_18.setText("Imported: " + str(h_RC))
         print("h_RC imported: ", h_RC)
+        
+        h_RC_restoration = 0;
+    def import10_restoration(self):
+        global h_RC_restoration
+        path = self.dlg.lineEdit_189.text()
+        h_RC_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_189.setText("Imported: " + str(h_RC_restoration))
+        print("h_RC imported: ", h_RC_restoration)
         
         protected_species = 0;
     def import11(self):
         global protected_species
         path = self.dlg.lineEdit_20.text()
-        protected_species = np.asarray(path, dtype='float64')#float(input(path))
+        protected_species = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_20.setText("Imported: " + str(protected_species))
         print("p. species imported: ", protected_species)
         protected_species = np.asarray(protected_species, dtype='float64')
+        
+        protected_species_restoration = 0;
+    def import11_restoration(self):
+        global protected_species_restoration
+        path = self.dlg.lineEdit_198.text()
+        protected_species_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_198.setText("Imported: " + str(protected_species_restoration))
+        print("p. species imported: ", protected_species_restoration)
+        protected_species_restoration = np.asarray(protected_species_restoration, dtype='float64')
         
         c_fwb = 0;
     def import12(self):
@@ -430,84 +582,146 @@ class test_plugin:
         print("p. species imported: ", c_fwb)
         c_fwb = np.asarray(c_fwb, dtype='float64')
         
+        c_fwb_restoration = 0;
+    def import12_restoration(self):
+        global c_fwb_restoration
+        path = self.dlg.lineEdit_200.text()
+        c_fwb_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_200.setText("Imported: " + str(c_fwb_restoration))
+        print("p. species imported: ", c_fwb_restoration)
+        c_fwb_restoration = np.asarray(c_fwb_restoration, dtype='float64')
+        
         buildings = 0;
     def import13(self):
         global buildings
         path = self.dlg.lineEdit_22.text()
-        buildings = np.asarray(path, dtype='float64')#float(input(path))
+        buildings = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_22.setText("Imported: " + str(buildings))
         print("affected b. imported: ", buildings)
         buildings = np.asarray(buildings, dtype='float64')
+        
+        buildings_restoration = 0;
+    def import13_restoration(self):
+        global buildings_restoration
+        path = self.dlg.lineEdit_209.text()
+        buildings_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_209.setText("Imported: " + str(buildings_restoration))
+        print("affected b. imported: ", buildings_restoration)
+        buildings_restoration = np.asarray(buildings_restoration, dtype='float64')
         
         land_use = 0;
     def import14(self):
         global land_use
         path = self.dlg.lineEdit_23.text()
-        land_use = np.asarray(path, dtype='float64')#float(input(path))
+        land_use = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_23.setText("Imported: " + str(land_use))
         print("land use imported: ", land_use)  
-        land_use = np.asarray(land_use, dtype='float64')      
+        land_use = np.asarray(land_use, dtype='float64')
         
-    #    number_of_identified_fp = 0;
-    #def import15(self):
-    #    global number_of_identified_fp
-    #    path = self.dlg.lineEdit_44.text()
-    #    number_of_identified_fp = np.asarray(path, dtype='i')
-    #    self.dlg.lineEdit_41.setText("Nr of identified fp: " + str(number_of_identified_fp))
-    #    self.dlg.comboBox.clear()
-    #    array = np.arange(1, number_of_identified_fp+1, 1).tolist()
-    #    for i in range(len(array)):
-    #        print(i)
-    #        self.dlg.comboBox.addItems([str(array[i])])
-    #    print("Nr of identified fp: ", number_of_identified_fp)    
+        land_use_restoration = 0;
+    def import14_restoration(self):
+        global land_use_restoration
+        path = self.dlg.lineEdit_211.text()
+        land_use_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_211.setText("Imported: " + str(land_use_restoration))
+        print("land use imported: ", land_use_restoration)  
+        land_use_restoration = np.asarray(land_use_restoration, dtype='float64')
         
         v_tot = 0;
     def import16(self):
         global v_tot
         path = self.dlg.lineEdit_40.text()
-        v_tot = np.asarray(path, dtype='float64')#float(input(path))
+        v_tot = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_40.setText("Imported: " + str(v_tot))
         print("v_tot imported: ", v_tot)
+        
+        v_tot_restoration = 0;
+    def import16_restoration(self):
+        global v_tot_restoration
+        path = self.dlg.lineEdit_196.text()
+        v_tot_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_196.setText("Imported: " + str(v_tot_restoration))
+        print("v_tot imported: ", v_tot_restoration)
         
         v_RC = 0;
     def import17(self):
         global v_RC
         path = self.dlg.lineEdit_46.text()
-        v_RC = np.asarray(path, dtype='float64')#float(input(path))
+        v_RC = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_46.setText("Imported: " + str(v_RC))
         print("v_RC imported: ", v_RC)
+        
+        v_RC_restoration = 0;
+    def import17_restoration(self):
+        global v_RC_restoration
+        path = self.dlg.lineEdit_191.text()
+        v_RC_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_191.setText("Imported: " + str(v_RC_restoration))
+        print("v_RC imported: ", v_RC_restoration)
         
         tau_tot = 0;
     def import18(self):
         global tau_tot
         path = self.dlg.lineEdit_48.text()
-        tau_tot = np.asarray(path, dtype='float64')#float(input(path))
+        tau_tot = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_48.setText("Imported: " + str(tau_tot))
         print("tau_tot imported: ", tau_tot)
+        
+        tau_tot_restoration = 0;
+    def import18_restoration(self):
+        global tau_tot_restoration
+        path = self.dlg.lineEdit_194.text()
+        tau_tot_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_194.setText("Imported: " + str(tau_tot_restoration))
+        print("tau_tot imported: ", tau_tot_restoration)
         
         tau_RC = 0;
     def import19(self):
         global tau_RC
         path = self.dlg.lineEdit_50.text()
-        tau_RC = np.asarray(path, dtype='float64')#float(input(path))
+        tau_RC = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_50.setText("Imported: " + str(tau_RC))
         print("tau_RC imported: ", tau_RC)
+        
+        tau_RC_restoration = 0;
+    def import19_restoration(self):
+        global tau_RC_restoration
+        path = self.dlg.lineEdit_197.text()
+        tau_RC_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_197.setText("Imported: " + str(tau_RC_restoration))
+        print("tau_RC imported: ", tau_RC_restoration)
 
         area_protected = 0;
     def import20(self):
         global area_protected
         path = self.dlg.lineEdit_51.text()
-        area_protected = np.asarray(path, dtype='float64')#float(input(path))
+        area_protected = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_51.setText("Imported: " + str(area_protected))
         print("Area_protected imported: ", area_protected)
+        
+        area_protected_restoration = 0;
+    def import20_restoration(self):
+        global area_protected_restoration
+        path = self.dlg.lineEdit_205.text()
+        area_protected_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_205.setText("Imported: " + str(area_protected_restoration))
+        print("Area_protected imported: ", area_protected_restoration)
 
         vegetation_naturalness = 0;
     def import21(self):
         global vegetation_naturalness
         path = self.dlg.lineEdit_53.text()
-        vegetation_naturalness = np.asarray(path, dtype='float64')#float(input(path))
+        vegetation_naturalness = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_53.setText("Imported: " + str(vegetation_naturalness))
         print("Vegetation_naturalness imported: ", vegetation_naturalness)
+        
+        vegetation_naturalness_restoration = 0;
+    def import21_restoration(self):
+        global vegetation_naturalness_restoration
+        path = self.dlg.lineEdit_207.text()
+        vegetation_naturalness_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_207.setText("Imported: " + str(vegetation_naturalness_restoration))
+        print("Vegetation_naturalness imported: ", vegetation_naturalness_restoration)
 
         water_level_dynamics = 0;
     def import22(self):
@@ -517,6 +731,14 @@ class test_plugin:
         self.dlg.lineEdit_54.setText("Imported: " + str(water_level_dynamics))
         print("Water_level_dynamics imported: ", water_level_dynamics)
         
+        water_level_dynamics_restoration = 0;
+    def import22_restoration(self):
+        global water_level_dynamics_restoration
+        path = self.dlg.lineEdit_202.text()
+        water_level_dynamics_restoration = np.asarray(path, dtype='float64')#float(input(path))
+        self.dlg.lineEdit_202.setText("Imported: " + str(water_level_dynamics_restoration))
+        print("Water_level_dynamics imported: ", water_level_dynamics_restoration)
+        
         potential_for_typical_habitats = 0;
     def import23(self):
         global potential_for_typical_habitats
@@ -525,11 +747,19 @@ class test_plugin:
         self.dlg.lineEdit_55.setText("Imported: " + str(potential_for_typical_habitats))
         print("Potential_for_typical_habitats imported: ", potential_for_typical_habitats)
         
+        potential_for_typical_habitats_restoration = 0;
+    def import23_restoration(self):
+        global potential_for_typical_habitats_restoration
+        path = self.dlg.lineEdit_204.text()
+        potential_for_typical_habitats_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_204.setText("Imported: " + str(potential_for_typical_habitats_restoration))
+        print("Potential_for_typical_habitats imported: ", potential_for_typical_habitats_restoration)
+        
         area_floodplain = 0;
     def import24(self):
         global area_floodplain
         path = self.dlg.lineEdit_32.text()
-        area_floodplain = np.asarray(path, dtype='float64')#float(input(path))
+        area_floodplain = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_32.setText("Imported: " + str(area_floodplain))
         print("Area_floodplain imported: ", area_floodplain)
 
@@ -537,25 +767,49 @@ class test_plugin:
     def import25(self):
         global ecological_water_body_status
         path = self.dlg.lineEdit_49.text()
-        ecological_water_body_status = np.asarray(path, dtype='float64')#float(input(path))
+        ecological_water_body_status = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_49.setText("Imported: " + str(ecological_water_body_status))
         print("Ecological_water_body_status imported: ", ecological_water_body_status)
+        
+        ecological_water_body_status_restoration = 0;
+    def import25_restoration(self):
+        global ecological_water_body_status_restoration
+        path = self.dlg.lineEdit_203.text()
+        ecological_water_body_status_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_203.setText("Imported: " + str(ecological_water_body_status_restoration))
+        print("Ecological_water_body_status imported: ", ecological_water_body_status_restoration)
         
         presence_of_documented_planning_interests = 0;
     def import26(self):
         global presence_of_documented_planning_interests
         path = self.dlg.lineEdit_58.text()
-        presence_of_documented_planning_interests = np.asarray(path, dtype='float64')#float(input(path))
+        presence_of_documented_planning_interests = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_58.setText("Imported: " + str(presence_of_documented_planning_interests))
         print("Presence_of_documented_planning_interests imported: ", presence_of_documented_planning_interests)
+        
+        presence_of_documented_planning_interests_restoration = 0;
+    def import26_restoration(self):
+        global presence_of_documented_planning_interests_restoration
+        path = self.dlg.lineEdit_213.text()
+        presence_of_documented_planning_interests_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_213.setText("Imported: " + str(presence_of_documented_planning_interests_restoration))
+        print("Presence_of_documented_planning_interests imported: ", presence_of_documented_planning_interests_restoration)
         
         extended_cost_benefit_analysis = 0;
     def import27(self):
         global extended_cost_benefit_analysis
         path = self.dlg.lineEdit_60.text()
-        extended_cost_benefit_analysis = np.asarray(path, dtype='float64')#float(input(path))
+        extended_cost_benefit_analysis = np.asarray(path, dtype='float64')
         self.dlg.lineEdit_60.setText("Imported: " + str(extended_cost_benefit_analysis))
         print("Extended_cost_benefit_analysis imported: ", extended_cost_benefit_analysis)
+        
+        extended_cost_benefit_analysis_restoration = 0;
+    def import27_restoration(self):
+        global extended_cost_benefit_analysis_restoration
+        path = self.dlg.lineEdit_214.text()
+        extended_cost_benefit_analysis_restoration = np.asarray(path, dtype='float64')
+        self.dlg.lineEdit_214.setText("Imported: " + str(extended_cost_benefit_analysis_restoration))
+        print("Extended_cost_benefit_analysis imported: ", extended_cost_benefit_analysis_restoration)
         
         parameter_invasive_species = 0;
     def import28(self):
@@ -564,6 +818,14 @@ class test_plugin:
         parameter_invasive_species = np.asarray(path, dtype='float64')#float(input(path))
         self.dlg.lineEdit_57.setText("Imported: " + str(parameter_invasive_species))
         print("Parameter_invasive_species imported: ", parameter_invasive_species)
+        
+        parameter_invasive_species_restoration = 0;
+    def import28_restoration(self):
+        global parameter_invasive_species_restoration
+        path = self.dlg.lineEdit_208.text()
+        parameter_invasive_species_restoration = np.asarray(path, dtype='float64')#float(input(path))
+        self.dlg.lineEdit_208.setText("Imported: " + str(parameter_invasive_species_restoration))
+        print("Parameter_invasive_species imported: ", parameter_invasive_species_restoration)
         
     #    number_of_identified_fp = 0;
     #def select_fp(self):
@@ -584,6 +846,15 @@ class test_plugin:
         self.dlg.lineEdit_145.setText(str(buildings))
         self.dlg.lineEdit_121.setText(str(land_use))
         
+    def confirm_values_restoration(self):
+        self.dlg.lineEdit_597.setText(str(Delta_Qrelative_restoration))
+        self.dlg.lineEdit_601.setText(str(Delta_T_restoration))
+        self.dlg.lineEdit_604.setText(str(Delta_h_restoration))
+        self.dlg.lineEdit_609.setText(str(c_fwb_restoration))
+        self.dlg.lineEdit_599.setText(str(protected_species_restoration))
+        self.dlg.lineEdit_613.setText(str(buildings_restoration))
+        self.dlg.lineEdit_600.setText(str(land_use_restoration))
+        
     def confirm_extra_values(self):
         self.dlg.lineEdit_137.setText(str(Delta_v))
         self.dlg.lineEdit_150.setText(str(Delta_tau))
@@ -595,6 +866,76 @@ class test_plugin:
         self.dlg.lineEdit_158.setText(str(parameter_invasive_species)) 
         self.dlg.lineEdit_160.setText(str(presence_of_documented_planning_interests)) 
         self.dlg.lineEdit_162.setText(str(extended_cost_benefit_analysis))
+        
+    def confirm_extra_values_restoration(self):
+        self.dlg.lineEdit_619.setText(str(Delta_v_restoration))
+        self.dlg.lineEdit_628.setText(str(Delta_tau_restoration))
+        self.dlg.lineEdit_620.setText(str(protected_habitat_restoration))
+        self.dlg.lineEdit_627.setText(str(vegetation_naturalness_restoration))
+        self.dlg.lineEdit_616.setText(str(water_level_dynamics_restoration))
+        self.dlg.lineEdit_632.setText(str(potential_for_typical_habitats_restoration))
+        self.dlg.lineEdit_631.setText(str(ecological_water_body_status_restoration))   
+        self.dlg.lineEdit_634.setText(str(parameter_invasive_species_restoration)) 
+        self.dlg.lineEdit_635.setText(str(presence_of_documented_planning_interests_restoration)) 
+        self.dlg.lineEdit_636.setText(str(extended_cost_benefit_analysis_restoration))
+        
+    def restoration_decision(self):
+        path_Delta_Qrelative = self.dlg.lineEdit_131.text()
+        FEM_Delta_Qrelative = np.asarray(path_Delta_Qrelative, dtype='float64')
+        self.dlg.lineEdit_361.setText(str(FEM_Delta_Qrelative))
+        path_Delta_T = self.dlg.lineEdit_128.text()
+        FEM_Delta_T = np.asarray(path_Delta_T, dtype='float64')
+        self.dlg.lineEdit_358.setText(str(FEM_Delta_T))
+        path_Delta_h = self.dlg.lineEdit_140.text()
+        FEM_Delta_h = np.asarray(path_Delta_h, dtype='float64')
+        self.dlg.lineEdit_347.setText(str(FEM_Delta_h))
+        path_Delta_c_fwb = self.dlg.lineEdit_139.text()
+        FEM_Delta_c_fwb = np.asarray(path_Delta_c_fwb, dtype='float64')
+        self.dlg.lineEdit_360.setText(str(FEM_Delta_c_fwb))
+        path_Delta_protected_species = self.dlg.lineEdit_119.text()
+        FEM_Delta_protected_species = np.asarray(path_Delta_protected_species, dtype='float64')
+        self.dlg.lineEdit_353.setText(str(FEM_Delta_protected_species))
+        path_Delta_buildings = self.dlg.lineEdit_124.text()
+        FEM_Delta_buildings = np.asarray(path_Delta_buildings, dtype='float64')
+        self.dlg.lineEdit_351.setText(str(FEM_Delta_buildings))
+        path_Delta_land_use = self.dlg.lineEdit_147.text()
+        FEM_Delta_land_use = np.asarray(path_Delta_land_use, dtype='float64')
+        self.dlg.lineEdit_346.setText(str(FEM_Delta_land_use))
+
+        path_Delta_Qrelative_restoration = self.dlg.lineEdit_605.text()
+        FEM_Delta_Qrelative_restoration = np.asarray(path_Delta_Qrelative_restoration, dtype='float64')
+        self.dlg.lineEdit_216.setText(str(FEM_Delta_Qrelative_restoration))
+        path_Delta_T_restoration = self.dlg.lineEdit_598.text()
+        FEM_Delta_T_restoration = np.asarray(path_Delta_T_restoration, dtype='float64')
+        self.dlg.lineEdit_217.setText(str(FEM_Delta_T_restoration))
+        path_Delta_h_restoration = self.dlg.lineEdit_611.text()
+        FEM_Delta_h_restoration = np.asarray(path_Delta_h_restoration, dtype='float64')
+        self.dlg.lineEdit_218.setText(str(FEM_Delta_h_restoration))
+        path_Delta_c_fwb_restoration = self.dlg.lineEdit_608.text()
+        FEM_Delta_c_fwb_restoration = np.asarray(path_Delta_c_fwb_restoration, dtype='float64')
+        self.dlg.lineEdit_219.setText(str(FEM_Delta_c_fwb_restoration))
+        path_Delta_protected_species_restoration = self.dlg.lineEdit_606.text()
+        FEM_Delta_protected_species_restoration = np.asarray(path_Delta_protected_species_restoration, dtype='float64')
+        self.dlg.lineEdit_220.setText(str(FEM_Delta_protected_species_restoration))
+        path_Delta_buildings_restoration = self.dlg.lineEdit_602.text()
+        FEM_Delta_buildings_restoration = np.asarray(path_Delta_buildings_restoration, dtype='float64')
+        self.dlg.lineEdit_221.setText(str(FEM_Delta_buildings_restoration))
+        path_Delta_land_use_restoration = self.dlg.lineEdit_612.text()
+        FEM_Delta_land_use_restoration = np.asarray(path_Delta_land_use_restoration, dtype='float64')
+        self.dlg.lineEdit_222.setText(str(FEM_Delta_land_use_restoration))
+        
+        FEM_sum_current = FEM_Delta_Qrelative + FEM_Delta_T + FEM_Delta_h + FEM_Delta_c_fwb + FEM_Delta_protected_species + FEM_Delta_buildings + FEM_Delta_land_use
+        print(FEM_sum_current)
+        self.dlg.lineEdit_215.setText(str(FEM_sum_current))
+        FEM_sum_restoration = FEM_Delta_Qrelative_restoration + FEM_Delta_T_restoration + FEM_Delta_h_restoration + FEM_Delta_c_fwb_restoration + FEM_Delta_protected_species_restoration + FEM_Delta_buildings_restoration + FEM_Delta_land_use_restoration
+        print(FEM_sum_restoration)
+        self.dlg.lineEdit_223.setText(str(FEM_sum_restoration))
+        if FEM_sum_current <= FEM_sum_restoration:
+        	self.dlg.lineEdit_224.setText("No")
+        	print("No")
+        else:
+        	self.dlg.lineEdit_224.setText("Yes")
+        	print("Yes")
 
     def load_AFP_defaults(self):
         dist_b_fp = 5000;
@@ -721,7 +1062,6 @@ class test_plugin:
         threshold_cost_ben_fac_medium = 3;
         threshold_cost_ben_fac_high = 5;
 
-        
         self.dlg.lineEdit_114.setText(str(threshold_delta_v_low))
         self.dlg.lineEdit_115.setText(str(threshold_delta_v_medium))
         self.dlg.lineEdit_116.setText(str(threshold_delta_v_high))
@@ -752,7 +1092,6 @@ class test_plugin:
         self.dlg.lineEdit_127.setText(str(threshold_cost_ben_fac_low))
         self.dlg.lineEdit_130.setText(str(threshold_cost_ben_fac_medium))
         self.dlg.lineEdit_132.setText(str(threshold_cost_ben_fac_high))
-
 
     def calculate_FEM(self):
         path_threshold_delta_q_relative_low = self.dlg.lineEdit_92.text()
@@ -924,6 +1263,177 @@ class test_plugin:
         treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')#float(input(path))
         path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
         treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')#float(input(path))
+        
+    def calculate_FEM_restoration(self):
+        path_threshold_delta_q_relative_low = self.dlg.lineEdit_92.text()
+        threshold_delta_q_relative_low = np.asarray(path_threshold_delta_q_relative_low, dtype='float64')#float(input(path))
+        path_threshold_delta_q_relative_medium = self.dlg.lineEdit_90.text()
+        threshold_delta_q_relative_medium = np.asarray(path_threshold_delta_q_relative_medium, dtype='float64')#float(input(path))
+        path_threshold_delta_q_relative_high = self.dlg.lineEdit_110.text()
+        threshold_delta_q_relative_high = np.asarray(path_threshold_delta_q_relative_high, dtype='float64')#float(input(path))
+        if Delta_Qrelative_restoration < threshold_delta_q_relative_low:
+        	self.dlg.lineEdit_605.setText("1")
+        	FEM_Delta_Qrelative_restoration = 1
+        	print(FEM_Delta_Qrelative_restoration)
+        elif Delta_Qrelative_restoration > threshold_delta_q_relative_high:
+        	self.dlg.lineEdit_605.setText("5")
+        	FEM_Delta_Qrelative_restoration = 5
+        	print(FEM_Delta_Qrelative_restoration)
+        else: #Delta_Qrelative >= threshold_delta_q_relative_low and Delta_Qrelative < threshold_delta_q_relative_medium:
+        	self.dlg.lineEdit_605.setText("3")
+        	FEM_Delta_Qrelative_restoration = 3
+        	print(FEM_Delta_Qrelative_restoration)
+        path_treshold_f_w_t_deltaT_low = self.dlg.lineEdit_95.text()
+        treshold_f_w_t_deltaT_low = np.asarray(path_treshold_f_w_t_deltaT_low, dtype='float64')#float(input(path))
+        path_treshold_f_w_t_deltaT_medium = self.dlg.lineEdit_106.text()
+        treshold_f_w_t_deltaT_medium = np.asarray(path_treshold_f_w_t_deltaT_medium, dtype='float64')#float(input(path))
+        path_treshold_f_w_t_deltaT_high = self.dlg.lineEdit_89.text()
+        treshold_f_w_t_deltaT_high = np.asarray(path_treshold_f_w_t_deltaT_high, dtype='float64')#float(input(path))
+        if Delta_T_restoration < treshold_f_w_t_deltaT_low:
+        	self.dlg.lineEdit_598.setText("1")
+        	FEM_Delta_T_restoration = 1
+        	print(FEM_Delta_T_restoration)
+        elif Delta_T_restoration > treshold_f_w_t_deltaT_high:
+        	self.dlg.lineEdit_598.setText("5")
+        	FEM_Delta_T_restoration = 5
+        	print(FEM_Delta_T_restoration)
+        else:
+        	self.dlg.lineEdit_598.setText("3")
+        	FEM_Delta_T_restoration = 3
+        	print(FEM_Delta_T_restoration)
+        path_treshold_water_level_change_low = self.dlg.lineEdit_105.text()
+        treshold_water_level_change_low = np.asarray(path_treshold_water_level_change_low, dtype='float64')#float(input(path))
+        path_treshold_water_level_change_medium = self.dlg.lineEdit_88.text()
+        treshold_water_level_change_medium = np.asarray(path_treshold_water_level_change_medium, dtype='float64')#float(input(path))
+        path_treshold_water_level_change_high = self.dlg.lineEdit_109.text()
+        treshold_water_level_change_high = np.asarray(path_treshold_water_level_change_high, dtype='float64')#float(input(path))
+        if Delta_h_restoration < treshold_f_w_t_deltaT_low:
+        	self.dlg.lineEdit_611.setText("1")
+        	FEM_Delta_h_restoration = 1
+        	print(FEM_Delta_h_restoration)
+        elif Delta_h_restoration > treshold_f_w_t_deltaT_high:
+        	self.dlg.lineEdit_611.setText("5")
+        	FEM_Delta_h_restoration = 5
+        	print(FEM_Delta_h_restoration)
+        else:
+        	self.dlg.lineEdit_611.setText("3")
+        	FEM_Delta_h_restoration = 3
+        	print(FEM_Delta_h_restoration)
+        path_treshold_c_fp_w_b_low = self.dlg.lineEdit_78.text()
+        treshold_c_fp_w_b_low = np.asarray(path_treshold_c_fp_w_b_low, dtype='float64')#float(input(path))
+        path_treshold_c_fp_w_b_medium = self.dlg.lineEdit_93.text()
+        treshold_c_fp_w_b_medium = np.asarray(path_treshold_c_fp_w_b_medium, dtype='float64')#float(input(path))
+        path_treshold_c_fp_w_b_high = self.dlg.lineEdit_104.text()
+        treshold_c_fp_w_b_high = np.asarray(path_treshold_c_fp_w_b_high, dtype='float64')#float(input(path))
+        if c_fwb_restoration < treshold_c_fp_w_b_low:
+        	self.dlg.lineEdit_608.setText("1")
+        	FEM_c_fwb_restoration = 1
+        	print(FEM_c_fwb_restoration)
+        elif c_fwb_restoration > treshold_c_fp_w_b_high:
+        	self.dlg.lineEdit_608.setText("5")
+        	FEM_c_fwb_restoration = 5
+        	print(FEM_c_fwb_restoration)
+        else:
+        	self.dlg.lineEdit_608.setText("3")
+        	FEM_c_fwb_restoration = 3
+        	print(FEM_c_fwb_restoration)
+        path_treshold_existence_p_s_low = self.dlg.lineEdit_86.text()
+        treshold_existence_p_s_low = np.asarray(path_treshold_existence_p_s_low, dtype='float64')#float(input(path))
+        path_treshold_existence_p_s_medium = self.dlg.lineEdit_100.text()
+        treshold_existence_p_s_medium = np.asarray(path_treshold_existence_p_s_medium, dtype='float64')#float(input(path))
+        path_treshold_existence_p_s_high = self.dlg.lineEdit_81.text()
+        treshold_existence_p_s_high = np.asarray(path_treshold_existence_p_s_high, dtype='float64')#float(input(path))
+        if protected_species_restoration < treshold_existence_p_s_low:
+        	self.dlg.lineEdit_606.setText("1")
+        	FEM_protected_species_restoration = 1
+        	print(FEM_protected_species_restoration)
+        elif protected_species_restoration > treshold_existence_p_s_high:
+        	self.dlg.lineEdit_606.setText("5")
+        	FEM_protected_species_restoration = 5
+        	print(FEM_protected_species_restoration)
+        else:
+        	self.dlg.lineEdit_606.setText("3")
+        	FEM_protected_species_restoration = 3
+        	print(FEM_protected_species_restoration)
+        path_treshold_potentially_a_b_low = self.dlg.lineEdit_97.text()
+        treshold_potentially_a_b_low = np.asarray(path_treshold_potentially_a_b_low, dtype='float64')#float(input(path))
+        path_treshold_potentially_a_b_medium = self.dlg.lineEdit_107.text()
+        treshold_potentially_a_b_medium = np.asarray(path_treshold_potentially_a_b_medium, dtype='float64')#float(input(path))
+        path_treshold_potentially_a_b_high = self.dlg.lineEdit_103.text()
+        treshold_potentially_a_b_high = np.asarray(path_treshold_potentially_a_b_high, dtype='float64')#float(input(path))
+        if buildings_restoration < treshold_potentially_a_b_low:
+        	self.dlg.lineEdit_602.setText("1")
+        	FEM_buildings_restoration = 1
+        	print(FEM_buildings_restoration)
+        elif buildings_restoration > treshold_potentially_a_b_high:
+        	self.dlg.lineEdit_602.setText("5")
+        	FEM_buildings_restoration = 5
+        	print(FEM_buildings_restoration)
+        else:
+        	self.dlg.lineEdit_602.setText("3")
+        	FEM_buildings_restoration = 3
+        	print(FEM_buildings_restoration)
+        path_treshold_land_use_low = self.dlg.lineEdit_91.text()
+        treshold_land_use_low = np.asarray(path_treshold_land_use_low, dtype='float64')#float(input(path))
+        path_treshold_land_use_medium = self.dlg.lineEdit_85.text()
+        treshold_land_use_medium = np.asarray(path_treshold_land_use_medium, dtype='float64')#float(input(path))
+        path_treshold_land_use_high = self.dlg.lineEdit_82.text()
+        treshold_land_use_high = np.asarray(path_treshold_land_use_high, dtype='float64')#float(input(path))
+        if land_use_restoration < treshold_land_use_low:
+        	self.dlg.lineEdit_612.setText("1")
+        	FEM_land_use_restoration = 1
+        	print(FEM_land_use_restoration)
+        elif land_use_restoration > treshold_land_use_high:
+        	self.dlg.lineEdit_612.setText("5")
+        	FEM_land_use_restoration = 5
+        	print(FEM_land_use_restoration)
+        else:
+        	self.dlg.lineEdit_612.setText("3")
+        	FEM_land_use_restoration = 3
+        	print(FEM_land_use_restoration)
+        	
+        FEM_sum_restoration = FEM_Delta_Qrelative_restoration + FEM_Delta_T_restoration + FEM_Delta_h_restoration + FEM_c_fwb_restoration + FEM_protected_species_restoration + FEM_buildings_restoration + FEM_land_use_restoration
+        print(FEM_sum_restoration)
+        self.dlg.lineEdit_607.setText(str(FEM_sum_restoration))
+        if FEM_sum_restoration >= 27:
+        	self.dlg.lineEdit_610.setText("Low Demand")
+        	print("Low Demand")
+        elif FEM_sum_restoration < 23:
+        	self.dlg.lineEdit_610.setText("High Demand")
+        	print("High Demand")
+        else:
+        	self.dlg.lineEdit_610.setText("Medium Demand")
+        	print("Medium Demand")
+        #path_treshold_sediment_balance_low = self.dlg.lineEdit_84.text()
+        #treshold_sediment_balance_low = np.asarray(path_treshold_sediment_balance_low, dtype='float64')
+        #path_treshold_sediment_balance_medium = self.dlg.lineEdit_102.text()
+        #treshold_sediment_balance_medium = np.asarray(path_treshold_sediment_balance_medium, dtype='float64')
+        #path_treshold_sediment_balance_high = self.dlg.lineEdit_79.text()
+        #treshold_sediment_balance_high = np.asarray(path_treshold_sediment_balance_high, dtype='float64')
+        #path_treshold_con_fp_w_b_low = self.dlg.lineEdit_108.text()
+        #treshold_con_fp_w_b_low = np.asarray(path_treshold_con_fp_w_b_low, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_medium = self.dlg.lineEdit_80.text()
+        #treshold_con_fp_w_b_medium = np.asarray(path_treshold_con_fp_w_b_medium, dtype='float64')
+        #path_treshold_con_fp_w_b_high = self.dlg.lineEdit_101.text()
+        #treshold_con_fp_w_b_high = np.asarray(path_treshold_con_fp_w_b_high, dtype='float64')
+        #path_treshold_con_fp_w_b_detailed_low = self.dlg.lineEdit_96.text()
+        #treshold_con_fp_w_b_detailed_low = np.asarray(path_treshold_con_fp_w_b_detailed_low, dtype='float64')
+        #path_treshold_con_fp_w_b_detailed_medium = self.dlg.lineEdit_83.text()
+        #treshold_con_fp_w_b_detailed_medium = np.asarray(path_treshold_con_fp_w_b_detailed_medium, dtype='float64')
+        #path_treshold_con_fp_w_b_detailed_high = self.dlg.lineEdit_99.text()
+        #treshold_con_fp_w_b_detailed_high = np.asarray(path_treshold_con_fp_w_b_detailed_high, dtype='float64')
+        #path_treshold_w_l_d_low = self.dlg.lineEdit_98.text()
+        #treshold_w_l_d_low = np.asarray(path_treshold_w_l_d_low, dtype='float64')
+        #path_treshold_w_l_d_medium = self.dlg.lineEdit_87.text()
+        #treshold_w_l_d_medium = np.asarray(path_treshold_w_l_d_medium, dtype='float64')
+        #path_treshold_w_l_d_high = self.dlg.lineEdit_94.text()
+        #treshold_w_l_d_high = np.asarray(path_treshold_w_l_d_high, dtype='float64')
+        #path_treshold_c_b_r_low = self.dlg.lineEdit_111.text()
+        #treshold_c_b_r_low = np.asarray(path_treshold_c_b_r_low, dtype='float64')
+        #path_treshold_c_b_r_medium = self.dlg.lineEdit_112.text()
+        #treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')
+        #path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
+        #treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')
         
     def calculate_extra_FEM(self):
         path_threshold_delta_v_low = self.dlg.lineEdit_114.text()
@@ -1118,6 +1628,201 @@ class test_plugin:
         	print("High Demand")
         else:
         	self.dlg.lineEdit_154.setText("Medium Demand")
+        	print("Medium Demand")
+        	
+    def calculate_extra_FEM_restoration(self):
+        path_threshold_delta_v_low = self.dlg.lineEdit_114.text()
+        threshold_delta_v_low = np.asarray(path_threshold_delta_v_low, dtype='float64')
+        path_threshold_delta_v_medium = self.dlg.lineEdit_115.text()
+        threshold_delta_v_medium = np.asarray(path_threshold_delta_v_medium, dtype='float64')
+        path_threshold_delta_v_high = self.dlg.lineEdit_116.text()
+        threshold_delta_v_high = np.asarray(path_threshold_delta_v_high, dtype='float64')
+        if Delta_v_restoration < threshold_delta_v_low:
+        	self.dlg.lineEdit_621.setText("1")
+        	FEM_Delta_v_restoration = 1
+        	print(FEM_Delta_v_restoration)
+        elif Delta_v_restoration > threshold_delta_v_high:
+        	self.dlg.lineEdit_621.setText("5")
+        	FEM_Delta_v_restoration = 5
+        	print(FEM_Delta_v_restoration)
+        else:
+        	self.dlg.lineEdit_621.setText("3")
+        	FEM_Delta_v_restoration = 3
+        	print(FEM_Delta_v_restoration)
+        path_treshold_delta_tau_low = self.dlg.lineEdit_41.text()
+        treshold_delta_tau_low = np.asarray(path_treshold_delta_tau_low, dtype='float64')
+        path_treshold_delta_tau_medium = self.dlg.lineEdit_42.text()
+        treshold_delta_tau_medium = np.asarray(path_treshold_delta_tau_medium, dtype='float64')#float(input(path))
+        path_treshold_delta_tau_high = self.dlg.lineEdit_43.text()
+        treshold_delta_tau_high = np.asarray(path_treshold_delta_tau_high, dtype='float64')
+        if Delta_tau_restoration < treshold_delta_tau_low:
+        	self.dlg.lineEdit_618.setText("1")
+        	FEM_Delta_tau_restoration = 1
+        	print(FEM_Delta_tau_restoration)
+        elif Delta_tau_restoration > treshold_delta_tau_high:
+        	self.dlg.lineEdit_618.setText("5")
+        	FEM_Delta_tau_restoration = 5
+        	print(FEM_Delta_tau_restoration)
+        else:
+        	self.dlg.lineEdit_618.setText("3")
+        	FEM_Delta_tau_restoration = 3
+        	print(FEM_Delta_tau_restoration)
+        path_treshold_protected_habitat_low = self.dlg.lineEdit_44.text()
+        treshold_protected_habitat_low = np.asarray(path_treshold_protected_habitat_low, dtype='float64')#float(input(path))
+        path_treshold_protected_habitat_medium = self.dlg.lineEdit_61.text()
+        treshold_protected_habitat_medium = np.asarray(path_treshold_protected_habitat_medium, dtype='float64')#float(input(path))
+        path_treshold_protected_habitat_high = self.dlg.lineEdit_62.text()
+        treshold_protected_habitat_high = np.asarray(path_treshold_protected_habitat_high, dtype='float64')#float(input(path))
+        if protected_habitat_restoration < treshold_protected_habitat_low:
+        	self.dlg.lineEdit_626.setText("1")
+        	FEM_protected_habitat_restoration = 1
+        	print(FEM_protected_habitat_restoration)
+        elif protected_habitat_restoration > treshold_protected_habitat_high:
+        	self.dlg.lineEdit_626.setText("5")
+        	FEM_protected_habitat_restoration = 5
+        	print(FEM_protected_habitat_restoration)
+        else:
+        	self.dlg.lineEdit_626.setText("3")
+        	FEM_protected_habitat_restoration = 3
+        	print(FEM_protected_habitat_restoration)
+        path_treshold_vegetation_naturalness_low = self.dlg.lineEdit_63.text()
+        treshold_vegetation_naturalness_low = np.asarray(path_treshold_vegetation_naturalness_low, dtype='float64')#float(input(path))
+        path_treshold_vegetation_naturalness_medium = self.dlg.lineEdit_64.text()
+        treshold_vegetation_naturalness_medium = np.asarray(path_treshold_vegetation_naturalness_medium, dtype='float64')#float(input(path))
+        path_treshold_vegetation_naturalness_high = self.dlg.lineEdit_65.text()
+        treshold_vegetation_naturalness_high = np.asarray(path_treshold_vegetation_naturalness_high, dtype='float64')#float(input(path))
+        if vegetation_naturalness_restoration < treshold_vegetation_naturalness_low:
+        	self.dlg.lineEdit_633.setText("1")
+        	FEM_vegetation_naturalness_restoration = 1
+        	print(FEM_vegetation_naturalness_restoration)
+        elif vegetation_naturalness_restoration > treshold_vegetation_naturalness_high:
+        	self.dlg.lineEdit_633.setText("5")
+        	FEM_vegetation_naturalness_restoration = 5
+        	print(FEM_vegetation_naturalness_restoration)
+        else:
+        	self.dlg.lineEdit_633.setText("3")
+        	FEM_vegetation_naturalness_restoration = 3
+        	print(FEM_vegetation_naturalness_restoration)
+        path_treshold_water_level_dynamics_low = self.dlg.lineEdit_66.text()
+        treshold_water_level_dynamics_low = np.asarray(path_treshold_water_level_dynamics_low, dtype='float64')#float(input(path))
+        path_treshold_water_level_dynamics_medium = self.dlg.lineEdit_67.text()
+        treshold_water_level_dynamics_medium = np.asarray(path_treshold_water_level_dynamics_medium, dtype='float64')#float(input(path))
+        path_treshold_water_level_dynamics_high = self.dlg.lineEdit_68.text()
+        treshold_water_level_dynamics_high = np.asarray(path_treshold_water_level_dynamics_high, dtype='float64')#float(input(path))
+        if water_level_dynamics_restoration < treshold_water_level_dynamics_low:
+        	self.dlg.lineEdit_617.setText("1")
+        	FEM_water_level_dynamics_restoration = 1
+        	print(FEM_water_level_dynamics_restoration)
+        elif water_level_dynamics_restoration > treshold_water_level_dynamics_high:
+        	self.dlg.lineEdit_617.setText("5")
+        	FEM_water_level_dynamics_restoration = 5
+        	print(FEM_water_level_dynamics_restoration)
+        else:
+        	self.dlg.lineEdit_617.setText("3")
+        	FEM_water_level_dynamics_restoration = 3
+        	print(FEM_water_level_dynamics_restoration)        
+        path_treshold_potential_for_typical_habitats_low = self.dlg.lineEdit_69.text()
+        treshold_potential_for_typical_habitats_low = np.asarray(path_treshold_potential_for_typical_habitats_low, dtype='float64')#float(input(path))
+        path_treshold_potential_for_typical_habitats_medium = self.dlg.lineEdit_70.text()
+        treshold_potential_for_typical_habitats_medium = np.asarray(path_treshold_potential_for_typical_habitats_medium, dtype='float64')#float(input(path))
+        path_treshold_potential_for_typical_habitats_high = self.dlg.lineEdit_71.text()
+        treshold_potential_for_typical_habitats_high = np.asarray(path_treshold_potential_for_typical_habitats_high, dtype='float64')#float(input(path))
+        if potential_for_typical_habitats_restoration < treshold_potential_for_typical_habitats_low:
+        	self.dlg.lineEdit_614.setText("1")
+        	FEM_potential_for_typical_habitats_restoration = 1
+        	print(FEM_potential_for_typical_habitats_restoration)
+        elif potential_for_typical_habitats_restoration > treshold_potential_for_typical_habitats_high:
+        	self.dlg.lineEdit_614.setText("5")
+        	FEM_potential_for_typical_habitats_restoration = 5
+        	print(FEM_potential_for_typical_habitats_restoration)
+        else:
+        	self.dlg.lineEdit_614.setText("3")
+        	FEM_potential_for_typical_habitats_restoration = 3
+        	print(FEM_potential_for_typical_habitats_restoration)       
+        path_treshold_ecological_water_body_status_low = self.dlg.lineEdit_72.text()
+        treshold_ecological_water_body_status_low = np.asarray(path_treshold_ecological_water_body_status_low, dtype='float64')#float(input(path))
+        path_treshold_ecological_water_body_status_medium = self.dlg.lineEdit_73.text()
+        treshold_ecological_water_body_status_medium = np.asarray(path_treshold_ecological_water_body_status_medium, dtype='float64')#float(input(path))
+        path_treshold_ecological_water_body_status_high = self.dlg.lineEdit_74.text()
+        treshold_ecological_water_body_status_high = np.asarray(path_treshold_ecological_water_body_status_high, dtype='float64')#float(input(path))
+        if ecological_water_body_status_restoration < treshold_ecological_water_body_status_low:
+        	self.dlg.lineEdit_624.setText("1")
+        	FEM_ecological_water_body_status_restoration = 1
+        	print(FEM_ecological_water_body_status_restoration)
+        elif ecological_water_body_status_restoration > treshold_ecological_water_body_status_high:
+        	self.dlg.lineEdit_624.setText("5")
+        	FEM_ecological_water_body_status_restoration = 5
+        	print(FEM_ecological_water_body_status_restoration)
+        else:
+        	self.dlg.lineEdit_624.setText("3")
+        	FEM_ecological_water_body_status_restoration = 3
+        	print(FEM_ecological_water_body_status_restoration)        
+        path_treshold_parameter_invasive_species_low = self.dlg.lineEdit_117.text()
+        treshold_parameter_invasive_species_low = np.asarray(path_treshold_parameter_invasive_species_low, dtype='float64')#float(input(path))
+        path_treshold_parameter_invasive_species_medium = self.dlg.lineEdit_118.text()
+        treshold_parameter_invasive_species_medium = np.asarray(path_treshold_parameter_invasive_species_medium, dtype='float64')#float(input(path))
+        path_treshold_parameter_invasive_species_high = self.dlg.lineEdit_120.text()
+        treshold_parameter_invasive_species_high = np.asarray(path_treshold_parameter_invasive_species_high, dtype='float64')#float(input(path))
+        if parameter_invasive_species_restoration < treshold_parameter_invasive_species_low:
+        	self.dlg.lineEdit_622.setText("1")
+        	FEM_parameter_invasive_species_restoration = 1
+        	print(FEM_parameter_invasive_species_restoration)
+        elif parameter_invasive_species_restoration > treshold_parameter_invasive_species_high:
+        	self.dlg.lineEdit_622.setText("5")
+        	FEM_parameter_invasive_species_restoration = 5
+        	print(FEM_parameter_invasive_species_restoration)
+        else:
+        	self.dlg.lineEdit_622.setText("3")
+        	FEM_parameter_invasive_species_restoration = 3
+        	print(FEM_parameter_invasive_species_restoration)        	
+        path_treshold_presence_of_documented_planning_interests_low = self.dlg.lineEdit_123.text()
+        treshold_presence_of_documented_planning_interests_low = np.asarray(path_treshold_presence_of_documented_planning_interests_low, dtype='float64')#float(input(path))
+        path_treshold_presence_of_documented_planning_interests_medium = self.dlg.lineEdit_125.text()
+        treshold_presence_of_documented_planning_interests_medium = np.asarray(path_treshold_presence_of_documented_planning_interests_medium, dtype='float64')#float(input(path))
+        path_treshold_presence_of_documented_planning_interests_high = self.dlg.lineEdit_126.text()
+        treshold_presence_of_documented_planning_interests_high = np.asarray(path_treshold_presence_of_documented_planning_interests_high, dtype='float64')#float(input(path))
+        if presence_of_documented_planning_interests_restoration < treshold_presence_of_documented_planning_interests_low:
+        	self.dlg.lineEdit_625.setText("1")
+        	FEM_presence_of_documented_planning_interests_restoration = 1
+        	print(FEM_presence_of_documented_planning_interests_restoration)
+        elif presence_of_documented_planning_interests_restoration > treshold_presence_of_documented_planning_interests_high:
+        	self.dlg.lineEdit_625.setText("5")
+        	FEM_presence_of_documented_planning_interests_restoration = 5
+        	print(FEM_presence_of_documented_planning_interests_restoration)
+        else:
+        	self.dlg.lineEdit_625.setText("3")
+        	FEM_presence_of_documented_planning_interests_restoration = 3
+        	print(FEM_presence_of_documented_planning_interests_restoration)
+        path_treshold_extended_cost_benefit_analysis_low = self.dlg.lineEdit_127.text()
+        treshold_extended_cost_benefit_analysis_low = np.asarray(path_treshold_extended_cost_benefit_analysis_low, dtype='float64')
+        path_treshold_extended_cost_benefit_analysis_medium = self.dlg.lineEdit_130.text()
+        treshold_extended_cost_benefit_analysis_medium = np.asarray(path_treshold_extended_cost_benefit_analysis_medium, dtype='float64')
+        path_treshold_extended_cost_benefit_analysis_high = self.dlg.lineEdit_132.text()
+        treshold_extended_cost_benefit_analysis_high = np.asarray(path_treshold_extended_cost_benefit_analysis_high, dtype='float64')
+        if extended_cost_benefit_analysis_restoration < treshold_extended_cost_benefit_analysis_low:
+        	self.dlg.lineEdit_629.setText("1")
+        	FEM_extended_cost_benefit_analysis_restoration = 1
+        	print(FEM_extended_cost_benefit_analysis_restoration)
+        elif extended_cost_benefit_analysis_restoration > treshold_extended_cost_benefit_analysis_high:
+        	self.dlg.lineEdit_629.setText("5")
+        	FEM_extended_cost_benefit_analysis_restoration = 5
+        	print(FEM_extended_cost_benefit_analysis_restoration)
+        else:
+        	self.dlg.lineEdit_629.setText("3")
+        	FEM_extended_cost_benefit_analysis_restoration = 3
+        	print(FEM_extended_cost_benefit_analysis_restoration)
+
+        FEM_sum_restoration = FEM_Delta_v_restoration + FEM_Delta_tau_restoration + FEM_protected_habitat_restoration + FEM_vegetation_naturalness_restoration + FEM_water_level_dynamics_restoration + FEM_potential_for_typical_habitats_restoration + FEM_ecological_water_body_status_restoration + FEM_parameter_invasive_species_restoration + FEM_presence_of_documented_planning_interests_restoration + FEM_extended_cost_benefit_analysis_restoration
+        print(FEM_sum_restoration)
+        self.dlg.lineEdit_630.setText(str(FEM_sum_restoration))
+        if FEM_sum_restoration >= 27:
+        	self.dlg.lineEdit_615.setText("Low Demand")
+        	print("Low Demand")
+        elif FEM_sum_restoration < 23:
+        	self.dlg.lineEdit_615.setText("High Demand")
+        	print("High Demand")
+        else:
+        	self.dlg.lineEdit_615.setText("Medium Demand")
         	print("Medium Demand")
 
 
@@ -1659,6 +2364,9 @@ class test_plugin:
             self.dlg.toolButton_2.clicked.connect(self.select_input_file1)
             self.dlg.toolButton_3.clicked.connect(self.select_input_file2)
             self.dlg.toolButton_4.clicked.connect(self.select_input_file3)
+            self.dlg.toolButton_10.clicked.connect(self.select_input_file1_restoration)
+            self.dlg.toolButton_9.clicked.connect(self.select_input_file2_restoration)
+            self.dlg.toolButton_11.clicked.connect(self.select_input_file3_restoration)
             
             self.dlg.toolButton_5.clicked.connect(self.select_input_file5)
             self.dlg.toolButton_6.clicked.connect(self.select_input_file6)
@@ -1667,46 +2375,78 @@ class test_plugin:
             
             self.dlg.pushButton_2.clicked.connect(self.automatic_floodplain)
             self.dlg.pushButton_5.clicked.connect(self.import1)
+            self.dlg.pushButton_68.clicked.connect(self.import1_restoration)
             self.dlg.pushButton_6.clicked.connect(self.import2)
+            self.dlg.pushButton_61.clicked.connect(self.import2_restoration)
             self.dlg.pushButton_7.clicked.connect(self.import3)
+            self.dlg.pushButton_66.clicked.connect(self.import3_restoration)
             self.dlg.pushButton_8.clicked.connect(self.import4)
+            self.dlg.pushButton_58.clicked.connect(self.import4_restoration)
             self.dlg.pushButton_21.clicked.connect(self.import5)
             self.dlg.pushButton_22.clicked.connect(self.import6)
             self.dlg.pushButton_3.clicked.connect(self.import7)
             self.dlg.pushButton_25.clicked.connect(self.import8)
             self.dlg.pushButton_14.clicked.connect(self.import9)
+            self.dlg.pushButton_82.clicked.connect(self.import9_restoration)
             self.dlg.pushButton_15.clicked.connect(self.import10)
+            self.dlg.pushButton_83.clicked.connect(self.import10_restoration)
             self.dlg.pushButton_17.clicked.connect(self.import11)
+            self.dlg.pushButton_92.clicked.connect(self.import11_restoration)
             self.dlg.pushButton_18.clicked.connect(self.import12)
+            self.dlg.pushButton_94.clicked.connect(self.import12_restoration)
             self.dlg.pushButton_19.clicked.connect(self.import13)
+            self.dlg.pushButton_103.clicked.connect(self.import13_restoration)
             self.dlg.pushButton_20.clicked.connect(self.import14)
-            #self.dlg.pushButton_34.clicked.connect(self.import15)
+            self.dlg.pushButton_105.clicked.connect(self.import14_restoration)
             self.dlg.pushButton_30.clicked.connect(self.import16)
+            self.dlg.pushButton_86.clicked.connect(self.import16_restoration)
             self.dlg.pushButton_32.clicked.connect(self.import17)
+            self.dlg.pushButton_85.clicked.connect(self.import17_restoration)
             self.dlg.pushButton_40.clicked.connect(self.import18)
+            self.dlg.pushButton_87.clicked.connect(self.import18_restoration)
             self.dlg.pushButton_41.clicked.connect(self.import19)
+            self.dlg.pushButton_89.clicked.connect(self.import19_restoration)
             self.dlg.pushButton_43.clicked.connect(self.import20)
+            self.dlg.pushButton_98.clicked.connect(self.import20_restoration)
             self.dlg.pushButton_46.clicked.connect(self.import21)
+            self.dlg.pushButton_100.clicked.connect(self.import21_restoration)
             self.dlg.pushButton_47.clicked.connect(self.import22)
+            self.dlg.pushButton_96.clicked.connect(self.import22_restoration)
             self.dlg.pushButton_48.clicked.connect(self.import23)
+            self.dlg.pushButton_95.clicked.connect(self.import23_restoration)
             self.dlg.pushButton_44.clicked.connect(self.import24)
             self.dlg.pushButton_42.clicked.connect(self.import25)
+            self.dlg.pushButton_101.clicked.connect(self.import25_restoration)
             self.dlg.pushButton_51.clicked.connect(self.import26)
+            self.dlg.pushButton_106.clicked.connect(self.import26_restoration)
             self.dlg.pushButton_53.clicked.connect(self.import27)
+            self.dlg.pushButton_108.clicked.connect(self.import27_restoration)
             self.dlg.pushButton_50.clicked.connect(self.import28)
+            self.dlg.pushButton_102.clicked.connect(self.import28_restoration)
             
 
             self.dlg.pushButton.clicked.connect(self.substract1)
+            self.dlg.pushButton_59.clicked.connect(self.substract1_restoration)
             self.dlg.pushButton_4.clicked.connect(self.substract2)
+            self.dlg.pushButton_60.clicked.connect(self.substract2_restoration)
             self.dlg.pushButton_9.clicked.connect(self.substract3)
+            self.dlg.pushButton_63.clicked.connect(self.substract3_restoration)
             self.dlg.pushButton_10.clicked.connect(self.substract4)
+            self.dlg.pushButton_67.clicked.connect(self.substract4_restoration)
             self.dlg.pushButton_11.clicked.connect(self.substract5)
+            self.dlg.pushButton_62.clicked.connect(self.substract5_restoration)
             self.dlg.pushButton_12.clicked.connect(self.substract6)
+            self.dlg.pushButton_65.clicked.connect(self.substract6_restoration)
             self.dlg.pushButton_13.clicked.connect(self.substract7)
+            self.dlg.pushButton_64.clicked.connect(self.substract7_restoration)
             self.dlg.pushButton_16.clicked.connect(self.substract8)
+            self.dlg.pushButton_81.clicked.connect(self.substract8_restoration)
             self.dlg.pushButton_31.clicked.connect(self.substract9)
+            self.dlg.pushButton_90.clicked.connect(self.substract9_restoration)
             self.dlg.pushButton_39.clicked.connect(self.substract10)
+            self.dlg.pushButton_88.clicked.connect(self.substract10_restoration)
             self.dlg.pushButton_45.clicked.connect(self.substract11)
+            self.dlg.pushButton_97.clicked.connect(self.substract11_restoration)
             
             self.dlg.pushButton_23.clicked.connect(self.import_flood)
             self.dlg.pushButton_24.clicked.connect(self.create_attribute_table)
@@ -1724,9 +2464,15 @@ class test_plugin:
             #self.dlg.pushButton_35.clicked.connect(self.select_fp)
             self.dlg.pushButton_35.clicked.connect(self.load_AFP_defaults)
             self.dlg.pushButton_36.clicked.connect(self.confirm_values)
+            self.dlg.pushButton_135.clicked.connect(self.confirm_values_restoration)
             self.dlg.pushButton_57.clicked.connect(self.confirm_extra_values)
+            self.dlg.pushButton_137.clicked.connect(self.confirm_extra_values_restoration)
             self.dlg.pushButton_38.clicked.connect(self.calculate_FEM)
+            self.dlg.pushButton_134.clicked.connect(self.calculate_FEM_restoration)
             self.dlg.pushButton_56.clicked.connect(self.calculate_extra_FEM)
+            self.dlg.pushButton_136.clicked.connect(self.calculate_extra_FEM_restoration)
+            self.dlg.pushButton_109.clicked.connect(self.restoration_decision)
+            
             
             
             
