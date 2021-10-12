@@ -6,11 +6,11 @@
 name=FEM Tool
 qgisMinimumVersion=3.0
 description=FEM Tool
-version=1.0
+version=1.2
 author=Sencer Yucesan - BOKU
 email=s.yuecesan@boku.ac.at
 
-about=Flood Evaluation Matrix For Automatic Flood Identification And Evaluation
+about=Floodplain Evaluation Matrix For Automatic Floodplain Identification And Evaluation
 
 tracker=http://bugs
 repository=http://repo

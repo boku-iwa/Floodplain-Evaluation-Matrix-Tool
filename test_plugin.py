@@ -1190,11 +1190,11 @@ class test_plugin:
         treshold_potentially_a_b_medium = np.asarray(path_treshold_potentially_a_b_medium, dtype='float64')#float(input(path))
         path_treshold_potentially_a_b_high = self.dlg.lineEdit_103.text()
         treshold_potentially_a_b_high = np.asarray(path_treshold_potentially_a_b_high, dtype='float64')#float(input(path))
-        if buildings < treshold_potentially_a_b_low:
+        if buildings > treshold_potentially_a_b_high:
         	self.dlg.lineEdit_124.setText("1")
         	FEM_buildings = 1
         	print(FEM_buildings)
-        elif buildings > treshold_potentially_a_b_high:
+        elif buildings < treshold_potentially_a_b_low:
         	self.dlg.lineEdit_124.setText("5")
         	FEM_buildings = 5
         	print(FEM_buildings)
@@ -1263,6 +1263,12 @@ class test_plugin:
         treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')#float(input(path))
         path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
         treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')#float(input(path))
+        if FEM_Delta_Qrelative == 5 or FEM_Delta_T == 5 or FEM_Delta_h == 5 or FEM_c_fwb == 5 or FEM_protected_species == 5 or FEM_buildings == 5 or FEM_land_use == 5:
+        	self.dlg.lineEdit_175.setText("Yes")
+        	print("Need for Restoration:  Yes")
+        else:
+        	self.dlg.lineEdit_175.setText("No")
+        	print("Need for Restoration:  No")
         
     def calculate_FEM_restoration(self):
         path_threshold_delta_q_relative_low = self.dlg.lineEdit_92.text()
@@ -1404,36 +1410,7 @@ class test_plugin:
         else:
         	self.dlg.lineEdit_610.setText("Medium Demand")
         	print("Medium Demand")
-        #path_treshold_sediment_balance_low = self.dlg.lineEdit_84.text()
-        #treshold_sediment_balance_low = np.asarray(path_treshold_sediment_balance_low, dtype='float64')
-        #path_treshold_sediment_balance_medium = self.dlg.lineEdit_102.text()
-        #treshold_sediment_balance_medium = np.asarray(path_treshold_sediment_balance_medium, dtype='float64')
-        #path_treshold_sediment_balance_high = self.dlg.lineEdit_79.text()
-        #treshold_sediment_balance_high = np.asarray(path_treshold_sediment_balance_high, dtype='float64')
-        #path_treshold_con_fp_w_b_low = self.dlg.lineEdit_108.text()
-        #treshold_con_fp_w_b_low = np.asarray(path_treshold_con_fp_w_b_low, dtype='float64')#float(input(path))
-        #path_treshold_con_fp_w_b_medium = self.dlg.lineEdit_80.text()
-        #treshold_con_fp_w_b_medium = np.asarray(path_treshold_con_fp_w_b_medium, dtype='float64')
-        #path_treshold_con_fp_w_b_high = self.dlg.lineEdit_101.text()
-        #treshold_con_fp_w_b_high = np.asarray(path_treshold_con_fp_w_b_high, dtype='float64')
-        #path_treshold_con_fp_w_b_detailed_low = self.dlg.lineEdit_96.text()
-        #treshold_con_fp_w_b_detailed_low = np.asarray(path_treshold_con_fp_w_b_detailed_low, dtype='float64')
-        #path_treshold_con_fp_w_b_detailed_medium = self.dlg.lineEdit_83.text()
-        #treshold_con_fp_w_b_detailed_medium = np.asarray(path_treshold_con_fp_w_b_detailed_medium, dtype='float64')
-        #path_treshold_con_fp_w_b_detailed_high = self.dlg.lineEdit_99.text()
-        #treshold_con_fp_w_b_detailed_high = np.asarray(path_treshold_con_fp_w_b_detailed_high, dtype='float64')
-        #path_treshold_w_l_d_low = self.dlg.lineEdit_98.text()
-        #treshold_w_l_d_low = np.asarray(path_treshold_w_l_d_low, dtype='float64')
-        #path_treshold_w_l_d_medium = self.dlg.lineEdit_87.text()
-        #treshold_w_l_d_medium = np.asarray(path_treshold_w_l_d_medium, dtype='float64')
-        #path_treshold_w_l_d_high = self.dlg.lineEdit_94.text()
-        #treshold_w_l_d_high = np.asarray(path_treshold_w_l_d_high, dtype='float64')
-        #path_treshold_c_b_r_low = self.dlg.lineEdit_111.text()
-        #treshold_c_b_r_low = np.asarray(path_treshold_c_b_r_low, dtype='float64')
-        #path_treshold_c_b_r_medium = self.dlg.lineEdit_112.text()
-        #treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')
-        #path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
-        #treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')
+
         
     def calculate_extra_FEM(self):
         path_threshold_delta_v_low = self.dlg.lineEdit_114.text()
@@ -1629,6 +1606,12 @@ class test_plugin:
         else:
         	self.dlg.lineEdit_154.setText("Medium Demand")
         	print("Medium Demand")
+        if FEM_Delta_v == 5 or FEM_Delta_tau == 5 or FEM_protected_habitat == 5 or FEM_vegetation_naturalness == 5 or FEM_water_level_dynamics == 5 or FEM_potential_for_typical_habitats == 5 or FEM_ecological_water_body_status == 5 or FEM_parameter_invasive_species == 5 or FEM_presence_of_documented_planning_interests == 5 or FEM_extended_cost_benefit_analysis == 5:
+        	self.dlg.lineEdit_176.setText("Yes")
+        	print("Need for Restoration:  Yes")
+        else:
+        	self.dlg.lineEdit_176.setText("No")
+        	print("Need for Restoration:  No")
         	
     def calculate_extra_FEM_restoration(self):
         path_threshold_delta_v_low = self.dlg.lineEdit_114.text()
