@@ -440,9 +440,14 @@ class test_plugin:
         protected_habitat_restoration = np.asarray(protected_habitat_restoration, dtype='float64')   
         
     def import_flood(self):
-        layer = self.dlg.mMapLayerComboBox.currentLayer()
-        self.dlg.lineEdit_31.setText("Layer imported: " + str(layer))
-               
+        layer_selected = self.dlg.mMapLayerComboBox.currentLayer()
+        self.dlg.lineEdit_31.setText("Layer imported: " + str(layer_selected))
+        features_selected = layer_selected.getFeatures()
+        for feature in features_selected:
+            geom_selected = feature.geometry()
+            self.dlg.lineEdit_32.setText(str("{:.2f}".format(float(geom_selected.area()*float(0.000001))))) 
+            self.dlg.lineEdit_177.setText(str("{:.2f}".format(float(geom_selected.area()))))
+            
 #%% Floodplain Areas ###################################################### 
 
 # Automatic Floodplain    
@@ -795,13 +800,13 @@ class test_plugin:
         self.dlg.lineEdit_213.setText("Imported: " + str(presence_of_documented_planning_interests_restoration))
         print("Presence_of_documented_planning_interests imported: ", presence_of_documented_planning_interests_restoration)
         
-        extended_cost_benefit_analysis = 0;
-    def import27(self):
-        global extended_cost_benefit_analysis
-        path = self.dlg.lineEdit_60.text()
-        extended_cost_benefit_analysis = np.asarray(path, dtype='float64')
-        self.dlg.lineEdit_60.setText("Imported: " + str(extended_cost_benefit_analysis))
-        print("Extended_cost_benefit_analysis imported: ", extended_cost_benefit_analysis)
+        #extended_cost_benefit_analysis = 0;
+    #def import27(self):
+        #global extended_cost_benefit_analysis
+        #path = self.dlg.lineEdit_60.text()
+        #extended_cost_benefit_analysis = np.asarray(path, dtype='float64')
+        #self.dlg.lineEdit_60.setText("Imported: " + str(extended_cost_benefit_analysis))
+        #print("Extended_cost_benefit_analysis imported: ", extended_cost_benefit_analysis)
         
         extended_cost_benefit_analysis_restoration = 0;
     def import27_restoration(self):
@@ -865,7 +870,7 @@ class test_plugin:
         self.dlg.lineEdit_138.setText(str(ecological_water_body_status))   
         self.dlg.lineEdit_158.setText(str(parameter_invasive_species)) 
         self.dlg.lineEdit_160.setText(str(presence_of_documented_planning_interests)) 
-        self.dlg.lineEdit_162.setText(str(extended_cost_benefit_analysis))
+        #self.dlg.lineEdit_162.setText(str(extended_cost_benefit_analysis))
         
     def confirm_extra_values_restoration(self):
         self.dlg.lineEdit_619.setText(str(Delta_v_restoration))
@@ -923,19 +928,13 @@ class test_plugin:
         path_Delta_land_use_restoration = self.dlg.lineEdit_612.text()
         FEM_Delta_land_use_restoration = np.asarray(path_Delta_land_use_restoration, dtype='float64')
         self.dlg.lineEdit_222.setText(str(FEM_Delta_land_use_restoration))
-        
-        FEM_sum_current = FEM_Delta_Qrelative + FEM_Delta_T + FEM_Delta_h + FEM_Delta_c_fwb + FEM_Delta_protected_species + FEM_Delta_buildings + FEM_Delta_land_use
-        print(FEM_sum_current)
-        self.dlg.lineEdit_215.setText(str(FEM_sum_current))
-        FEM_sum_restoration = FEM_Delta_Qrelative_restoration + FEM_Delta_T_restoration + FEM_Delta_h_restoration + FEM_Delta_c_fwb_restoration + FEM_Delta_protected_species_restoration + FEM_Delta_buildings_restoration + FEM_Delta_land_use_restoration
-        print(FEM_sum_restoration)
-        self.dlg.lineEdit_223.setText(str(FEM_sum_restoration))
-        if FEM_sum_current <= FEM_sum_restoration:
-        	self.dlg.lineEdit_224.setText("No")
-        	print("No")
-        else:
+        if FEM_Delta_Qrelative < FEM_Delta_Qrelative_restoration or FEM_Delta_T < FEM_Delta_T_restoration or FEM_Delta_h < FEM_Delta_h_restoration or FEM_Delta_c_fwb < FEM_Delta_c_fwb_restoration or FEM_Delta_protected_species < FEM_Delta_protected_species_restoration or FEM_Delta_buildings < FEM_Delta_buildings_restoration or FEM_Delta_land_use < FEM_Delta_land_use_restoration:
         	self.dlg.lineEdit_224.setText("Yes")
         	print("Yes")
+        else:
+        	self.dlg.lineEdit_224.setText("No")
+        	print("No")
+
 
     def load_AFP_defaults(self):
         dist_b_fp = 5000;
@@ -952,12 +951,12 @@ class test_plugin:
         threshold_delta_q_relative_low = 1;
         threshold_delta_q_relative_medium = 2;
         threshold_delta_q_relative_high = 2;
-        treshold_f_w_t_deltaT_low = 60;
-        treshold_f_w_t_deltaT_medium = 300;
-        treshold_f_w_t_deltaT_high = 300;
-        treshold_water_level_change_low = 10;
-        treshold_water_level_change_medium = 50;
-        treshold_water_level_change_high = 50;
+        treshold_f_w_t_deltaT_low = 1;
+        treshold_f_w_t_deltaT_medium = 5;
+        treshold_f_w_t_deltaT_high = 5;
+        treshold_water_level_change_low = 0.1;
+        treshold_water_level_change_medium = 0.5;
+        treshold_water_level_change_high = 0.5;
         treshold_c_fp_w_b_low = 1;
         treshold_c_fp_w_b_medium = 3;
         treshold_c_fp_w_b_high = 5;
@@ -973,18 +972,18 @@ class test_plugin:
         treshold_sediment_balance_low = 0.33;
         treshold_sediment_balance_medium = 0.66;
         treshold_sediment_balance_high = 0.66;
-        treshold_con_fp_w_b_low = 15;
-        treshold_con_fp_w_b_medium = 50;
-        treshold_con_fp_w_b_high = 50;
-        treshold_con_fp_w_b_detailed_low = 5;
-        treshold_con_fp_w_b_detailed_medium = 30;
-        treshold_con_fp_w_b_detailed_high = 30;
+        #treshold_con_fp_w_b_low = 15;
+        #treshold_con_fp_w_b_medium = 50;
+        #treshold_con_fp_w_b_high = 50;
+        #treshold_con_fp_w_b_detailed_low = 5;
+        #treshold_con_fp_w_b_detailed_medium = 30;
+        #treshold_con_fp_w_b_detailed_high = 30;
         treshold_w_l_d_low = 1;
         treshold_w_l_d_medium = 3;
         treshold_w_l_d_high = 5;
-        treshold_c_b_r_low = 0.5;
-        treshold_c_b_r_medium = 1;
-        treshold_c_b_r_high = 1;
+        #treshold_c_b_r_low = 0.5;
+        #treshold_c_b_r_medium = 1;
+        #treshold_c_b_r_high = 1;
         FEM_Delta_Qrelative = 0;
         FEM_Delta_T = 0;
         FEM_Delta_h = 0;
@@ -1017,18 +1016,18 @@ class test_plugin:
         self.dlg.lineEdit_84.setText(str(treshold_sediment_balance_low))
         self.dlg.lineEdit_102.setText(str(treshold_sediment_balance_medium))
         self.dlg.lineEdit_79.setText(str(treshold_sediment_balance_high))    
-        self.dlg.lineEdit_108.setText(str(treshold_con_fp_w_b_low))
-        self.dlg.lineEdit_80.setText(str(treshold_con_fp_w_b_medium))
-        self.dlg.lineEdit_101.setText(str(treshold_con_fp_w_b_high))      
-        self.dlg.lineEdit_96.setText(str(treshold_con_fp_w_b_detailed_low))
-        self.dlg.lineEdit_83.setText(str(treshold_con_fp_w_b_detailed_medium))
-        self.dlg.lineEdit_99.setText(str(treshold_con_fp_w_b_detailed_high))  
+        #self.dlg.lineEdit_108.setText(str(treshold_con_fp_w_b_low))
+        #self.dlg.lineEdit_80.setText(str(treshold_con_fp_w_b_medium))
+        #self.dlg.lineEdit_101.setText(str(treshold_con_fp_w_b_high))      
+        #self.dlg.lineEdit_96.setText(str(treshold_con_fp_w_b_detailed_low))
+        #self.dlg.lineEdit_83.setText(str(treshold_con_fp_w_b_detailed_medium))
+        #self.dlg.lineEdit_99.setText(str(treshold_con_fp_w_b_detailed_high))  
         self.dlg.lineEdit_98.setText(str(treshold_w_l_d_low))
         self.dlg.lineEdit_87.setText(str(treshold_w_l_d_medium))
         self.dlg.lineEdit_94.setText(str(treshold_w_l_d_high))
-        self.dlg.lineEdit_111.setText(str(treshold_c_b_r_low))
-        self.dlg.lineEdit_112.setText(str(treshold_c_b_r_medium))
-        self.dlg.lineEdit_113.setText(str(treshold_c_b_r_high))
+        #self.dlg.lineEdit_111.setText(str(treshold_c_b_r_low))
+        #self.dlg.lineEdit_112.setText(str(treshold_c_b_r_medium))
+        #self.dlg.lineEdit_113.setText(str(treshold_c_b_r_high))
         
     def load_extra_treshold_defaults(self):
         threshold_delta_v_low = 0.1;
@@ -1239,30 +1238,30 @@ class test_plugin:
         treshold_sediment_balance_medium = np.asarray(path_treshold_sediment_balance_medium, dtype='float64')#float(input(path))
         path_treshold_sediment_balance_high = self.dlg.lineEdit_79.text()
         treshold_sediment_balance_high = np.asarray(path_treshold_sediment_balance_high, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_low = self.dlg.lineEdit_108.text()
-        treshold_con_fp_w_b_low = np.asarray(path_treshold_con_fp_w_b_low, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_medium = self.dlg.lineEdit_80.text()
-        treshold_con_fp_w_b_medium = np.asarray(path_treshold_con_fp_w_b_medium, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_high = self.dlg.lineEdit_101.text()
-        treshold_con_fp_w_b_high = np.asarray(path_treshold_con_fp_w_b_high, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_detailed_low = self.dlg.lineEdit_96.text()
-        treshold_con_fp_w_b_detailed_low = np.asarray(path_treshold_con_fp_w_b_detailed_low, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_detailed_medium = self.dlg.lineEdit_83.text()
-        treshold_con_fp_w_b_detailed_medium = np.asarray(path_treshold_con_fp_w_b_detailed_medium, dtype='float64')#float(input(path))
-        path_treshold_con_fp_w_b_detailed_high = self.dlg.lineEdit_99.text()
-        treshold_con_fp_w_b_detailed_high = np.asarray(path_treshold_con_fp_w_b_detailed_high, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_low = self.dlg.lineEdit_108.text()
+        #treshold_con_fp_w_b_low = np.asarray(path_treshold_con_fp_w_b_low, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_medium = self.dlg.lineEdit_80.text()
+        #treshold_con_fp_w_b_medium = np.asarray(path_treshold_con_fp_w_b_medium, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_high = self.dlg.lineEdit_101.text()
+        #treshold_con_fp_w_b_high = np.asarray(path_treshold_con_fp_w_b_high, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_detailed_low = self.dlg.lineEdit_96.text()
+        #treshold_con_fp_w_b_detailed_low = np.asarray(path_treshold_con_fp_w_b_detailed_low, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_detailed_medium = self.dlg.lineEdit_83.text()
+        #treshold_con_fp_w_b_detailed_medium = np.asarray(path_treshold_con_fp_w_b_detailed_medium, dtype='float64')#float(input(path))
+        #path_treshold_con_fp_w_b_detailed_high = self.dlg.lineEdit_99.text()
+        #treshold_con_fp_w_b_detailed_high = np.asarray(path_treshold_con_fp_w_b_detailed_high, dtype='float64')#float(input(path))
         path_treshold_w_l_d_low = self.dlg.lineEdit_98.text()
         treshold_w_l_d_low = np.asarray(path_treshold_w_l_d_low, dtype='float64')#float(input(path))
         path_treshold_w_l_d_medium = self.dlg.lineEdit_87.text()
         treshold_w_l_d_medium = np.asarray(path_treshold_w_l_d_medium, dtype='float64')#float(input(path))
         path_treshold_w_l_d_high = self.dlg.lineEdit_94.text()
         treshold_w_l_d_high = np.asarray(path_treshold_w_l_d_high, dtype='float64')#float(input(path))
-        path_treshold_c_b_r_low = self.dlg.lineEdit_111.text()
-        treshold_c_b_r_low = np.asarray(path_treshold_c_b_r_low, dtype='float64')#float(input(path))
-        path_treshold_c_b_r_medium = self.dlg.lineEdit_112.text()
-        treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')#float(input(path))
-        path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
-        treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')#float(input(path))
+        #path_treshold_c_b_r_low = self.dlg.lineEdit_111.text()
+        #treshold_c_b_r_low = np.asarray(path_treshold_c_b_r_low, dtype='float64')#float(input(path))
+        #path_treshold_c_b_r_medium = self.dlg.lineEdit_112.text()
+        #treshold_c_b_r_medium = np.asarray(path_treshold_c_b_r_medium, dtype='float64')#float(input(path))
+        #path_treshold_c_b_r_high = self.dlg.lineEdit_113.text()
+        #treshold_c_b_r_high = np.asarray(path_treshold_c_b_r_high, dtype='float64')#float(input(path))
         if FEM_Delta_Qrelative == 5 or FEM_Delta_T == 5 or FEM_Delta_h == 5 or FEM_c_fwb == 5 or FEM_protected_species == 5 or FEM_buildings == 5 or FEM_land_use == 5:
         	self.dlg.lineEdit_175.setText("Yes")
         	print("Need for Restoration:  Yes")
@@ -1367,11 +1366,11 @@ class test_plugin:
         treshold_potentially_a_b_medium = np.asarray(path_treshold_potentially_a_b_medium, dtype='float64')#float(input(path))
         path_treshold_potentially_a_b_high = self.dlg.lineEdit_103.text()
         treshold_potentially_a_b_high = np.asarray(path_treshold_potentially_a_b_high, dtype='float64')#float(input(path))
-        if buildings_restoration < treshold_potentially_a_b_low:
+        if buildings_restoration > treshold_potentially_a_b_low:
         	self.dlg.lineEdit_602.setText("1")
         	FEM_buildings_restoration = 1
         	print(FEM_buildings_restoration)
-        elif buildings_restoration > treshold_potentially_a_b_high:
+        elif buildings_restoration < treshold_potentially_a_b_high:
         	self.dlg.lineEdit_602.setText("5")
         	FEM_buildings_restoration = 5
         	print(FEM_buildings_restoration)
@@ -1581,20 +1580,20 @@ class test_plugin:
         treshold_extended_cost_benefit_analysis_medium = np.asarray(path_treshold_extended_cost_benefit_analysis_medium, dtype='float64')#float(input(path))
         path_treshold_extended_cost_benefit_analysis_high = self.dlg.lineEdit_132.text()
         treshold_extended_cost_benefit_analysis_high = np.asarray(path_treshold_extended_cost_benefit_analysis_high, dtype='float64')#float(input(path))
-        if extended_cost_benefit_analysis < treshold_extended_cost_benefit_analysis_low:
-        	self.dlg.lineEdit_163.setText("1")
-        	FEM_extended_cost_benefit_analysis = 1
-        	print(FEM_extended_cost_benefit_analysis)
-        elif extended_cost_benefit_analysis > treshold_extended_cost_benefit_analysis_high:
-        	self.dlg.lineEdit_163.setText("5")
-        	FEM_extended_cost_benefit_analysis = 5
-        	print(FEM_extended_cost_benefit_analysis)
-        else:
-        	self.dlg.lineEdit_163.setText("3")
-        	FEM_extended_cost_benefit_analysis = 3
-        	print(FEM_extended_cost_benefit_analysis)
+        #if extended_cost_benefit_analysis < treshold_extended_cost_benefit_analysis_low:
+        #	self.dlg.lineEdit_163.setText("1")
+        #	FEM_extended_cost_benefit_analysis = 1
+        #	print(FEM_extended_cost_benefit_analysis)
+        #elif extended_cost_benefit_analysis > treshold_extended_cost_benefit_analysis_high:
+        #	self.dlg.lineEdit_163.setText("5")
+        #	FEM_extended_cost_benefit_analysis = 5
+        #	print(FEM_extended_cost_benefit_analysis)
+        #else:
+        #	self.dlg.lineEdit_163.setText("3")
+        #	FEM_extended_cost_benefit_analysis = 3
+        #	print(FEM_extended_cost_benefit_analysis)
 
-        FEM_sum = FEM_Delta_v + FEM_Delta_tau + FEM_protected_habitat + FEM_vegetation_naturalness + FEM_water_level_dynamics + FEM_potential_for_typical_habitats + FEM_ecological_water_body_status + FEM_parameter_invasive_species + FEM_presence_of_documented_planning_interests + FEM_extended_cost_benefit_analysis
+        FEM_sum = FEM_Delta_v + FEM_Delta_tau + FEM_protected_habitat + FEM_vegetation_naturalness + FEM_water_level_dynamics + FEM_potential_for_typical_habitats + FEM_ecological_water_body_status + FEM_parameter_invasive_species + FEM_presence_of_documented_planning_interests #+ FEM_extended_cost_benefit_analysis
         print(FEM_sum)
         self.dlg.lineEdit_153.setText(str(FEM_sum))
         if FEM_sum >= 27:
@@ -2209,9 +2208,9 @@ class test_plugin:
         for f in features:
             id=f.id()
             attr_value_buildings={27:str(presence_of_documented_planning_interests)}
-            attr_value_land_use={30:str(extended_cost_benefit_analysis)}
+            #attr_value_land_use={30:str(extended_cost_benefit_analysis)}
             layer_provider.changeAttributeValues({id:attr_value_buildings})
-            layer_provider.changeAttributeValues({id:attr_value_land_use})
+            #layer_provider.changeAttributeValues({id:attr_value_land_use})
         layer.commitChanges()
         self.dlg.lineEdit_59.setText("Results added")  
         
@@ -2402,7 +2401,7 @@ class test_plugin:
             self.dlg.pushButton_101.clicked.connect(self.import25_restoration)
             self.dlg.pushButton_51.clicked.connect(self.import26)
             self.dlg.pushButton_106.clicked.connect(self.import26_restoration)
-            self.dlg.pushButton_53.clicked.connect(self.import27)
+            #self.dlg.pushButton_53.clicked.connect(self.import27)
             self.dlg.pushButton_108.clicked.connect(self.import27_restoration)
             self.dlg.pushButton_50.clicked.connect(self.import28)
             self.dlg.pushButton_102.clicked.connect(self.import28_restoration)

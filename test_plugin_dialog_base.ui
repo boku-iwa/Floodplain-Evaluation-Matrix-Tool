@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1446</width>
-    <height>778</height>
+    <height>779</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -159,25 +159,164 @@
           <string>Floodplain Areas</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_6">
+          <item row="3" column="0">
+           <widget class="QGroupBox" name="groupBox_13">
+            <property name="title">
+             <string>Select a Floodplain to Create Attribute Table</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_21">
+             <item row="0" column="3">
+              <widget class="QPushButton" name="pushButton_23">
+               <property name="text">
+                <string>Select</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_35">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area of the selected floodplain layer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;floodplain(FP) &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_37">
+               <property name="text">
+                <string>Information</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="2">
+              <widget class="QLineEdit" name="lineEdit_34"/>
+             </item>
+             <item row="0" column="2">
+              <widget class="QgsMapLayerComboBox" name="mMapLayerComboBox"/>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_28">
+               <property name="text">
+                <string>Select Floodplain Layer</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_34">
+               <property name="text">
+                <string>Information </string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLabel" name="label_162">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QPushButton" name="pushButton_24">
+               <property name="text">
+                <string>Create Attribute Table</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QPushButton" name="pushButton_44">
+               <property name="text">
+                <string>Import</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLineEdit" name="lineEdit_31"/>
+             </item>
+             <item row="2" column="2">
+              <widget class="QLineEdit" name="lineEdit_32"/>
+             </item>
+             <item row="3" column="2">
+              <widget class="QLineEdit" name="lineEdit_177"/>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLabel" name="label_161">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="title">
+             <string>Load Layers for Automatic Floodplain Identification</string>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>Load Centerline of the River</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QToolButton" name="toolButton_6">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_27"/>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="label_26">
+               <property name="text">
+                <string>Load Inudation Area (i.e HQ100)</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEdit_26"/>
+             </item>
+             <item row="0" column="2">
+              <widget class="QToolButton" name="toolButton_5">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QToolButton" name="toolButton_7">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_25"/>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_7">
+               <property name="text">
+                <string>Load River (Optional)</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
           <item row="2" column="0">
            <widget class="QGroupBox" name="groupBox_3">
             <property name="title">
              <string>Automatic Floodplain Identification</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_4">
-             <item row="5" column="1">
-              <widget class="QPushButton" name="pushButton_2">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2">
-              <widget class="QPushButton" name="pushButton_22">
-               <property name="text">
-                <string>Import</string>
-               </property>
-              </widget>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEdit_24"/>
              </item>
              <item row="1" column="2">
               <widget class="QPushButton" name="pushButton_3">
@@ -186,26 +325,13 @@
                </property>
               </widget>
              </item>
-             <item row="4" column="2">
-              <widget class="QPushButton" name="pushButton_25">
-               <property name="text">
-                <string>Import</string>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_27">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 5000)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_30"/>
-             </item>
-             <item row="4" column="1">
-              <widget class="QLineEdit" name="lineEdit_33"/>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_24"/>
-             </item>
-             <item row="2" column="2">
-              <widget class="QPushButton" name="pushButton_21">
                <property name="text">
-                <string>Import</string>
+                <string>Distance Between the Floodplains</string>
                </property>
               </widget>
              </item>
@@ -219,26 +345,20 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_29"/>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_76"/>
              </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_27">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 5000)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="2" column="2">
+              <widget class="QPushButton" name="pushButton_21">
                <property name="text">
-                <string>Distance Between the Floodplains</string>
+                <string>Import</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="label_36">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 1)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="5" column="1">
+              <widget class="QPushButton" name="pushButton_2">
                <property name="text">
-                <string>Ratio Factor</string>
+                <string>Compute</string>
                </property>
               </widget>
              </item>
@@ -249,13 +369,20 @@
                </property>
               </widget>
              </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_29">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 1100)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="3" column="2">
+              <widget class="QPushButton" name="pushButton_22">
                <property name="text">
-                <string>River Width</string>
+                <string>Import</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEdit_29"/>
+             </item>
+             <item row="4" column="2">
+              <widget class="QPushButton" name="pushButton_25">
+               <property name="text">
+                <string>Import</string>
                </property>
               </widget>
              </item>
@@ -273,8 +400,31 @@
                </property>
               </widget>
              </item>
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_76"/>
+             <item row="4" column="1">
+              <widget class="QLineEdit" name="lineEdit_33"/>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="label_36">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 1)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Ratio Factor</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_30"/>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_29">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(e.g. 1100)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>River Width</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -305,139 +455,6 @@
             </layout>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="QGroupBox" name="groupBox_5">
-            <property name="title">
-             <string>Load Layers for Automatic Floodplain Identification</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_8">
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_27"/>
-             </item>
-             <item row="0" column="2">
-              <widget class="QToolButton" name="toolButton_5">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_26">
-               <property name="text">
-                <string>Load Inudation Area (i.e HQ100)</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>Load Centerline of the River</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2">
-              <widget class="QToolButton" name="toolButton_7">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_25"/>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_7">
-               <property name="text">
-                <string>Load River (Optional)</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QToolButton" name="toolButton_6">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_26"/>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QGroupBox" name="groupBox_13">
-            <property name="title">
-             <string>Select a Floodplain to Create Attribute Table</string>
-            </property>
-            <layout class="QGridLayout" name="gridLayout_21">
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_28">
-               <property name="text">
-                <string>Select Floodplain Layer</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_34">
-               <property name="text">
-                <string>Information </string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QPushButton" name="pushButton_23">
-               <property name="text">
-                <string>Select</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_31"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_35">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area of the selected floodplain layer&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;floodplain(FP)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_32"/>
-             </item>
-             <item row="0" column="1">
-              <widget class="QgsMapLayerComboBox" name="mMapLayerComboBox"/>
-             </item>
-             <item row="3" column="2">
-              <widget class="QPushButton" name="pushButton_24">
-               <property name="text">
-                <string>Create Attribute Table</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="label_37">
-               <property name="text">
-                <string>Information</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_34"/>
-             </item>
-             <item row="2" column="2">
-              <widget class="QPushButton" name="pushButton_44">
-               <property name="text">
-                <string>Import</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="tab_3">
@@ -451,20 +468,147 @@
              <string>Peak Reduction and Flood Wave Translation</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_24">
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_2"/>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_8"/>
              </item>
-             <item row="6" column="6">
-              <widget class="QPushButton" name="pushButton_13">
+             <item row="6" column="8">
+              <widget class="QLineEdit" name="lineEdit_16"/>
+             </item>
+             <item row="2" column="7">
+              <widget class="QPushButton" name="pushButton_9">
                <property name="text">
                 <string>Compute</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="3">
-              <widget class="QPushButton" name="pushButton_7">
+             <item row="4" column="7">
+              <widget class="QPushButton" name="pushButton_11">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="6">
+              <widget class="QLabel" name="label_168">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_9">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output hydrograph at the end of the floodplain&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; vertical-align:sub;&quot;/&gt;Output Hydrograph with FP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QToolButton" name="toolButton_3">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="8">
+              <widget class="QLineEdit" name="lineEdit_10"/>
+             </item>
+             <item row="8" column="5">
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEdit_9"/>
+             </item>
+             <item row="4" column="5">
+              <widget class="QLabel" name="label_17">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph with FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="label_12">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output with FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="7">
+              <widget class="QPushButton" name="pushButton_10">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="label_11">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output hydrograph at the end of the floodplain for the river channel model (without floodplain)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output Hydrograph without FP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QToolButton" name="toolButton_2">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEdit_2"/>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="pushButton_5">
                <property name="toolTip">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Import</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="6">
+              <widget class="QLabel" name="label_163">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="6">
+              <widget class="QLabel" name="label_172">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="8">
+              <widget class="QLineEdit" name="lineEdit_14"/>
+             </item>
+             <item row="3" column="3">
+              <widget class="QPushButton" name="pushButton_8">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
                 <string>Import</string>
@@ -477,59 +621,38 @@
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bankfull discharge&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
-                <string>QBankfull</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QBankfull (&lt;span style=&quot; font-style:italic;&quot;&gt;m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="5" column="5">
-              <widget class="QLabel" name="label_16">
+             <item row="7" column="8">
+              <widget class="QLineEdit" name="lineEdit_35"/>
+             </item>
+             <item row="0" column="4">
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="3" column="5">
+              <widget class="QLabel" name="label_15">
                <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph without FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;is calculated by dividing DeltaQ with the difference of (maximum of the Qmax Input and QBankfull) x 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
-                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;</string>
+                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative&lt;/span&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="7">
-              <widget class="QLineEdit" name="lineEdit_12"/>
-             </item>
-             <item row="2" column="2">
-              <widget class="QToolButton" name="toolButton_4">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="5">
-              <widget class="QLabel" name="label_18">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt; and the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>DeltaT</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="6">
-              <widget class="QPushButton" name="pushButton_4">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="6">
-              <widget class="QPushButton" name="pushButton_26">
-               <property name="text">
-                <string>Add</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="7">
-              <widget class="QLineEdit" name="lineEdit_10"/>
-             </item>
-             <item row="3" column="6">
-              <widget class="QPushButton" name="pushButton_10">
+             <item row="6" column="7">
+              <widget class="QPushButton" name="pushButton_13">
                <property name="text">
                 <string>Compute</string>
                </property>
@@ -538,8 +661,8 @@
              <item row="0" column="1">
               <widget class="QLineEdit" name="lineEdit_7"/>
              </item>
-             <item row="0" column="6">
-              <widget class="QPushButton" name="pushButton">
+             <item row="1" column="7">
+              <widget class="QPushButton" name="pushButton_4">
                <property name="text">
                 <string>Compute</string>
                </property>
@@ -555,102 +678,45 @@
                </property>
               </widget>
              </item>
-             <item row="8" column="5">
-              <spacer name="verticalSpacer_3">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="0" column="4">
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="2" column="6">
-              <widget class="QPushButton" name="pushButton_9">
+             <item row="1" column="6">
+              <widget class="QLabel" name="label_164">
                <property name="text">
-                <string>Compute</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="2">
-              <widget class="QToolButton" name="toolButton_3">
+             <item row="1" column="8">
+              <widget class="QLineEdit" name="lineEdit_11"/>
+             </item>
+             <item row="5" column="5">
+              <widget class="QLabel" name="label_16">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph without FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="5">
+              <widget class="QLabel" name="label_18">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt; and the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaT</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="2">
+              <widget class="QToolButton" name="toolButton_4">
                <property name="text">
                 <string>...</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="3">
-              <widget class="QPushButton" name="pushButton_6">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Import</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="label_9">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output hydrograph at the end of the floodplain&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; vertical-align:sub;&quot;/&gt;Output Hydrograph with FP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="5">
-              <widget class="QLabel" name="label_15">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;is calculated by dividing DeltaQ with the difference of (maximum of the Qmax Input and QBankfull) x 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative&lt;/span&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="6">
-              <widget class="QPushButton" name="pushButton_11">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="5">
-              <widget class="QLabel" name="label_17">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph with FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="7" column="5">
-              <widget class="QLabel" name="label_39">
-               <property name="text">
-                <string>Attribute Table</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QPushButton" name="pushButton_5">
+             <item row="2" column="3">
+              <widget class="QPushButton" name="pushButton_7">
                <property name="toolTip">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
@@ -669,41 +735,28 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="1">
-              <widget class="QLineEdit" name="lineEdit_8"/>
+             <item row="3" column="8">
+              <widget class="QLineEdit" name="lineEdit_13"/>
              </item>
-             <item row="0" column="5">
-              <widget class="QLabel" name="label_12">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output with FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="5" column="7">
+              <widget class="QPushButton" name="pushButton_12">
                <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>Compute</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_9"/>
-             </item>
-             <item row="3" column="3">
-              <widget class="QPushButton" name="pushButton_8">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="3" column="6">
+              <widget class="QLabel" name="label_166">
                <property name="text">
-                <string>Import</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="2">
-              <widget class="QToolButton" name="toolButton_2">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
+             <item row="5" column="8">
+              <widget class="QLineEdit" name="lineEdit_15"/>
              </item>
-             <item row="6" column="7">
-              <widget class="QLineEdit" name="lineEdit_16"/>
+             <item row="2" column="8">
+              <widget class="QLineEdit" name="lineEdit_12"/>
              </item>
              <item row="1" column="5">
               <widget class="QLabel" name="label_13">
@@ -715,37 +768,50 @@
                </property>
               </widget>
              </item>
-             <item row="3" column="7">
-              <widget class="QLineEdit" name="lineEdit_13"/>
+             <item row="7" column="5">
+              <widget class="QLabel" name="label_39">
+               <property name="text">
+                <string>Attribute Table</string>
+               </property>
+              </widget>
              </item>
-             <item row="4" column="7">
-              <widget class="QLineEdit" name="lineEdit_14"/>
+             <item row="2" column="6">
+              <widget class="QLabel" name="label_165">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
-             <item row="5" column="7">
-              <widget class="QLineEdit" name="lineEdit_15"/>
-             </item>
-             <item row="5" column="6">
-              <widget class="QPushButton" name="pushButton_12">
+             <item row="0" column="7">
+              <widget class="QPushButton" name="pushButton">
                <property name="text">
                 <string>Compute</string>
                </property>
               </widget>
              </item>
-             <item row="1" column="7">
-              <widget class="QLineEdit" name="lineEdit_11"/>
-             </item>
-             <item row="2" column="0">
-              <widget class="QLabel" name="label_11">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output hydrograph at the end of the floodplain for the river channel model (without floodplain)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="7" column="7">
+              <widget class="QPushButton" name="pushButton_26">
                <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output Hydrograph without FP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>Add</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="7">
-              <widget class="QLineEdit" name="lineEdit_35"/>
+             <item row="1" column="3">
+              <widget class="QPushButton" name="pushButton_6">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Import</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="6">
+              <widget class="QLabel" name="label_167">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -756,35 +822,8 @@
              <string>Peak Reduction and Flood Wave Translation - After Restoration</string>
             </property>
             <layout class="QGridLayout" name="gridLayout_11">
-             <item row="2" column="1">
-              <widget class="QLineEdit" name="lineEdit_171"/>
-             </item>
-             <item row="0" column="2">
-              <widget class="QToolButton" name="toolButton_10">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="5">
-              <widget class="QLabel" name="label_150">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;is calculated by dividing DeltaQ with the difference of (maximum of the Qmax Input and QBankfull) x 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative&lt;/span&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLineEdit" name="lineEdit_164"/>
-             </item>
-             <item row="1" column="6">
-              <widget class="QPushButton" name="pushButton_60">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="lineEdit_173"/>
              </item>
              <item row="2" column="5">
               <widget class="QLabel" name="label_151">
@@ -799,18 +838,15 @@
              <item row="1" column="1">
               <widget class="QLineEdit" name="lineEdit_174"/>
              </item>
-             <item row="7" column="5">
-              <spacer name="verticalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
+             <item row="2" column="8">
+              <widget class="QLineEdit" name="lineEdit_165"/>
+             </item>
+             <item row="0" column="7">
+              <widget class="QPushButton" name="pushButton_59">
+               <property name="text">
+                <string>Compute</string>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
-               </property>
-              </spacer>
+              </widget>
              </item>
              <item row="2" column="0">
               <widget class="QLabel" name="label_153">
@@ -819,30 +855,6 @@
                </property>
                <property name="text">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Output Hydrograph without FP&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="5">
-              <widget class="QLabel" name="label_148">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph with FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="6">
-              <widget class="QPushButton" name="pushButton_65">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="6">
-              <widget class="QPushButton" name="pushButton_67">
-               <property name="text">
-                <string>Compute</string>
                </property>
               </widget>
              </item>
@@ -866,25 +878,115 @@
                </property>
               </widget>
              </item>
+             <item row="6" column="5">
+              <widget class="QLabel" name="label_147">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt; and the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaT</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="7">
+              <widget class="QPushButton" name="pushButton_64">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_152">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input hydrograph at the beginning of the floodplain&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input Hydrograph&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QToolButton" name="toolButton_10">
+               <property name="text">
+                <string>...</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5">
+              <widget class="QLabel" name="label_150">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;is calculated by dividing DeltaQ with the difference of (maximum of the Qmax Input and QBankfull) x 100&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative&lt;/span&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="8">
+              <widget class="QLineEdit" name="lineEdit_170"/>
+             </item>
+             <item row="7" column="5">
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="1" column="7">
+              <widget class="QPushButton" name="pushButton_60">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit_164"/>
+             </item>
+             <item row="4" column="7">
+              <widget class="QPushButton" name="pushButton_62">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
              <item row="3" column="0">
               <widget class="QLabel" name="label_156">
                <property name="toolTip">
                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Bankfull discharge&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
-                <string>QBankfull</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;QBankfull (&lt;span style=&quot; font-style:italic;&quot;&gt;m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="3">
-              <widget class="QPushButton" name="pushButton_68">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="2" column="2">
+              <widget class="QToolButton" name="toolButton_11">
                <property name="text">
-                <string>Import</string>
+                <string>...</string>
                </property>
               </widget>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="label_154">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output with FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="8">
+              <widget class="QLineEdit" name="lineEdit_169"/>
+             </item>
+             <item row="1" column="8">
+              <widget class="QLineEdit" name="lineEdit_172"/>
              </item>
              <item row="5" column="5">
               <widget class="QLabel" name="label_155">
@@ -896,37 +998,16 @@
                </property>
               </widget>
              </item>
-             <item row="1" column="5">
-              <widget class="QLabel" name="label_146">
+             <item row="4" column="8">
+              <widget class="QLineEdit" name="lineEdit_168"/>
+             </item>
+             <item row="4" column="5">
+              <widget class="QLabel" name="label_148">
                <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output without FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the time where a maximum value of the Qmax of the output hydrograph with FP and Qmax of the input hydrograph occurs&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
                <property name="text">
-                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="6">
-              <widget class="QPushButton" name="pushButton_62">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QToolButton" name="toolButton_9">
-               <property name="text">
-                <string>...</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="3">
-              <widget class="QPushButton" name="pushButton_61">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Import</string>
+                <string>DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;</string>
                </property>
               </widget>
              </item>
@@ -943,21 +1024,58 @@
                </property>
               </spacer>
              </item>
-             <item row="2" column="2">
-              <widget class="QToolButton" name="toolButton_11">
+             <item row="5" column="7">
+              <widget class="QPushButton" name="pushButton_65">
                <property name="text">
-                <string>...</string>
+                <string>Compute</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="7">
-              <widget class="QLineEdit" name="lineEdit_170"/>
+             <item row="1" column="3">
+              <widget class="QPushButton" name="pushButton_61">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Import</string>
+               </property>
+              </widget>
              </item>
-             <item row="0" column="7">
+             <item row="1" column="5">
+              <widget class="QLabel" name="label_146">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output without FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QLineEdit" name="lineEdit_171"/>
+             </item>
+             <item row="0" column="8">
               <widget class="QLineEdit" name="lineEdit_166"/>
              </item>
-             <item row="3" column="1">
-              <widget class="QLineEdit" name="lineEdit_173"/>
+             <item row="3" column="7">
+              <widget class="QPushButton" name="pushButton_67">
+               <property name="text">
+                <string>Compute</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QPushButton" name="pushButton_68">
+               <property name="toolTip">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please use space &amp;quot; &amp;quot; deliminated .txt file&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+               <property name="text">
+                <string>Import</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="8">
+              <widget class="QLineEdit" name="lineEdit_167"/>
              </item>
              <item row="3" column="3">
               <widget class="QPushButton" name="pushButton_58">
@@ -969,71 +1087,68 @@
                </property>
               </widget>
              </item>
-             <item row="6" column="6">
-              <widget class="QPushButton" name="pushButton_64">
-               <property name="text">
-                <string>Compute</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="7">
-              <widget class="QLineEdit" name="lineEdit_172"/>
-             </item>
-             <item row="5" column="7">
-              <widget class="QLineEdit" name="lineEdit_169"/>
-             </item>
-             <item row="0" column="0">
-              <widget class="QLabel" name="label_152">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input hydrograph at the beginning of the floodplain&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Input Hydrograph&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="6">
+             <item row="2" column="7">
               <widget class="QPushButton" name="pushButton_63">
                <property name="text">
                 <string>Compute</string>
                </property>
               </widget>
              </item>
-             <item row="6" column="5">
-              <widget class="QLabel" name="label_147">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference between the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt; and the DeltaT&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
+             <item row="1" column="2">
+              <widget class="QToolButton" name="toolButton_9">
                <property name="text">
-                <string>DeltaT</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="5">
-              <widget class="QLabel" name="label_154">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;The difference where a maximum value between the Qmax Input and Qmax Output with FP occurs, referred to as total peak reduction&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DeltaQ&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>...</string>
                </property>
               </widget>
              </item>
              <item row="0" column="6">
-              <widget class="QPushButton" name="pushButton_59">
+              <widget class="QLabel" name="label_177">
                <property name="text">
-                <string>Compute</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
-             <item row="3" column="7">
-              <widget class="QLineEdit" name="lineEdit_167"/>
+             <item row="1" column="6">
+              <widget class="QLabel" name="label_181">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
-             <item row="2" column="7">
-              <widget class="QLineEdit" name="lineEdit_165"/>
+             <item row="2" column="6">
+              <widget class="QLabel" name="label_183">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;3&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
-             <item row="4" column="7">
-              <widget class="QLineEdit" name="lineEdit_168"/>
+             <item row="3" column="6">
+              <widget class="QLabel" name="label_222">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="6">
+              <widget class="QLabel" name="label_225">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="6">
+              <widget class="QLabel" name="label_229">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="6">
+              <widget class="QLabel" name="label_230">
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
              </item>
             </layout>
            </widget>
@@ -1061,14 +1176,14 @@
               <item row="0" column="5">
                <widget class="QLabel" name="label_21">
                 <property name="text">
-                 <string>Delta h</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta h &lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_19">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1084,7 +1199,7 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_20">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1184,7 +1299,7 @@
               <item row="2" column="0">
                <widget class="QLabel" name="label_46">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1194,21 +1309,21 @@
               <item row="3" column="0">
                <widget class="QLabel" name="label_52">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="6">
                <widget class="QLabel" name="label_38">
                 <property name="text">
-                 <string>Delta v</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v &lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_45">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot &lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1279,14 +1394,14 @@
               <item row="2" column="6">
                <widget class="QLabel" name="label_89">
                 <property name="text">
-                 <string>Delta tau</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta tau &lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;-2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="4" column="0">
                <widget class="QLabel" name="label_84">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1324,14 +1439,14 @@
               <item row="0" column="5">
                <widget class="QLabel" name="label_169">
                 <property name="text">
-                 <string>Delta h</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta h &lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_170">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1347,7 +1462,7 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_171">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;h&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1427,7 +1542,7 @@
               <item row="2" column="0">
                <widget class="QLabel" name="label_173">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1437,21 +1552,21 @@
               <item row="3" column="0">
                <widget class="QLabel" name="label_174">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="6">
                <widget class="QLabel" name="label_175">
                 <property name="text">
-                 <string>Delta v</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v &lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_176">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;v&lt;span style=&quot; vertical-align:sub;&quot;&gt;tot&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1515,14 +1630,14 @@
               <item row="2" column="6">
                <widget class="QLabel" name="label_178">
                 <property name="text">
-                 <string>Delta tau</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta tau &lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;-2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
               <item row="4" column="0">
                <widget class="QLabel" name="label_179">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;tau&lt;span style=&quot; vertical-align:sub;&quot;&gt;RC&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1697,7 +1812,7 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_93">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;protected&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;protected&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -1789,7 +1904,7 @@
               <item row="6" column="0">
                <widget class="QLabel" name="label_101">
                 <property name="text">
-                 <string>Parameter Invasive Species</string>
+                 <string>Invasive Species</string>
                 </property>
                </widget>
               </item>
@@ -1930,7 +2045,7 @@
               <item row="1" column="0">
                <widget class="QLabel" name="label_190">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;protected&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Area&lt;span style=&quot; vertical-align:sub;&quot;&gt;protected&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -2015,7 +2130,7 @@
               <item row="6" column="0">
                <widget class="QLabel" name="label_198">
                 <property name="text">
-                 <string>Parameter Invasive Species</string>
+                 <string>Invasive Species</string>
                 </property>
                </widget>
               </item>
@@ -2037,6 +2152,147 @@
           <string>Socio-Economics</string>
          </attribute>
          <layout class="QGridLayout" name="gridLayout_17">
+          <item row="1" column="0">
+           <widget class="QTabWidget" name="tabWidget_12">
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="tab_32">
+             <attribute name="title">
+              <string>Minimum Parameters - After Restoration</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_29">
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_103">
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <spacer name="verticalSpacer_15">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_199">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr. of Affected Buildings &lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pushButton_105">
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_223">
+                <property name="text">
+                 <string>Land Use</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_211"/>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_209"/>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_33">
+             <attribute name="title">
+              <string>Additional Parameters - After Restoration</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_43">
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_213"/>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pushButton_108">
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QLineEdit" name="lineEdit_214"/>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_106">
+                <property name="text">
+                 <string>Import</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_224">
+                <property name="text">
+                 <string>Presence of Doc. Pl. Interests</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_226">
+                <property name="text">
+                 <string>Extended Cost-Ben. Factor</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <spacer name="horizontalSpacer_18">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="2" column="1">
+               <spacer name="verticalSpacer_26">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
           <item row="0" column="0">
            <widget class="QTabWidget" name="tabWidget_6">
             <property name="currentIndex">
@@ -2094,7 +2350,7 @@
               <item row="0" column="0">
                <widget class="QLabel" name="label_24">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr. of Affected Buildings (n/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr. of Affected Buildings &lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -2131,6 +2387,9 @@
               <string>Additional Parameters</string>
              </attribute>
              <layout class="QGridLayout" name="gridLayout_31">
+              <item row="0" column="1">
+               <widget class="QLineEdit" name="lineEdit_58"/>
+              </item>
               <item row="0" column="2">
                <widget class="QPushButton" name="pushButton_51">
                 <property name="text">
@@ -2138,33 +2397,24 @@
                 </property>
                </widget>
               </item>
-              <item row="0" column="6">
-               <widget class="QLineEdit" name="lineEdit_59"/>
+              <item row="0" column="4">
+               <widget class="QLabel" name="label_103">
+                <property name="text">
+                 <string>Attribute Table</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QPushButton" name="pushButton_52">
+                <property name="text">
+                 <string>Add</string>
+                </property>
+               </widget>
               </item>
               <item row="0" column="0">
                <widget class="QLabel" name="label_102">
                 <property name="text">
                  <string>Presence of Doc. Pl. Interests</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <spacer name="verticalSpacer_11">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="0" column="4">
-               <widget class="QLabel" name="label_103">
-                <property name="text">
-                 <string>Attribute Table</string>
                 </property>
                </widget>
               </item>
@@ -2181,56 +2431,11 @@
                 </property>
                </spacer>
               </item>
-              <item row="0" column="5">
-               <widget class="QPushButton" name="pushButton_52">
-                <property name="text">
-                 <string>Add</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="lineEdit_58"/>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_104">
-                <property name="text">
-                 <string>Extended Cost-Ben. Factor</string>
-                </property>
-               </widget>
+              <item row="0" column="6">
+               <widget class="QLineEdit" name="lineEdit_59"/>
               </item>
               <item row="1" column="1">
-               <widget class="QLineEdit" name="lineEdit_60"/>
-              </item>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="pushButton_53">
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QTabWidget" name="tabWidget_12">
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <widget class="QWidget" name="tab_32">
-             <attribute name="title">
-              <string>Minimum Parameters - After Restoration</string>
-             </attribute>
-             <layout class="QGridLayout" name="gridLayout_29">
-              <item row="0" column="2">
-               <widget class="QPushButton" name="pushButton_103">
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <spacer name="verticalSpacer_15">
+               <spacer name="verticalSpacer_11">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -2241,113 +2446,6 @@
                  </size>
                 </property>
                </spacer>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_199">
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr. of Affected Buildings (n/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <spacer name="horizontalSpacer_9">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="pushButton_105">
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_223">
-                <property name="text">
-                 <string>Land Use</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="lineEdit_211"/>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="lineEdit_209"/>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="tab_33">
-             <attribute name="title">
-              <string>Additional Parameters - After Restoration</string>
-             </attribute>
-             <layout class="QGridLayout" name="gridLayout_43">
-              <item row="2" column="1">
-               <spacer name="verticalSpacer_26">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="0" column="3">
-               <spacer name="horizontalSpacer_18">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="lineEdit_214"/>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="lineEdit_213"/>
-              </item>
-              <item row="0" column="2">
-               <widget class="QPushButton" name="pushButton_106">
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_224">
-                <property name="text">
-                 <string>Presence of Doc. Pl. Interests</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_226">
-                <property name="text">
-                 <string>Extended Cost-Ben. Factor</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="pushButton_108">
-                <property name="text">
-                 <string>Import</string>
-                </property>
-               </widget>
               </item>
              </layout>
             </widget>
@@ -2370,44 +2468,54 @@
               <string>Tresholds</string>
              </attribute>
              <layout class="QGridLayout" name="gridLayout_25">
-              <item row="9" column="0">
-               <widget class="QLabel" name="label_78">
+              <item row="10" column="6">
+               <widget class="QLineEdit" name="lineEdit_82"/>
+              </item>
+              <item row="10" column="2">
+               <widget class="QLineEdit" name="lineEdit_91"/>
+              </item>
+              <item row="7" column="2">
+               <widget class="QLineEdit" name="lineEdit_78"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_158">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potentially affected buildings (Nr/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string/>
                 </property>
                </widget>
               </item>
-              <item row="15" column="6">
-               <widget class="QLineEdit" name="lineEdit_113"/>
-              </item>
-              <item row="12" column="0">
-               <widget class="QLabel" name="label_65">
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_50">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Connectivity of FP water bodies (%)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>Load Default Values</string>
                 </property>
                </widget>
               </item>
               <item row="8" column="2">
                <widget class="QLineEdit" name="lineEdit_86"/>
               </item>
-              <item row="2" column="5">
-               <widget class="Line" name="line_7">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
+              <item row="8" column="6">
+               <widget class="QLineEdit" name="lineEdit_81"/>
+              </item>
+              <item row="6" column="2">
+               <widget class="QLineEdit" name="lineEdit_105"/>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pushButton_37">
+                <property name="text">
+                 <string>Apply</string>
                 </property>
                </widget>
               </item>
-              <item row="9" column="6">
-               <widget class="QLineEdit" name="lineEdit_103"/>
+              <item row="2" column="6">
+               <widget class="QLabel" name="label_79">
+                <property name="text">
+                 <string>High (5)</string>
+                </property>
+               </widget>
               </item>
-              <item row="7" column="4">
-               <widget class="QLineEdit" name="lineEdit_93"/>
-              </item>
-              <item row="12" column="6">
-               <widget class="QLineEdit" name="lineEdit_101"/>
-              </item>
-              <item row="3" column="0">
-               <widget class="Line" name="line">
+              <item row="3" column="6">
+               <widget class="Line" name="line_4">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -2416,105 +2524,16 @@
               <item row="4" column="0">
                <widget class="QLabel" name="label_70">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Peak reduction Delta Q&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;(%)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Peak reduction Delta Q&lt;span style=&quot; vertical-align:sub;&quot;&gt;relative &lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_67">
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_78">
                 <property name="text">
-                 <string>Connectivity of FP water bodies (-)</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potentially affected buildings &lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-              </item>
-              <item row="14" column="0">
-               <widget class="QLabel" name="label_72">
-                <property name="text">
-                 <string>Water level dynamics (-)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="6">
-               <widget class="QLineEdit" name="lineEdit_110"/>
-              </item>
-              <item row="13" column="6">
-               <widget class="QLineEdit" name="lineEdit_99"/>
-              </item>
-              <item row="7" column="6">
-               <widget class="QLineEdit" name="lineEdit_104"/>
-              </item>
-              <item row="6" column="4">
-               <widget class="QLineEdit" name="lineEdit_88"/>
-              </item>
-              <item row="10" column="2">
-               <widget class="QLineEdit" name="lineEdit_91"/>
-              </item>
-              <item row="2" column="3">
-               <widget class="Line" name="line_6">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="0">
-               <widget class="QLabel" name="label_75">
-                <property name="text">
-                 <string>Existence of protected species (-)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="4">
-               <widget class="Line" name="line_3">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="15" column="4">
-               <widget class="QLineEdit" name="lineEdit_112"/>
-              </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_76">
-                <property name="text">
-                 <string>Water level change Delta h (cm)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="4">
-               <widget class="QLineEdit" name="lineEdit_80"/>
-              </item>
-              <item row="3" column="2">
-               <widget class="Line" name="line_2">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QLineEdit" name="lineEdit_105"/>
-              </item>
-              <item row="5" column="0">
-               <widget class="QLabel" name="label_68">
-                <property name="text">
-                 <string>Flood wave translation Delta T (min)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="2">
-               <widget class="QLineEdit" name="lineEdit_84"/>
-              </item>
-              <item row="2" column="1">
-               <widget class="Line" name="line_5">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="2">
-               <widget class="QLineEdit" name="lineEdit_97"/>
-              </item>
-              <item row="15" column="2">
-               <widget class="QLineEdit" name="lineEdit_111"/>
               </item>
               <item row="2" column="0">
                <widget class="QLabel" name="label_66">
@@ -2523,46 +2542,161 @@
                 </property>
                </widget>
               </item>
-              <item row="10" column="4">
-               <widget class="QLineEdit" name="lineEdit_85"/>
-              </item>
-              <item row="10" column="6">
-               <widget class="QLineEdit" name="lineEdit_82"/>
-              </item>
-              <item row="5" column="4">
-               <widget class="QLineEdit" name="lineEdit_106"/>
-              </item>
               <item row="11" column="6">
                <widget class="QLineEdit" name="lineEdit_79"/>
               </item>
-              <item row="8" column="6">
-               <widget class="QLineEdit" name="lineEdit_81"/>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLineEdit" name="lineEdit_92"/>
+              <item row="11" column="4">
+               <widget class="QLineEdit" name="lineEdit_102"/>
               </item>
               <item row="5" column="6">
                <widget class="QLineEdit" name="lineEdit_89"/>
               </item>
-              <item row="14" column="4">
+              <item row="12" column="0">
+               <widget class="QLabel" name="label_72">
+                <property name="text">
+                 <string>Water level dynamics</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="4">
                <widget class="QLineEdit" name="lineEdit_87"/>
               </item>
-              <item row="13" column="2">
-               <widget class="QLineEdit" name="lineEdit_96"/>
+              <item row="8" column="4">
+               <widget class="QLineEdit" name="lineEdit_100"/>
               </item>
-              <item row="13" column="4">
-               <widget class="QLineEdit" name="lineEdit_83"/>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_76">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Water level change Delta h &lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="0">
+               <widget class="Line" name="line">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="4">
+               <widget class="QLabel" name="label_74">
+                <property name="text">
+                 <string>Medium (3)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_75">
+                <property name="text">
+                 <string>Existence of protected species </string>
+                </property>
+               </widget>
+              </item>
+              <item row="10" column="4">
+               <widget class="QLineEdit" name="lineEdit_85"/>
+              </item>
+              <item row="2" column="2">
+               <widget class="QLabel" name="label_77">
+                <property name="text">
+                 <string>Low (1)</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="6">
+               <widget class="QLineEdit" name="lineEdit_94"/>
               </item>
               <item row="12" column="2">
-               <widget class="QLineEdit" name="lineEdit_108"/>
+               <widget class="QLineEdit" name="lineEdit_98"/>
               </item>
               <item row="4" column="4">
                <widget class="QLineEdit" name="lineEdit_90"/>
               </item>
+              <item row="3" column="2">
+               <widget class="Line" name="line_2">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="6">
+               <widget class="QLineEdit" name="lineEdit_103"/>
+              </item>
+              <item row="4" column="6">
+               <widget class="QLineEdit" name="lineEdit_110"/>
+              </item>
+              <item row="2" column="1">
+               <widget class="Line" name="line_5">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="4">
+               <widget class="QLineEdit" name="lineEdit_88"/>
+              </item>
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_67">
+                <property name="text">
+                 <string>Connectivity of FP water bodies </string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="2">
+               <widget class="QLineEdit" name="lineEdit_97"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_68">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Flood wave translation Delta T &lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QLineEdit" name="lineEdit_95"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="Line" name="line_6">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="0">
+               <widget class="QLabel" name="label_71">
+                <property name="text">
+                 <string>Sediment balance</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="6">
+               <widget class="QLineEdit" name="lineEdit_104"/>
+              </item>
+              <item row="5" column="4">
+               <widget class="QLineEdit" name="lineEdit_106"/>
+              </item>
               <item row="9" column="4">
                <widget class="QLineEdit" name="lineEdit_107"/>
               </item>
-              <item row="16" column="2">
+              <item row="6" column="6">
+               <widget class="QLineEdit" name="lineEdit_109"/>
+              </item>
+              <item row="11" column="2">
+               <widget class="QLineEdit" name="lineEdit_84"/>
+              </item>
+              <item row="2" column="5">
+               <widget class="Line" name="line_7">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QLineEdit" name="lineEdit_92"/>
+              </item>
+              <item row="7" column="4">
+               <widget class="QLineEdit" name="lineEdit_93"/>
+              </item>
+              <item row="13" column="2">
                <spacer name="verticalSpacer_6">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -2578,98 +2712,14 @@
               <item row="10" column="0">
                <widget class="QLabel" name="label_69">
                 <property name="text">
-                 <string>Land use (-)</string>
+                 <string>Land use</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="2">
-               <widget class="QLabel" name="label_77">
-                <property name="text">
-                 <string>Low (1)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="4">
-               <widget class="QLineEdit" name="lineEdit_102"/>
-              </item>
-              <item row="14" column="6">
-               <widget class="QLineEdit" name="lineEdit_94"/>
-              </item>
-              <item row="13" column="0">
-               <widget class="QLabel" name="label_73">
-                <property name="text">
-                 <string>C. of FP water bodies (detailed analysis) (-)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_50">
-                <property name="text">
-                 <string>Load Default Values</string>
-                </property>
-               </widget>
-              </item>
-              <item row="14" column="2">
-               <widget class="QLineEdit" name="lineEdit_98"/>
-              </item>
-              <item row="2" column="4">
-               <widget class="QLabel" name="label_74">
-                <property name="text">
-                 <string>Medium (3)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="2">
-               <widget class="QLineEdit" name="lineEdit_95"/>
-              </item>
-              <item row="8" column="4">
-               <widget class="QLineEdit" name="lineEdit_100"/>
-              </item>
-              <item row="6" column="6">
-               <widget class="QLineEdit" name="lineEdit_109"/>
-              </item>
-              <item row="7" column="2">
-               <widget class="QLineEdit" name="lineEdit_78"/>
-              </item>
-              <item row="2" column="6">
-               <widget class="QLabel" name="label_79">
-                <property name="text">
-                 <string>High (5)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="0">
-               <widget class="QLabel" name="label_71">
-                <property name="text">
-                 <string>Sediment balance (-)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QPushButton" name="pushButton_37">
-                <property name="text">
-                 <string>Apply</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="6">
-               <widget class="Line" name="line_4">
+              <item row="3" column="4">
+               <widget class="Line" name="line_3">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="15" column="0">
-               <widget class="QLabel" name="label_80">
-                <property name="text">
-                 <string>Cost benefit ratio (-)</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="label_158">
-                <property name="text">
-                 <string/>
                 </property>
                </widget>
               </item>
@@ -2692,7 +2742,7 @@
               <item row="4" column="0">
                <widget class="QLabel" name="label_108">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v (m/s)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v &lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -2738,7 +2788,7 @@
               <item row="2" column="0">
                <widget class="QLabel" name="label_107">
                 <property name="text">
-                 <string>Extra FEM Parameters</string>
+                 <string>Additional FEM Parameters</string>
                 </property>
                </widget>
               </item>
@@ -2759,7 +2809,7 @@
               <item row="5" column="0">
                <widget class="QLabel" name="label_43">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta tau (N/m&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta tau &lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -2982,7 +3032,7 @@
               <item row="4" column="2">
                <widget class="QLabel" name="label_54">
                 <property name="text">
-                 <string>cm</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3047,7 +3097,7 @@
               <item row="8" column="2">
                <widget class="QLabel" name="label_58">
                 <property name="text">
-                 <string>-</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -3084,7 +3134,7 @@
               <item row="7" column="2">
                <widget class="QLabel" name="label_57">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3143,7 +3193,7 @@
               <item row="3" column="2">
                <widget class="QLabel" name="label_53">
                 <property name="text">
-                 <string>min</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3173,7 +3223,7 @@
               <item row="5" column="2">
                <widget class="QLabel" name="label_55">
                 <property name="text">
-                 <string>-</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -3211,7 +3261,7 @@
               <item row="6" column="2">
                <widget class="QLabel" name="label_56">
                 <property name="text">
-                 <string>Nr</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -3247,7 +3297,7 @@
               <item row="2" column="2">
                <widget class="QLabel" name="label_49">
                 <property name="text">
-                 <string>%</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3291,49 +3341,42 @@
               <string>Floodplains (additional) - Current Status</string>
              </attribute>
              <layout class="QGridLayout" name="gridLayout_23">
-              <item row="8" column="1">
-               <widget class="QLineEdit" name="lineEdit_138"/>
-              </item>
-              <item row="13" column="2">
-               <widget class="Line" name="line_28">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+              <item row="0" column="0">
+               <widget class="QLabel" name="label_124">
+                <property name="text">
+                 <string>Additional Parameters</string>
                 </property>
                </widget>
               </item>
-              <item row="1" column="1">
-               <widget class="Line" name="line_32">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+              <item row="3" column="1">
+               <widget class="QLineEdit" name="lineEdit_150"/>
+              </item>
+              <item row="8" column="0">
+               <widget class="QLabel" name="label_142">
+                <property name="text">
+                 <string>Ecological Water Body Status</string>
                 </property>
                </widget>
               </item>
-              <item row="5" column="1">
-               <widget class="QLineEdit" name="lineEdit_149"/>
+              <item row="15" column="3">
+               <widget class="QLineEdit" name="lineEdit_176"/>
               </item>
-              <item row="13" column="3">
+              <item row="7" column="0">
+               <widget class="QLabel" name="label_132">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potential for Typical Habitats&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="12" column="3">
                <widget class="Line" name="line_31">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
-              <item row="6" column="0">
-               <widget class="QLabel" name="label_130">
-                <property name="text">
-                 <string>Water Level Dynamics</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="3">
-               <widget class="QLineEdit" name="lineEdit_141"/>
-              </item>
-              <item row="1" column="2">
-               <widget class="Line" name="line_29">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
+              <item row="6" column="1">
+               <widget class="QLineEdit" name="lineEdit_143"/>
               </item>
               <item row="5" column="0">
                <widget class="QLabel" name="label_133">
@@ -3342,24 +3385,74 @@
                 </property>
                </widget>
               </item>
-              <item row="3" column="2">
-               <widget class="QLabel" name="label_61">
+              <item row="3" column="3">
+               <widget class="QLineEdit" name="lineEdit_156"/>
+              </item>
+              <item row="19" column="3">
+               <widget class="QLabel" name="label_127">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(N/m&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>3: Medium Performance</string>
                 </property>
                </widget>
               </item>
-              <item row="20" column="1">
-               <widget class="QLabel" name="label_131">
-                <property name="text">
-                 <string>FEM-Evaluation Sheet: </string>
+              <item row="12" column="0">
+               <widget class="Line" name="line_35">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
                </widget>
               </item>
-              <item row="8" column="2">
-               <widget class="QLabel" name="label_139">
+              <item row="7" column="1">
+               <widget class="QLineEdit" name="lineEdit_152"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="Line" name="line_30">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="1">
+               <widget class="QLineEdit" name="lineEdit_158"/>
+              </item>
+              <item row="10" column="1">
+               <widget class="QLineEdit" name="lineEdit_160"/>
+              </item>
+              <item row="12" column="2">
+               <widget class="Line" name="line_28">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="16" column="2">
+               <widget class="QPushButton" name="pushButton_55">
                 <property name="text">
-                 <string>-</string>
+                 <string>Add</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_122">
+                <property name="text">
+                 <string>FEM-Evaluation</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_129">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="3">
+               <widget class="QLineEdit" name="lineEdit_146"/>
+              </item>
+              <item row="10" column="0">
+               <widget class="QLabel" name="label_144">
+                <property name="text">
+                 <string>Presence of Doc. Pl. Interests</string>
                 </property>
                </widget>
               </item>
@@ -3370,108 +3463,14 @@
                 </property>
                </widget>
               </item>
-              <item row="9" column="3">
-               <widget class="QLineEdit" name="lineEdit_159"/>
-              </item>
-              <item row="4" column="0">
-               <widget class="QLabel" name="label_126">
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_138">
                 <property name="text">
-                 <string>Protected Habitat</string>
+                 <string>Delta tau</string>
                 </property>
                </widget>
               </item>
-              <item row="8" column="3">
-               <widget class="QLineEdit" name="lineEdit_148"/>
-              </item>
-              <item row="1" column="3">
-               <widget class="Line" name="line_30">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="7" column="0">
-               <widget class="QLabel" name="label_132">
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potential for Typical Habitats&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLabel" name="label_134">
-                <property name="text">
-                 <string>Value</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="1">
-               <widget class="QLineEdit" name="lineEdit_150"/>
-              </item>
-              <item row="20" column="3">
-               <widget class="QLabel" name="label_127">
-                <property name="text">
-                 <string>3: Medium Performance</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="3">
-               <widget class="QPushButton" name="pushButton_56">
-                <property name="text">
-                 <string>Calculate FEM</string>
-                </property>
-               </widget>
-              </item>
-              <item row="13" column="0">
-               <widget class="Line" name="line_35">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="1">
-               <widget class="QLineEdit" name="lineEdit_158"/>
-              </item>
-              <item row="14" column="3">
-               <widget class="QLineEdit" name="lineEdit_153"/>
-              </item>
-              <item row="10" column="0">
-               <widget class="QLabel" name="label_144">
-                <property name="text">
-                 <string>Presence of Doc. Pl. Interests</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="3">
-               <widget class="QLineEdit" name="lineEdit_146"/>
-              </item>
-              <item row="17" column="2">
-               <widget class="QPushButton" name="pushButton_55">
-                <property name="text">
-                 <string>Add</string>
-                </property>
-               </widget>
-              </item>
-              <item row="19" column="3">
-               <widget class="QLabel" name="label_135">
-                <property name="text">
-                 <string>1: Low Performance</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QLineEdit" name="lineEdit_137"/>
-              </item>
-              <item row="21" column="3">
-               <widget class="QLabel" name="label_140">
-                <property name="text">
-                 <string>5: High Performance</string>
-                </property>
-               </widget>
-              </item>
-              <item row="4" column="1">
-               <widget class="QLineEdit" name="lineEdit_157"/>
-              </item>
-              <item row="18" column="1">
+              <item row="17" column="1">
                <spacer name="verticalSpacer_14">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
@@ -3484,126 +3483,42 @@
                 </property>
                </spacer>
               </item>
-              <item row="7" column="2">
-               <widget class="QLabel" name="label_62">
-                <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
+              <item row="2" column="1">
+               <widget class="QLineEdit" name="lineEdit_137"/>
               </item>
-              <item row="2" column="3">
-               <widget class="QLineEdit" name="lineEdit_151"/>
-              </item>
-              <item row="11" column="3">
-               <widget class="QLineEdit" name="lineEdit_163"/>
-              </item>
-              <item row="0" column="3">
-               <widget class="QLabel" name="label_122">
-                <property name="text">
-                 <string>FEM-Evaluation</string>
-                </property>
-               </widget>
-              </item>
-              <item row="17" column="1">
-               <widget class="QLabel" name="label_63">
-                <property name="text">
-                 <string>Attribute Table</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="2">
-               <widget class="QLabel" name="label_64">
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-              <item row="3" column="3">
-               <widget class="QLineEdit" name="lineEdit_156"/>
-              </item>
-              <item row="17" column="3">
+              <item row="16" column="3">
                <widget class="QLineEdit" name="lineEdit_77"/>
               </item>
-              <item row="6" column="2">
-               <widget class="QLabel" name="label_137">
-                <property name="text">
-                 <string>Nr</string>
-                </property>
-               </widget>
-              </item>
-              <item row="15" column="3">
-               <widget class="QLineEdit" name="lineEdit_154"/>
-              </item>
-              <item row="15" column="1">
+              <item row="14" column="1">
                <widget class="QLabel" name="label_123">
                 <property name="text">
                  <string>Restoration Demand :</string>
                 </property>
                </widget>
               </item>
-              <item row="3" column="0">
-               <widget class="QLabel" name="label_138">
-                <property name="text">
-                 <string>Delta tau</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QLabel" name="label_124">
-                <property name="text">
-                 <string>Minimum Parameters</string>
-                </property>
-               </widget>
-              </item>
-              <item row="12" column="1">
-               <widget class="QPushButton" name="pushButton_57">
-                <property name="text">
-                 <string>Confirm Values</string>
-                </property>
-               </widget>
-              </item>
-              <item row="5" column="3">
-               <widget class="QLineEdit" name="lineEdit_155"/>
-              </item>
-              <item row="7" column="3">
-               <widget class="QLineEdit" name="lineEdit_144"/>
-              </item>
-              <item row="11" column="0">
-               <widget class="QLabel" name="label_145">
-                <property name="text">
-                 <string>Extended Cost-Ben. Factor</string>
-                </property>
-               </widget>
-              </item>
-              <item row="10" column="3">
-               <widget class="QLineEdit" name="lineEdit_161"/>
-              </item>
-              <item row="14" column="1">
-               <widget class="QLabel" name="label_125">
-                <property name="text">
-                 <string>Sum :</string>
-                </property>
-               </widget>
-              </item>
-              <item row="11" column="1">
-               <widget class="QLineEdit" name="lineEdit_162"/>
+              <item row="14" column="3">
+               <widget class="QLineEdit" name="lineEdit_154"/>
               </item>
               <item row="2" column="2">
                <widget class="QLabel" name="label_136">
                 <property name="text">
-                 <string>m/s</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
-              <item row="2" column="0">
-               <widget class="QLabel" name="label_129">
+              <item row="12" column="1">
+               <widget class="Line" name="line_34">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_134">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>Value</string>
                 </property>
                </widget>
-              </item>
-              <item row="10" column="1">
-               <widget class="QLineEdit" name="lineEdit_160"/>
               </item>
               <item row="1" column="0">
                <widget class="Line" name="line_33">
@@ -3612,28 +3527,34 @@
                 </property>
                </widget>
               </item>
-              <item row="6" column="1">
-               <widget class="QLineEdit" name="lineEdit_143"/>
-              </item>
-              <item row="7" column="1">
-               <widget class="QLineEdit" name="lineEdit_152"/>
-              </item>
-              <item row="4" column="2">
-               <widget class="QLabel" name="label_141">
+              <item row="3" column="2">
+               <widget class="QLabel" name="label_61">
                 <property name="text">
-                 <string>cm</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
-              <item row="8" column="0">
-               <widget class="QLabel" name="label_142">
+              <item row="4" column="3">
+               <widget class="QLineEdit" name="lineEdit_141"/>
+              </item>
+              <item row="9" column="3">
+               <widget class="QLineEdit" name="lineEdit_159"/>
+              </item>
+              <item row="8" column="1">
+               <widget class="QLineEdit" name="lineEdit_138"/>
+              </item>
+              <item row="7" column="3">
+               <widget class="QLineEdit" name="lineEdit_144"/>
+              </item>
+              <item row="20" column="3">
+               <widget class="QLabel" name="label_140">
                 <property name="text">
-                 <string>Ecological Water Body Status</string>
+                 <string>5: High Performance</string>
                 </property>
                </widget>
               </item>
-              <item row="13" column="1">
-               <widget class="Line" name="line_34">
+              <item row="1" column="1">
+               <widget class="Line" name="line_32">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -3646,15 +3567,103 @@
                 </property>
                </widget>
               </item>
+              <item row="19" column="1">
+               <widget class="QLabel" name="label_131">
+                <property name="text">
+                 <string>FEM-Evaluation Sheet: </string>
+                </property>
+               </widget>
+              </item>
+              <item row="13" column="1">
+               <widget class="QLabel" name="label_125">
+                <property name="text">
+                 <string>Sum :</string>
+                </property>
+               </widget>
+              </item>
+              <item row="7" column="2">
+               <widget class="QLabel" name="label_62">
+                <property name="text">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="1">
+               <widget class="QPushButton" name="pushButton_57">
+                <property name="text">
+                 <string>Confirm Values</string>
+                </property>
+               </widget>
+              </item>
+              <item row="18" column="3">
+               <widget class="QLabel" name="label_135">
+                <property name="text">
+                 <string>1: Low Performance</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_126">
+                <property name="text">
+                 <string>Protected Habitat</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QLineEdit" name="lineEdit_149"/>
+              </item>
+              <item row="4" column="1">
+               <widget class="QLineEdit" name="lineEdit_157"/>
+              </item>
+              <item row="13" column="3">
+               <widget class="QLineEdit" name="lineEdit_153"/>
+              </item>
               <item row="16" column="1">
+               <widget class="QLabel" name="label_63">
+                <property name="text">
+                 <string>Attribute Table</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QLineEdit" name="lineEdit_151"/>
+              </item>
+              <item row="10" column="3">
+               <widget class="QLineEdit" name="lineEdit_161"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_130">
+                <property name="text">
+                 <string>Water Level Dynamics</string>
+                </property>
+               </widget>
+              </item>
+              <item row="11" column="3">
+               <widget class="QPushButton" name="pushButton_56">
+                <property name="text">
+                 <string>Calculate FEM</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="Line" name="line_29">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="15" column="1">
                <widget class="QLabel" name="label_160">
                 <property name="text">
                  <string>Need for Preservation:</string>
                 </property>
                </widget>
               </item>
-              <item row="16" column="3">
-               <widget class="QLineEdit" name="lineEdit_176"/>
+              <item row="5" column="3">
+               <widget class="QLineEdit" name="lineEdit_155"/>
+              </item>
+              <item row="8" column="3">
+               <widget class="QLineEdit" name="lineEdit_148"/>
               </item>
              </layout>
             </widget>
@@ -3732,13 +3741,6 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="2">
-               <widget class="QLabel" name="label_496">
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
               <item row="13" column="1">
                <spacer name="verticalSpacer_46">
                 <property name="orientation">
@@ -3795,7 +3797,7 @@
               <item row="7" column="2">
                <widget class="QLabel" name="label_498">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3812,7 +3814,7 @@
               <item row="3" column="2">
                <widget class="QLabel" name="label_511">
                 <property name="text">
-                 <string>min</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(h)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3823,13 +3825,6 @@
                <widget class="Line" name="line_158">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="2">
-               <widget class="QLabel" name="label_503">
-                <property name="text">
-                 <string>Nr</string>
                 </property>
                </widget>
               </item>
@@ -3853,7 +3848,7 @@
               <item row="4" column="2">
                <widget class="QLabel" name="label_501">
                 <property name="text">
-                 <string>cm</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -3871,13 +3866,6 @@
                <widget class="Line" name="line_152">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="2">
-               <widget class="QLabel" name="label_512">
-                <property name="text">
-                 <string>-</string>
                 </property>
                </widget>
               </item>
@@ -3958,7 +3946,7 @@
               <item row="2" column="2">
                <widget class="QLabel" name="label_495">
                 <property name="text">
-                 <string>%</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(%)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -4001,17 +3989,10 @@
               <item row="14" column="4">
                <widget class="QLineEdit" name="lineEdit_630"/>
               </item>
-              <item row="4" column="3">
-               <widget class="QLabel" name="label_534">
-                <property name="text">
-                 <string>cm</string>
-                </property>
-               </widget>
-              </item>
               <item row="2" column="3">
                <widget class="QLabel" name="label_537">
                 <property name="text">
-                 <string>m/s</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(m/s)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -4026,13 +4007,6 @@
                <widget class="QLabel" name="label_523">
                 <property name="text">
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Delta v&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                </property>
-               </widget>
-              </item>
-              <item row="6" column="3">
-               <widget class="QLabel" name="label_546">
-                <property name="text">
-                 <string>Nr</string>
                 </property>
                </widget>
               </item>
@@ -4081,7 +4055,7 @@
               <item row="3" column="3">
                <widget class="QLabel" name="label_525">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;(N/m&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(N/m&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -4160,17 +4134,10 @@
                 </property>
                </widget>
               </item>
-              <item row="5" column="3">
-               <widget class="QLabel" name="label_519">
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
               <item row="7" column="3">
                <widget class="QLabel" name="label_533">
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nr/km&lt;span style=&quot; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n/km&lt;/span&gt;&lt;span style=&quot; font-style:italic; vertical-align:super;&quot;&gt;2&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -4269,7 +4236,7 @@
               <item row="0" column="0">
                <widget class="QLabel" name="label_536">
                 <property name="text">
-                 <string>Minimum Parameters</string>
+                 <string>Additional Parameters</string>
                 </property>
                </widget>
               </item>
@@ -4294,13 +4261,6 @@
                <widget class="QLabel" name="label_540">
                 <property name="text">
                  <string>Ecological Water Body Status</string>
-                </property>
-               </widget>
-              </item>
-              <item row="8" column="3">
-               <widget class="QLabel" name="label_532">
-                <property name="text">
-                 <string>-</string>
                 </property>
                </widget>
               </item>
@@ -4444,13 +4404,6 @@
               <item row="6" column="6">
                <widget class="QLineEdit" name="lineEdit_220"/>
               </item>
-              <item row="10" column="0">
-               <widget class="QLabel" name="label_228">
-                <property name="text">
-                 <string>Restoration Decision:</string>
-                </property>
-               </widget>
-              </item>
               <item row="4" column="0">
                <widget class="QLabel" name="label_282">
                 <property name="text">
@@ -4464,9 +4417,6 @@
                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Potentially affected buildings&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
-              </item>
-              <item row="9" column="2">
-               <widget class="QLineEdit" name="lineEdit_215"/>
               </item>
               <item row="5" column="6">
                <widget class="QLineEdit" name="lineEdit_219"/>
@@ -4484,16 +4434,6 @@
                 </property>
                </spacer>
               </item>
-              <item row="9" column="0">
-               <widget class="QLabel" name="label_227">
-                <property name="text">
-                 <string>Sum:</string>
-                </property>
-               </widget>
-              </item>
-              <item row="9" column="6">
-               <widget class="QLineEdit" name="lineEdit_223"/>
-              </item>
               <item row="9" column="1">
                <widget class="QPushButton" name="pushButton_109">
                 <property name="text">
@@ -4501,7 +4441,21 @@
                 </property>
                </widget>
               </item>
-              <item row="10" column="2">
+              <item row="1" column="1">
+               <widget class="Line" name="line_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="0">
+               <widget class="QLabel" name="label_228">
+                <property name="text">
+                 <string>Restoration Decision:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="9" column="2">
                <widget class="QLineEdit" name="lineEdit_224"/>
               </item>
              </layout>
