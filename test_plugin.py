@@ -2477,7 +2477,7 @@ class test_plugin:
         title.setFont(QFont("Arial", 24))
         title.adjustSizeToText()
         layout.addLayoutItem(title)
-        title.attemptMove(QgsLayoutPoint(130, 4, QgsUnitTypes.LayoutMillimeers))
+        title.attemptMove(QgsLayoutPoint(130, 4, QgsUnitTypes.LayoutMillimeters))
         
         # Add title7 ##############################
         title7 = QgsLayoutItemLabel(layout)
