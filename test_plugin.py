@@ -11,6 +11,7 @@ from qgis.gui import * #QgsMessageBar
 
 import matplotlib as plt
 from matplotlib import pyplot as pllt
+from qgis.utils import iface
 
 # Initialize Qt resources from file resources.py
 from .resources import *
@@ -2698,6 +2699,9 @@ class test_plugin:
         table6.addFrame(frame6)
         frame6.attemptMove(QgsLayoutPoint(40, 153, QgsUnitTypes.LayoutMillimeters))
         #Add table6 ##############################
+        
+        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"')
+        iface.openLayoutDesigner(layout=l_out)
     
 
 #%% Floodplain Areas ######################################################     
@@ -2737,7 +2741,7 @@ class test_plugin:
         if self.first_start == True:
             self.first_start = False
             self.dlg = test_pluginDialog()
-            self.dlg.toolButton.clicked.connect(self.select_output_file)
+            #self.dlg.toolButton.clicked.connect(self.select_output_file)
             
             self.dlg.toolButton_2.clicked.connect(self.select_input_file1)
             self.dlg.toolButton_3.clicked.connect(self.select_input_file2)
