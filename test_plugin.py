@@ -2702,7 +2702,183 @@ class test_plugin:
         
         l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"')
         iface.openLayoutDesigner(layout=l_out)
-    
+
+    def create_factsheet2(self):
+        project = QgsProject.instance()
+        manager = project.layoutManager()
+        layout = QgsPrintLayout(project)
+        layoutName = '"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"' #setText(self.dlg.lineEdit_3.text(), " Layout")
+
+        layouts_list = manager.printLayouts()
+        for layout in layouts_list:
+            if layout.name() == layoutName:
+                manager.removeLayout(layout)
+        
+        layout = QgsPrintLayout(project)
+        layout.initializeDefaults()
+        layout.setName(layoutName)
+        manager.addLayout(layout)
+
+        title = QgsLayoutItemLabel(layout)
+        title.setText(str(self.dlg.lineEdit_3.text()) + " Fact Sheet")
+        title.setFont(QFont("Arial", 24))
+        title.adjustSizeToText()
+        layout.addLayoutItem(title)
+        title.attemptMove(QgsLayoutPoint(130, 4, QgsUnitTypes.LayoutMillimeters))
+        
+        # Add title2 ##############################
+        title2 = QgsLayoutItemLabel(layout)
+        title2.setText("Countries: " + str(self.dlg.lineEdit_4.text()))
+        title2.setFont(QFont("Arial", 12))
+        title2.adjustSizeToText()
+        layout.addLayoutItem(title2)
+        title2.attemptMove(QgsLayoutPoint(10, 20, QgsUnitTypes.LayoutMillimeters))
+        # Add title2 ##############################
+
+        # Add title3 ##############################
+        title3 = QgsLayoutItemLabel(layout)
+        title3.setText("Editor: " + str(self.dlg.lineEdit_5.text()))
+        title3.setFont(QFont("Arial", 12))
+        title3.adjustSizeToText()
+        layout.addLayoutItem(title3)
+        title3.attemptMove(QgsLayoutPoint(10, 26, QgsUnitTypes.LayoutMillimeters))
+        # Add title3 ##############################
+
+        # Add title4 ##############################
+        title4 = QgsLayoutItemLabel(layout)
+        title4.setText("Date: " + str(self.dlg.lineEdit_6.text()))
+        title4.setFont(QFont("Arial", 12))
+        title4.adjustSizeToText()
+        layout.addLayoutItem(title4)
+        title4.attemptMove(QgsLayoutPoint(10, 32, QgsUnitTypes.LayoutMillimeters))
+        # Add title4 ##############################        
+        
+        #Add table1 ##############################
+        table = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table)
+
+        cols = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols[0].setHeading("Hydrology")
+        cols[1].setHeading("")
+
+        table.setColumns(cols)
+
+        table.addRow(['Peak Reduction', str(self.dlg.lineEdit_131.text())])
+        table.addRow(['Flood Wave Translation', str(self.dlg.lineEdit_128.text())])
+
+        frame = QgsLayoutFrame(layout, table)
+        frame.attemptResize(QgsLayoutSize(10, 20), True)
+        table.addFrame(frame)
+        frame.attemptMove(QgsLayoutPoint(30, 75, QgsUnitTypes.LayoutMillimeters))
+        #Add table1 ##############################
+
+        #Add table2 ##############################
+        table2 = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table2)
+
+        cols2 = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols2[0].setHeading("Hydraulics")
+        cols2[1].setHeading("")
+
+        table2.setColumns(cols2)
+
+        table2.addRow(['Water Level Change', str(self.dlg.lineEdit_140.text())])
+        table2.addRow(['Flow Velocity Change', str(self.dlg.lineEdit_151.text())])
+        table2.addRow(['Bed Shear Stress Change', str(self.dlg.lineEdit_156.text())])
+
+        frame2 = QgsLayoutFrame(layout, table2)
+        frame2.attemptResize(QgsLayoutSize(10, 40), True)
+        table2.addFrame(frame2)
+        frame2.attemptMove(QgsLayoutPoint(85, 75, QgsUnitTypes.LayoutMillimeters))
+        #Add table2 ##############################
+
+        #Add table3 ##############################
+        table3 = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table3)
+
+        cols3 = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols3[0].setHeading("Ecology")
+        cols3[1].setHeading("")
+
+        table3.setColumns(cols3)
+
+        table3.addRow(['Connectivity of FWB', str(self.dlg.lineEdit_139.text())])
+        table3.addRow(['Protected Species', str(self.dlg.lineEdit_119.text())])
+        table3.addRow(['Protected Habitat', str(self.dlg.lineEdit_141.text())])
+        table3.addRow(['Vegetation Naturalness', str(self.dlg.lineEdit_155.text())])
+        table3.addRow(['Water Level Dynamics', str(self.dlg.lineEdit_146.text())])
+        table3.addRow(['Potential for Typ. Habitats', str(self.dlg.lineEdit_144.text())])
+        table3.addRow(['Ecological Water Body Status', str(self.dlg.lineEdit_148.text())])
+        table3.addRow(['Invasive Species', str(self.dlg.lineEdit_159.text())])
+
+        frame3 = QgsLayoutFrame(layout, table3)
+        frame3.attemptResize(QgsLayoutSize(10, 70), True)
+        table3.addFrame(frame3)
+        frame3.attemptMove(QgsLayoutPoint(142, 75, QgsUnitTypes.LayoutMillimeters))
+        #Add table3 ##############################
+
+        #Add table4 ##############################
+        table4 = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table4)
+
+        cols4 = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols4[0].setHeading("Socio-Economics")
+        cols4[1].setHeading("")
+
+        table4.setColumns(cols4)
+
+        table4.addRow(['Affected Buildings', str(self.dlg.lineEdit_124.text())])
+        table4.addRow(['Land Use', str(self.dlg.lineEdit_147.text())])
+        table4.addRow(['Presence of Doc. Pl. Int.', str(self.dlg.lineEdit_161.text())])
+
+
+        frame4 = QgsLayoutFrame(layout, table4)
+        frame4.attemptResize(QgsLayoutSize(10, 30), True)
+        table4.addFrame(frame4)
+        frame4.attemptMove(QgsLayoutPoint(207, 75, QgsUnitTypes.LayoutMillimeters))
+        #Add table4 ##############################
+
+        #Add table5 ##############################
+        table5 = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table5)
+
+        cols5 = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols5[0].setHeading("Need For Preservation")
+        cols5[1].setHeading("Restoration Demand")
+
+        table5.setColumns(cols5)
+
+        table5.addRow([str(self.dlg.lineEdit_175.text()), str(self.dlg.lineEdit_135.text())])
+
+        frame5 = QgsLayoutFrame(layout, table5)
+        frame5.attemptResize(QgsLayoutSize(10, 20), True)
+        table5.addFrame(frame5)
+        frame5.attemptMove(QgsLayoutPoint(30, 50, QgsUnitTypes.LayoutMillimeters))
+        #Add table5 ##############################
+
+        #Add table6 ##############################
+        table6 = QgsLayoutItemTextTable(layout)
+        layout.addMultiFrame(table6)
+
+        cols6 = [QgsLayoutTableColumn(),QgsLayoutTableColumn()]
+        cols6[0].setHeading("FEM Rating Performance")
+        cols6[1].setHeading("Ranking")
+
+        table6.setColumns(cols6)
+
+        table6.addRow(['High', '5'])
+        table6.addRow(['Medium', '3'])
+        table6.addRow(['Low', '1'])
+
+        frame6 = QgsLayoutFrame(layout, table6)
+        frame6.attemptResize(QgsLayoutSize(10, 30), True)
+        table6.addFrame(frame6)
+        frame6.attemptMove(QgsLayoutPoint(30, 160, QgsUnitTypes.LayoutMillimeters))
+        #Add table6 ##############################
+                
+        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"')
+        iface.openLayoutDesigner(layout=l_out)
+        
 
 #%% Floodplain Areas ######################################################     
         
@@ -2855,6 +3031,7 @@ class test_plugin:
             self.dlg.pushButton_136.clicked.connect(self.calculate_extra_FEM_restoration)
             self.dlg.pushButton_109.clicked.connect(self.restoration_decision)
             self.dlg.pushButton_53.clicked.connect(self.create_factsheet)
+            self.dlg.pushButton_69.clicked.connect(self.create_factsheet2)
             
             
             
