@@ -4439,6 +4439,11 @@
                   <widget class="QComboBox" name="comboBox_47">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4456,6 +4461,11 @@
                  </item>
                  <item row="6" column="2">
                   <widget class="QComboBox" name="comboBox_48">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -4516,6 +4526,11 @@
                   <widget class="QComboBox" name="comboBox_55">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>National Public Authorities</string>
                     </property>
                    </item>
@@ -4560,6 +4575,11 @@
                   <widget class="QComboBox" name="comboBox_56">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4582,6 +4602,11 @@
                   <widget class="QComboBox" name="comboBox_57">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4599,6 +4624,11 @@
                  </item>
                  <item row="3" column="4">
                   <widget class="QComboBox" name="comboBox_58">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -4643,6 +4673,11 @@
                   <widget class="QComboBox" name="comboBox_59">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4672,6 +4707,11 @@
                   <widget class="QComboBox" name="comboBox_60">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4699,6 +4739,11 @@
                  </item>
                  <item row="5" column="2">
                   <widget class="QComboBox" name="comboBox_61">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -4745,6 +4790,11 @@
                   <widget class="QComboBox" name="comboBox_62">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4762,6 +4812,11 @@
                  </item>
                  <item row="4" column="2">
                   <widget class="QComboBox" name="comboBox_63">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -4808,6 +4863,11 @@
                   <widget class="QComboBox" name="comboBox_64">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>National Public Authorities</string>
                     </property>
                    </item>
@@ -4850,6 +4910,11 @@
                  </item>
                  <item row="3" column="2">
                   <widget class="QComboBox" name="comboBox_65">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>National Public Authorities</string>
@@ -4924,6 +4989,11 @@
                   <widget class="QComboBox" name="comboBox_66">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -4944,6 +5014,11 @@
                  </item>
                  <item row="7" column="6">
                   <widget class="QComboBox" name="comboBox_67">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -4970,6 +5045,11 @@
                  </item>
                  <item row="2" column="6">
                   <widget class="QComboBox" name="comboBox_68">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>Low</string>
@@ -5001,6 +5081,11 @@
                   <widget class="QComboBox" name="comboBox_69">
                    <item>
                     <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Low</string>
                     </property>
                    </item>
@@ -5018,6 +5103,11 @@
                  </item>
                  <item row="5" column="4">
                   <widget class="QComboBox" name="comboBox_70">
+                   <item>
+                    <property name="text">
+                     <string>Missing</string>
+                    </property>
+                   </item>
                    <item>
                     <property name="text">
                      <string>Low</string>
