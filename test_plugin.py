@@ -985,6 +985,20 @@ class test_plugin:
         path_Delta_land_use_restoration = self.dlg.lineEdit_612.text()
         FEM_Delta_land_use_restoration = np.asarray(path_Delta_land_use_restoration, dtype='float64')
         self.dlg.lineEdit_222.setText(str(FEM_Delta_land_use_restoration))
+        extended_cbf = self.dlg.lineEdit_629.text()
+        if extended_cbf == 1:
+            extended_cbf == 1
+            self.dlg.lineEdit.setText(str(extended_cbf))
+        elif extended_cbf == 3:
+            extended_cbf == 1
+            self.dlg.lineEdit.setText(str(extended_cbf))
+        elif extended_cbf == 5:
+            extended_cbf == 5
+            self.dlg.lineEdit.setText(str(extended_cbf))
+        else:
+            extended_cbf == 0
+            self.dlg.lineEdit.setText(str(extended_cbf))
+        
         if FEM_Delta_Qrelative < FEM_Delta_Qrelative_restoration or FEM_Delta_T < FEM_Delta_T_restoration or FEM_Delta_h < FEM_Delta_h_restoration or FEM_Delta_c_fwb < FEM_Delta_c_fwb_restoration or FEM_Delta_protected_species < FEM_Delta_protected_species_restoration or FEM_Delta_buildings < FEM_Delta_buildings_restoration or FEM_Delta_land_use < FEM_Delta_land_use_restoration:
         	self.dlg.lineEdit_224.setText("Yes")
         	print("Yes")
@@ -1070,18 +1084,18 @@ class test_plugin:
         self.dlg.lineEdit_91.setText(str(treshold_land_use_low))
         self.dlg.lineEdit_85.setText(str(treshold_land_use_medium))
         self.dlg.lineEdit_82.setText(str(treshold_land_use_high))     
-        self.dlg.lineEdit_84.setText(str(treshold_sediment_balance_low))
-        self.dlg.lineEdit_102.setText(str(treshold_sediment_balance_medium))
-        self.dlg.lineEdit_79.setText(str(treshold_sediment_balance_high))    
+        #self.dlg.lineEdit_84.setText(str(treshold_sediment_balance_low))
+        #self.dlg.lineEdit_102.setText(str(treshold_sediment_balance_medium))
+        #self.dlg.lineEdit_79.setText(str(treshold_sediment_balance_high))    
         #self.dlg.lineEdit_108.setText(str(treshold_con_fp_w_b_low))
         #self.dlg.lineEdit_80.setText(str(treshold_con_fp_w_b_medium))
         #self.dlg.lineEdit_101.setText(str(treshold_con_fp_w_b_high))      
         #self.dlg.lineEdit_96.setText(str(treshold_con_fp_w_b_detailed_low))
         #self.dlg.lineEdit_83.setText(str(treshold_con_fp_w_b_detailed_medium))
         #self.dlg.lineEdit_99.setText(str(treshold_con_fp_w_b_detailed_high))  
-        self.dlg.lineEdit_98.setText(str(treshold_w_l_d_low))
-        self.dlg.lineEdit_87.setText(str(treshold_w_l_d_medium))
-        self.dlg.lineEdit_94.setText(str(treshold_w_l_d_high))
+        #self.dlg.lineEdit_98.setText(str(treshold_w_l_d_low))
+        #self.dlg.lineEdit_87.setText(str(treshold_w_l_d_medium))
+        #self.dlg.lineEdit_94.setText(str(treshold_w_l_d_high))
         #self.dlg.lineEdit_111.setText(str(treshold_c_b_r_low))
         #self.dlg.lineEdit_112.setText(str(treshold_c_b_r_medium))
         #self.dlg.lineEdit_113.setText(str(treshold_c_b_r_high))
@@ -2238,7 +2252,7 @@ class test_plugin:
         #            print(f.attributes()[i])
         #            layer_provider.deleteAttributes([i])
         #layer.updateFields()
-        layer_provider.addAttributes([QgsField("FID", QVariant.Double), QgsField("DFGIS_ID", QVariant.String), QgsField("FP_Type", QVariant.String), QgsField("Location", QVariant.String), QgsField("Transbound", QVariant.String), QgsField("Area", QVariant.Double), QgsField("FPLength", QVariant.Double), QgsField("Chan_width", QVariant.Double), QgsField("delta_Q", QVariant.Double), QgsField("delta_t", QVariant.Double), QgsField("delta_h", QVariant.Double), QgsField("C_fp_wb", QVariant.Double), QgsField("Prot_spp", QVariant.Double), QgsField("Building", QVariant.Double), QgsField("Land_use", QVariant.Double), QgsField("R_delta_Q", QVariant.Double), QgsField("R_delta_t", QVariant.Double), QgsField("R_delta_h", QVariant.Double), QgsField("R_C_fp_wb", QVariant.Double), QgsField("R_Prot_spp", QVariant.Double), QgsField("R_Building", QVariant.Double), QgsField("R_Land_use", QVariant.Double), QgsField("Hyd_eff", QVariant.Double), QgsField("delta_v", QVariant.Double), QgsField("prot_hab", QVariant.Double), QgsField("veg_nat", QVariant.Double), QgsField("WL_dyn", QVariant.Double), QgsField("p_int", QVariant.Double), QgsField("invasive_sp", QVariant.Double), QgsField("R_invasive_sp", QVariant.Double), QgsField("ext_CBA", QVariant.Double), QgsField("R_ext_CBA", QVariant.Double), QgsField("R_Hyd_eff", QVariant.Double), QgsField("R_delta_v", QVariant.Double), QgsField("R_prob_hab", QVariant.Double), QgsField("R_veg_nat", QVariant.Double), QgsField("R_WL_dyn", QVariant.Double), QgsField("R_pl_int", QVariant.Double), QgsField("delt_Tau", QVariant.Double), QgsField("p_tb_hab", QVariant.Double), QgsField("wb_status", QVariant.String), QgsField("R_delt_Tau", QVariant.Double), QgsField("R_p_tb_hab", QVariant.Double), QgsField("R_wb_stat", QVariant.Double), QgsField("Restoratio", QVariant.String), QgsField("HQ100", QVariant.Double), QgsField("Ecosystem_service", QVariant.Double), QgsField("Habitat_modelling", QVariant.Double), QgsField("Stakeholder_analysis", QVariant.Double), QgsField("km_from", QVariant.Double), QgsField("km_to", QVariant.Double)])
+        layer_provider.addAttributes([QgsField("FID", QVariant.Double), QgsField("DFGIS_ID", QVariant.String), QgsField("FP_Type", QVariant.String), QgsField("Location", QVariant.String), QgsField("Transbound", QVariant.String), QgsField("Area", QVariant.Double), QgsField("FPLength", QVariant.Double), QgsField("Chan_width", QVariant.Double), QgsField("delta_Q", QVariant.Double), QgsField("delta_t", QVariant.Double), QgsField("delta_h", QVariant.Double), QgsField("C_fp_wb", QVariant.Double), QgsField("Prot_spp", QVariant.Double), QgsField("Building", QVariant.Double), QgsField("Land_use", QVariant.Double), QgsField("R_delta_Q", QVariant.Double), QgsField("R_delta_t", QVariant.Double), QgsField("R_delta_h", QVariant.Double), QgsField("R_C_fp_wb", QVariant.Double), QgsField("R_Prot_spp", QVariant.Double), QgsField("R_Building", QVariant.Double), QgsField("R_Land_use", QVariant.Double), QgsField("Hyd_eff", QVariant.Double), QgsField("delta_v", QVariant.Double), QgsField("prot_hab", QVariant.Double), QgsField("veg_nat", QVariant.Double), QgsField("WL_dyn", QVariant.Double), QgsField("p_int", QVariant.Double), QgsField("invasive_sp", QVariant.Double), QgsField("R_invasive_sp", QVariant.Double), QgsField("ext_CBA", QVariant.Double), QgsField("R_ext_CBA", QVariant.Double), QgsField("R_Hyd_eff", QVariant.Double), QgsField("R_delta_v", QVariant.Double), QgsField("R_prob_hab", QVariant.Double), QgsField("R_veg_nat", QVariant.Double), QgsField("R_WL_dyn", QVariant.Double), QgsField("R_pl_int", QVariant.Double), QgsField("delt_Tau", QVariant.Double), QgsField("p_tb_hab", QVariant.Double), QgsField("wb_status", QVariant.String), QgsField("R_delt_Tau", QVariant.Double), QgsField("R_p_tb_hab", QVariant.Double), QgsField("R_wb_stat", QVariant.Double), QgsField("Restoratio", QVariant.String), QgsField("HQ100", QVariant.Double), QgsField("Ecosystem_service", QVariant.Double), QgsField("Habitat_modelling", QVariant.Double), QgsField("km_from", QVariant.Double), QgsField("km_to", QVariant.Double)])
         layer.updateFields()
         #layer.startEditing()
         #features=layer.getFeatures()
@@ -2461,7 +2475,7 @@ class test_plugin:
         project = QgsProject.instance()
         manager = project.layoutManager()
         layout = QgsPrintLayout(project)
-        layoutName = '"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"' #setText(self.dlg.lineEdit_3.text(), " Layout")
+        layoutName = '"' + self.dlg.lineEdit_3.text() + ' Additional Fact Sheet"' #setText(self.dlg.lineEdit_3.text(), " Layout")
 
         layouts_list = manager.printLayouts()
         for layout in layouts_list:
@@ -2474,7 +2488,7 @@ class test_plugin:
         manager.addLayout(layout)
 
         title = QgsLayoutItemLabel(layout)
-        title.setText(str(self.dlg.lineEdit_3.text()) + " Fact Sheet")
+        title.setText(str(self.dlg.lineEdit_3.text()) + " Additional Fact Sheet")
         title.setFont(QFont("Arial", 24))
         title.adjustSizeToText()
         layout.addLayoutItem(title)
@@ -2513,7 +2527,7 @@ class test_plugin:
         title2.setFont(QFont("Arial", 12))
         title2.adjustSizeToText()
         layout.addLayoutItem(title2)
-        title2.attemptMove(QgsLayoutPoint(210, 95, QgsUnitTypes.LayoutMillimeters))
+        title2.attemptMove(QgsLayoutPoint(210, 90, QgsUnitTypes.LayoutMillimeters))
         # Add title2 ##############################
 
         # Add title3 ##############################
@@ -2522,7 +2536,7 @@ class test_plugin:
         title3.setFont(QFont("Arial", 12))
         title3.adjustSizeToText()
         layout.addLayoutItem(title3)
-        title3.attemptMove(QgsLayoutPoint(210, 49, QgsUnitTypes.LayoutMillimeters))
+        title3.attemptMove(QgsLayoutPoint(210, 44, QgsUnitTypes.LayoutMillimeters))
         # Add title3 ##############################
 
         # Add title4 ##############################
@@ -2531,7 +2545,7 @@ class test_plugin:
         title4.setFont(QFont("Arial", 12))
         title4.adjustSizeToText()
         layout.addLayoutItem(title4)
-        title4.attemptMove(QgsLayoutPoint(40, 49, QgsUnitTypes.LayoutMillimeters))
+        title4.attemptMove(QgsLayoutPoint(40, 44, QgsUnitTypes.LayoutMillimeters))
         # Add title4 ##############################
 
         # Add title5 ##############################
@@ -2540,7 +2554,7 @@ class test_plugin:
         title5.setFont(QFont("Arial", 12))
         title5.adjustSizeToText()
         layout.addLayoutItem(title5)
-        title5.attemptMove(QgsLayoutPoint(40, 99, QgsUnitTypes.LayoutMillimeters))
+        title5.attemptMove(QgsLayoutPoint(40, 94, QgsUnitTypes.LayoutMillimeters))
         # Add title5 ##############################
 
         # Add title6 ##############################
@@ -2549,7 +2563,7 @@ class test_plugin:
         title6.setFont(QFont("Arial", 12))
         title6.adjustSizeToText()
         layout.addLayoutItem(title6)
-        title6.attemptMove(QgsLayoutPoint(40, 147, QgsUnitTypes.LayoutMillimeters))
+        title6.attemptMove(QgsLayoutPoint(40, 142, QgsUnitTypes.LayoutMillimeters))
         # Add title5 ##############################
 
         #Add table1 ##############################
@@ -2586,7 +2600,7 @@ class test_plugin:
         frame = QgsLayoutFrame(layout, table)
         frame.attemptResize(QgsLayoutSize(10, 160), True)
         table.addFrame(frame)
-        frame.attemptMove(QgsLayoutPoint(160, 101, QgsUnitTypes.LayoutMillimeters))
+        frame.attemptMove(QgsLayoutPoint(160, 96, QgsUnitTypes.LayoutMillimeters))
         #Add table1 ##############################
 
         #Add table2 ##############################
@@ -2605,7 +2619,7 @@ class test_plugin:
         frame2 = QgsLayoutFrame(layout, table2)
         frame2.attemptResize(QgsLayoutSize(10, 20), True)
         table2.addFrame(frame2)
-        frame2.attemptMove(QgsLayoutPoint(160, 55, QgsUnitTypes.LayoutMillimeters))
+        frame2.attemptMove(QgsLayoutPoint(160, 50, QgsUnitTypes.LayoutMillimeters))
         #Add table2 ##############################
 
         #Add table3 ##############################
@@ -2627,7 +2641,7 @@ class test_plugin:
         frame3 = QgsLayoutFrame(layout, table3)
         frame3.attemptResize(QgsLayoutSize(10, 20), True)
         table3.addFrame(frame3)
-        frame3.attemptMove(QgsLayoutPoint(160, 71, QgsUnitTypes.LayoutMillimeters))
+        frame3.attemptMove(QgsLayoutPoint(160, 66, QgsUnitTypes.LayoutMillimeters))
         #Add table3 ##############################
 
         #Add table4 ##############################
@@ -2651,7 +2665,7 @@ class test_plugin:
         frame4 = QgsLayoutFrame(layout, table4)
         frame4.attemptResize(QgsLayoutSize(10, 50), True)
         table4.addFrame(frame4)
-        frame4.attemptMove(QgsLayoutPoint(40, 55, QgsUnitTypes.LayoutMillimeters))
+        frame4.attemptMove(QgsLayoutPoint(40, 50, QgsUnitTypes.LayoutMillimeters))
         #Add table4 ##############################
 
         #Add table5 ##############################
@@ -2672,7 +2686,7 @@ class test_plugin:
         frame5 = QgsLayoutFrame(layout, table5)
         frame5.attemptResize(QgsLayoutSize(10, 40), True)
         table5.addFrame(frame5)
-        frame5.attemptMove(QgsLayoutPoint(40, 105, QgsUnitTypes.LayoutMillimeters))
+        frame5.attemptMove(QgsLayoutPoint(40, 100, QgsUnitTypes.LayoutMillimeters))
         #Add table5 ##############################
 
         #Add table6 ##############################
@@ -2693,21 +2707,22 @@ class test_plugin:
         table6.addRow(['Potentially affected buildings', self.dlg.lineEdit_351.text(), self.dlg.lineEdit_221.text()])
         table6.addRow(['Land use', self.dlg.lineEdit_346.text(), self.dlg.lineEdit_222.text()])
         table6.addRow(['Restoration Decision', str(self.dlg.lineEdit_224.text()), ''])
+        table6.addRow(['Extended Cost-Ben. Factor', '', str(self.dlg.lineEdit.text())])
 
         frame6 = QgsLayoutFrame(layout, table6)
-        frame6.attemptResize(QgsLayoutSize(10, 70), True)
+        frame6.attemptResize(QgsLayoutSize(10, 80), True)
         table6.addFrame(frame6)
-        frame6.attemptMove(QgsLayoutPoint(40, 153, QgsUnitTypes.LayoutMillimeters))
+        frame6.attemptMove(QgsLayoutPoint(40, 148, QgsUnitTypes.LayoutMillimeters))
         #Add table6 ##############################
         
-        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"')
+        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Additional Fact Sheet"')
         iface.openLayoutDesigner(layout=l_out)
 
     def create_factsheet2(self):
         project = QgsProject.instance()
         manager = project.layoutManager()
         layout = QgsPrintLayout(project)
-        layoutName = '"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"' #setText(self.dlg.lineEdit_3.text(), " Layout")
+        layoutName = '"' + self.dlg.lineEdit_3.text() + ' FEM Fact Sheet"' #setText(self.dlg.lineEdit_3.text(), " Layout")
 
         layouts_list = manager.printLayouts()
         for layout in layouts_list:
@@ -2720,7 +2735,7 @@ class test_plugin:
         manager.addLayout(layout)
 
         title = QgsLayoutItemLabel(layout)
-        title.setText(str(self.dlg.lineEdit_3.text()) + " Fact Sheet")
+        title.setText(str(self.dlg.lineEdit_3.text()) + " FEM Fact Sheet")
         title.setFont(QFont("Arial", 24))
         title.adjustSizeToText()
         layout.addLayoutItem(title)
@@ -2876,7 +2891,7 @@ class test_plugin:
         frame6.attemptMove(QgsLayoutPoint(30, 160, QgsUnitTypes.LayoutMillimeters))
         #Add table6 ##############################
                 
-        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' Fact Sheet"')
+        l_out = QgsProject.instance().layoutManager().layoutByName('"' + self.dlg.lineEdit_3.text() + ' FEM Fact Sheet"')
         iface.openLayoutDesigner(layout=l_out)
         
 
