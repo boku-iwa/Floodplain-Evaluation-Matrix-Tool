@@ -2,7 +2,10 @@
 import sys, csv, struct
 import os 
 import numpy as np
-import gdal
+try:
+    import gdal
+except ModuleNotFoundError:
+    from osgeo import gdal
 from qgis.PyQt.QtCore import * #QSettings, QTranslator, qVersion, QCoreApplication, QFileInfo
 from qgis.PyQt.QtGui import *
 from qgis.PyQt.QtWidgets import * #QAction, QFileDialog, QSizePolicy, QPushButton, QDialog, QGridLayout, QDialogButtonBox
